@@ -60,6 +60,11 @@ int main (int argc, const char* argv[]) {
 		bool swt[3]; // add, mult, var
 		swt[0] = false; swt[1] = false; swt[2] = false; // init
 		// if (! get_choice(argc, argv, swt)) return -1;
+        if(!Config::config.read())
+        {
+            std::cerr<<"config not found!\n";
+            exit(0);
+        }
 		cerr << "gao1 " << endl;
 		schememetadataPtr meta_rkgy(new schememetadata(QString("META_RENKOUGAIYAO")));
 		schememetadataPtr meta_fufuzinv(new schememetadata(QString("META_FUFUZINV")));
