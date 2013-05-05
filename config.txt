@@ -1,5 +1,5 @@
-DATA_STRUCT_PATH = E:\renkou\data\sim\0816\
-DATA_PATH = E:\renkou\data\sim\0926\
+DATA_STRUCT_PATH = G:\renkou\data\sim\0816\
+DATA_PATH = G:\renkou\data\sim\0926\
 DATABASE_DBNAME = rr
 DATABASE_USERNAME = root
 DATABASE_PASSWORD = 123456
