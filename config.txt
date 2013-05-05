@@ -1,0 +1,11 @@
+DATA_STRUCT_PATH = E:\renkou\data\sim\0816\
+DATA_PATH = E:\renkou\data\sim\0926\
+DATABASE_DBNAME = rr
+DATABASE_USERNAME = root
+DATABASE_PASSWORD = 123456
+START_YEAR = 2010
+END_YEAR = 2130
+META_RENKOUGAIYAO = 人口概要类字段名和对应指标名.txt
+META_FUFUZINV = 夫妇子女类字段名和对应指标名.txt
+META_SHENGYUHAICI = 生育孩次类字段名和对应指标名.txt
+META_ZHENGCESHENGYU = 政策生育类字段名和对应指标名.txt
