@@ -35,7 +35,7 @@ namespace METHOD_ADD { // decl
 			indicator_layer_score p; // the result
 			SchemeIndicator<T> ind = scheme->getIndicator<T>(para.index); // the indicator
 			for (size_t i = ind.startYear(); i <= ind.endYear(); ++i) {
-                qDebug() << "[do_remove_dimension]getting" << i;
+                // qDebug() << "[do_remove_dimension]getting" << i;
 				auto f = ind.get(i);
 
 				// assign p
@@ -67,12 +67,12 @@ namespace METHOD_ADD { // decl
 	 */
 	template <typename T>
 		void remove_dimension(std::vector<scheme_dimension>& score, const std::vector<SchemePtr>& scheme, const remove_dimension_para& ind) {
-			for (auto& i : scheme)
-				qDebug() << i->getMetadata()->name();
+            // for (auto& i : scheme)
+                // qDebug() << i->getMetadata()->name();
 
             std::vector<T> maxes; // maxes for each indicator
 			std::vector<T> mins; // mins for each indicator
-
+            qDebug() << "remove dimension";
 			// load maxes for each scheme of indicator
 			for (auto& s : scheme) { // foreach scheme
                 // qDebug() << "gao max min ";

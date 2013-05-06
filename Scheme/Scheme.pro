@@ -10,7 +10,6 @@ HEADERS += \
     schememetadata.h \
     SchemeInstance.hpp \
     SchemeIndicator.hpp \
-    schemeIndicator.h \
     SchemeExceptionBag.hpp \
     SchemeDef.hpp \
     SchemeBuffer.hpp \

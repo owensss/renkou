@@ -4,6 +4,8 @@
 #include <QFile>
 #include "ConfigMan.hpp"
 #include "exceptions/ValueNotExist.hpp"
+#include <QTextCodec>
+#include <QDebug>
 
 using namespace Config;
 
@@ -20,7 +22,7 @@ bool ConfigMan::read(const QString& _filename)
     }
 
     QTextStream config_file(&file);
-
+    config_file.setCodec(QTextCodec::codecForName("utf-8"));
     QString tmpline;
     QString property_name;
     QString property_value;
@@ -28,6 +30,7 @@ bool ConfigMan::read(const QString& _filename)
     while (!config_file.atEnd())
     {
         tmpline = config_file.readLine();
+        qDebug() << tmpline;
         ++count;
         int split = tmpline.indexOf("=");
         if (  split == -1) {

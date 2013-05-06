@@ -55,7 +55,7 @@ int main (int argc, const char* argv[]) {
 	using namespace std;
 	try {
 		// force use utf-8
-		QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf-8"));
+        QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf-8"));
 
 		bool swt[3]; // add, mult, var
 		swt[0] = false; swt[1] = false; swt[2] = false; // init
@@ -82,19 +82,22 @@ int main (int argc, const char* argv[]) {
 
 		bf::path path(Config::config["DATA_PATH"].toStdString());
 		bf::directory_iterator end_iter;
+
+        auto gbk = QTextCodec::codecForName("gbk");
+        auto gbk_dec = gbk->makeDecoder();
 		for (bf::directory_iterator file_iter(path); file_iter != end_iter; ++file_iter) {
-			auto filename = file_iter->path().filename().string();
+            auto filename = gbk_dec->toUnicode(file_iter->path().filename().string().c_str());
 			// remove ".txt"
-			filename.replace(filename.end()-4, filename.end(), "");
-			if (filename.find("上海") != string::npos) {
-				if (filename.find("合计人口概要") != string::npos) {
-					v_rkgy.push_back(std::make_shared<Scheme>(Scheme(meta_rkgy, buffer, QString(filename.c_str()))));
+            filename.remove(".txt");
+            if (filename.contains("上海")) {
+                if (filename.contains("合计人口概要")) {
+                    v_rkgy.push_back(std::make_shared<Scheme>(Scheme(meta_rkgy, buffer, filename)));
 					buffer->forceRead(v_rkgy.back().get());
-					cerr << filename << endl;
-				} else if (filename.find("合计夫妇子女") != string::npos) {
-					v_ffzn.push_back(std::make_shared<Scheme>(Scheme(meta_fufuzinv, buffer, QString(filename.c_str()))));
+                    qDebug() << filename << endl;
+                } else if (filename.contains("合计夫妇子女")) {
+                    v_ffzn.push_back(std::make_shared<Scheme>(Scheme(meta_fufuzinv, buffer, filename)));
 					buffer->forceRead(v_ffzn.back().get());
-					cerr << filename << endl;
+                    qDebug() << filename << endl;
 				}
 			}
 		}
