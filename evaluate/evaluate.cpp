@@ -87,13 +87,14 @@ int main (int argc, const char* argv[]) {
         auto gbk_dec = gbk->makeDecoder();
 		for (bf::directory_iterator file_iter(path); file_iter != end_iter; ++file_iter) {
             auto filename = gbk_dec->toUnicode(file_iter->path().filename().string().c_str());
+            qDebug() << "ori filename" << file_iter->path().filename().string().c_str();
 			// remove ".txt"
             filename.remove(".txt");
             if (filename.contains("上海")) {
                 if (filename.contains("合计人口概要")) {
+                    qDebug() << "filename" << filename << endl;
                     v_rkgy.push_back(std::make_shared<Scheme>(Scheme(meta_rkgy, buffer, filename)));
 					buffer->forceRead(v_rkgy.back().get());
-                    qDebug() << filename << endl;
                 } else if (filename.contains("合计夫妇子女")) {
                     v_ffzn.push_back(std::make_shared<Scheme>(Scheme(meta_fufuzinv, buffer, filename)));
 					buffer->forceRead(v_ffzn.back().get());

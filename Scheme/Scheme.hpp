@@ -1,6 +1,7 @@
 #pragma once
 #include <memory>
 #include "SchemeDef.hpp"
+#include <QTextCodec>
 /* note: scheme: 方案 */
 /* note: All data are stored in SchemeBuffer and schememetadata, Scheme do not store any data
  *     Scheme
@@ -65,7 +66,11 @@ class Scheme : public std::enable_shared_from_this<Scheme> {
          * 		   if the internal storage is placed in the database
          * 		   		then this function returns the scheme name
          */
-        QString toInternalName(void) const {return name+".txt";}
+        QString toInternalName(void) const {
+            // static QTextCodec* gbk = QTextCodec::codecForName("gbk");
+            // static QTextEncoder* gbk_enc = gbk->makeEncoder();
+            return /*gbk_enc->fromUnicode(*/name+".txt"/*)*/;
+        }
     public:
         /*
          * @params: the index of the indicator
