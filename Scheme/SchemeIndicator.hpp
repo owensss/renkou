@@ -135,10 +135,11 @@ class SchemeIndicator {
             return res;
         }
         double variance		(size_t start_year=UINT_MAX, size_t end_year=UINT_MAX) {
+            resetYear(start_year, end_year);
+            if (start_year == end_year) return 0;
             double _mean= mean(start_year, end_year);
-			if (start_year == end_year) return 0;
 
-            double res = 0;
+            double res = 0.0;
             for (size_t i = start_year; i != end_year; ++i)
                 res += (get(i)-_mean)*(get(i)-_mean);
 

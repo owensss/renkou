@@ -24,7 +24,7 @@
 // #include "configMan.hpp"
 
 namespace {
-    bool processLine(QTextStream& in, char * buffer, schememetadataPtr meta, size_t offset) {
+    bool processLine(QTextStream& in, char * buffer, schememetadataPtr meta, size_t& offset) {
         // static const size_t buffer_size = 10000;
         if (in.atEnd()) return false;
 
@@ -32,11 +32,18 @@ namespace {
         schInt i;
         schDouble f;
         // if year not exist
-        if (list[0].toInt()-meta->startYear() != offset) {
+        // FIX: start year could be READ_START_YEAR or USER_SPECIFIC START_YEAR
+        if (list[0].toInt()-(int)(meta->startYear()) > (int)(offset) ) {
             // set all to zero
+            qDebug() << "greater than" << list[0].toInt() << meta->startYear() << offset;
             memset(buffer, 0, meta->rowSize());
             return false;
+        } else if (list[0].toInt()-(int)(meta->startYear()) < (int)(offset) ) {
+            qDebug() << "less than" << list[0].toInt() << meta->startYear() << offset;
+            --offset; // skip this one
+            return false;
         }
+
 
         for (unsigned j = 1; j <= meta->colCount(); ++j) {
             switch (meta->colAt(j).getfield_type()) {

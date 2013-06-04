@@ -1,4 +1,4 @@
-#include "method_add_impl.h"
+﻿#include "method_add_impl.h"
 #include "method_add.h"
 #include <cmath>
 #include <algorithm> // max_element, min_element
@@ -30,13 +30,17 @@ namespace METHOD_ADD { // decl
 	 * 			)
 	 */
 	template <typename T>
-		indicator_layer_score do_remove_dimension(SchemePtr scheme, const remove_dimension_para& para, T max, T min) {
+        indicator_layer_score do_remove_dimension(
+                SchemePtr scheme,
+                const remove_dimension_para& para,
+                T max, T min
+        ) {
 
 			indicator_layer_score p; // the result
 			SchemeIndicator<T> ind = scheme->getIndicator<T>(para.index); // the indicator
 			for (size_t i = ind.startYear(); i <= ind.endYear(); ++i) {
                 // qDebug() << "[do_remove_dimension]getting" << i;
-				auto f = ind.get(i);
+                score_type f = ind.get(i);
 
 				// assign p
 				if (para.std) { // has a standard value
@@ -46,11 +50,11 @@ namespace METHOD_ADD { // decl
 				} else {
 					if (para.posi ) { // positive indicator(正向指标)
 						// p = (f-min(f))/(max(f)-min(f))*99+1
-						p.score.push_back( (f-min)/(max-min)*99+1 );
+                        p.score.push_back( (f-min)/(max-min)*99.0+1 );
 						p.valid.push_back(true);
 					} else { // neg indicator
 						// p = 100-(f-min(f))/(max(f)-min(f))*99
-						p.score.push_back( 100-(f-min)/(max-min)*99 );
+                        p.score.push_back( 100.0-(f-min)/(max-min)*99 );
 						p.valid.push_back(true);
 					}
 				}
@@ -66,35 +70,44 @@ namespace METHOD_ADD { // decl
 	 * @impl: the default remove dimension function, with original data input
 	 */
 	template <typename T>
-		void remove_dimension(std::vector<scheme_dimension>& score, const std::vector<SchemePtr>& scheme, const remove_dimension_para& ind) {
+        void remove_dimension(
+                std::vector<scheme_dimension>& score,
+                const std::vector<SchemePtr>& schemes,
+                const remove_dimension_para& para
+        ) {
             // for (auto& i : scheme)
                 // qDebug() << i->getMetadata()->name();
 
             std::vector<T> maxes; // maxes for each indicator
 			std::vector<T> mins; // mins for each indicator
-            qDebug() << "remove dimension";
+            // qDebug() << "remove dimension";
 			// load maxes for each scheme of indicator
-			for (auto& s : scheme) { // foreach scheme
+            for (auto& s : schemes) { // foreach scheme
                 // qDebug() << "gao max min ";
-				SchemeIndicator<T> indicator = s->getIndicator<T>(ind.index);
+                SchemeIndicator<T> indicator = s->getIndicator<T>(para.index);
 				maxes.push_back(indicator.max());
 				mins.push_back(indicator.min());
+               // if (ind.index == 64 || ind.index == 67) {
+               //     qDebug() << indicator.max();
+               //     qDebug() << indicator.min();
+               // }
 			}
 
 			// min(f)、 max(f) 是所有地区、所有方案、所有年份的最大值、最小值
 			// 计算最值，将指标无量纲化
 			T total_max = *std::max_element(maxes.begin(), maxes.end());
 			T total_min = *std::min_element(mins.begin(), mins.end());
-
+            qDebug() << "total max for" << para.index << total_max;
+            qDebug() << "total min for" << para.index << total_min;
 			// 无量纲化
-			size_t ssize = scheme.size();
-            score.resize(ssize);
+            size_t ssize = schemes.size();
+            // score.resize(ssize);
 			for (size_t j = 0; j < ssize; ++j) {
-                qDebug() << scheme[j]->getMetadata()->name() << scheme[j]->getMetadata()->colCount();
-				score[j].score.push_back(do_remove_dimension(scheme[j], ind, total_max, total_min));
+                // qDebug() << scheme[j]->getMetadata()->name() << scheme[j]->getMetadata()->colCount();
+                score[j].score.push_back(do_remove_dimension(schemes[j], para, total_max, total_min));
 				// note: initialize the scheme once and left it alone
 				// shall not be assign here
-				score[j].scheme = scheme[j]; // TODO: could be dangerous!
+                score[j].scheme = schemes[j]; // TODO: could be dangerous!
 			}
 		}
 
@@ -103,24 +116,35 @@ namespace METHOD_ADD { // decl
 	 * 差异系数 = 标准差 / 平均值
 	 */
 	template <typename T>
-		void prepare_chayixishu(std::vector<scheme_dimension>& score, const std::vector<SchemePtr>& scheme, const remove_dimension_para& para) {
-			std::vector<score_type> scores;
-			for (auto& s : scheme) { // foreach scheme
+        void prepare_chayixishu(
+                std::vector<chayixishu_score>& score,
+                const std::vector<SchemePtr>& schemes,
+                const remove_dimension_para& para
+        ) {
+            std::vector<score_type> recalc_score;
+            for (auto& s : schemes) { // foreach scheme
 				// 标准差
 				auto sd = std::sqrt(s->getIndicator<T>(7).variance());
 				// 平均值
 				auto avg = s->getIndicator<T>(7).mean();
-				scores.push_back(sd/avg);
+                // qDebug() << "sd" << sd << "mean" << avg;
+                recalc_score.push_back(sd/avg);
 			}
 			// find max & min
-			double max = *std::max_element(scores.begin(), scores.end());
-			double min = *std::min_element(scores.begin(), scores.end());
-
-			size_t ssize = scheme.size();
-			score.resize(ssize);
+            double total_max = *std::max_element(recalc_score.begin(), recalc_score.end());
+            double total_min = *std::min_element(recalc_score.begin(), recalc_score.end());
+            qDebug() << "total max for" << para.index << total_max;
+            qDebug() << "total min for" << para.index << total_min;
+            size_t ssize = schemes.size();
+            // score.resize(ssize);
 			for (size_t j = 0; j < ssize; ++j) {
-				score[j].score.push_back(do_remove_dimension<T>(scheme[j], para, max, min));
-				score[j].scheme = scheme[j]; // TODO: could be dangerous
+                auto f = recalc_score[j];
+                chayixishu_score p;
+                // known neg indicator. directly placed here.
+                p.score = 100-(f-total_min)/(total_max-total_min)*99;
+                p.scheme = schemes[j];
+                // qDebug() << f << p.score;
+                score[j] = p;
 			}
 		}
 
@@ -171,6 +195,7 @@ namespace METHOD_ADD { // decl
 
 			result.push_back(first_half*.6+second_half*.4);
 		}
+        // qDebug() << scheme.scheme->getName() << result.size();
 		return result;
 	}
 } // namespace method_add
@@ -180,47 +205,63 @@ using namespace METHOD_ADD;
 //------------------- main function start here ---------------------------
 // @params: the second vector is the number of schemes,
 // 			the first stores renkougaiyao & fufuzinv 
-evaluate_result* method_add(const std::vector<std::vector<SchemePtr>>& scheme) {
-	std::vector<score_type> indicator_layer;
+evaluate_result* method_add(const std::vector<std::vector<SchemePtr>>& schemes) {
 	// first : renkougaiyao & fufuzinv
 	// second: each schemes
 	// a scheme shall be score[0][i] + score[1][i];
-	std::vector<scheme_dimension> score[2];
-
+    /*
+    struct scheme_dimension { // schemePtr & the values with dimension removed
+        QVector<indicator_layer_score> score;
+        SchemePtr scheme;
+    };
+     */
+    // scheme_dimension: scheme & all it's dimension_removed indicator values
+    std::vector<scheme_dimension> scores[2];
+    std::vector<chayixishu_score> chayixishu_scores;
+    scores[0].resize(schemes[0].size());
+    scores[1].resize(schemes[1].size());
+    chayixishu_scores.resize(schemes[0].size());
 	// renkougaiyao
-	remove_dimension<schDouble>(score[0], scheme[0], {3, false});
-	remove_dimension<schDouble>(score[0], scheme[0], {115, true});
-	remove_dimension<schDouble>(score[0], scheme[0], {116, true});
-	remove_dimension<schDouble>(score[0], scheme[0], {22, true});
+    remove_dimension<schDouble>(scores[0], schemes[0], {3, false});
+    remove_dimension<schDouble>(scores[0], schemes[0], {115, true});
+    remove_dimension<schDouble>(scores[0], schemes[0], {116, true});
+    remove_dimension<schDouble>(scores[0], schemes[0], {22, true});
 	// gao 7
-	prepare_chayixishu<schDouble>(score[0], scheme[0], {7, false});
-	remove_dimension<schDouble>(score[0], scheme[0], {99, true});
-	remove_dimension<schDouble>(score[0], scheme[0], {100, false});
-	remove_dimension<schDouble>(score[0], scheme[0], {102, false});
-	remove_dimension<schDouble>(score[0], scheme[0], {103, false});
-	remove_dimension<schDouble>(score[0], scheme[0], {104, true});
-	remove_dimension<schDouble>(score[0], scheme[0], {105, true});
-	remove_dimension<schDouble>(score[0], scheme[0], {101, true});
-	remove_dimension<schDouble>(score[0], scheme[0], {81, false});
-	remove_dimension<schDouble>(score[1], scheme[1], {64, false});
-	remove_dimension<schDouble>(score[1], scheme[1], {67, false});
+    prepare_chayixishu<schDouble>(chayixishu_scores, schemes[0], {7, false});
+    remove_dimension<schDouble>(scores[0], schemes[0], {99, true});
+    remove_dimension<schDouble>(scores[0], schemes[0], {100, false});
+    remove_dimension<schDouble>(scores[0], schemes[0], {102, false});
+    remove_dimension<schDouble>(scores[0], schemes[0], {103, false});
+    remove_dimension<schDouble>(scores[0], schemes[0], {104, true});
+    remove_dimension<schDouble>(scores[0], schemes[0], {105, true});
+    remove_dimension<schDouble>(scores[0], schemes[0], {101, true});
+    remove_dimension<schDouble>(scores[0], schemes[0], {81, false});
+    remove_dimension<schInt>(scores[1], schemes[1], {64, false});
+    remove_dimension<schInt>(scores[1], schemes[1], {67, false});
 
 	evaluate_result* result=nullptr; 
 	// scheme size
-	result = new evaluate_result[scheme[0].size()];
-	size_t ssize = score[0].size(); // score[0] & score[1] shall have the same size
+    result = new evaluate_result[schemes[0].size()];
+    size_t ssize = scores[0].size(); // score[0] & score[1] shall have the same size
 	// foreach scheme =>indicator layer (准则层)
+    // TODO: magic number! alot of Magic Numbers!
 	for (size_t i = 0 ; i < ssize; ++i) {
 		// gao renkougaiyao
-		auto tmp_res = gao_add(score[0][i]);
-        for (size_t j = 0; j < tmp_res.size(); ++j)
+        auto tmp_res = gao_add(scores[0][i]);
+        // before chayixishu
+        for (size_t j = 0; j < 4; ++j)
 			result[i].indicator[j] = tmp_res[j];
+        result[i].indicator[4] = chayixishu_scores[i].score;
+        // tmp_res.size()+1 : one for chayixishu score
+        for (size_t j = 5; j < tmp_res.size()+1; ++j)
+            result[i].indicator[j] = tmp_res[j-1];
 		// gao fufuzinv
-		auto tmp_res_1 = gao_add(score[1][i]);
+        auto tmp_res_1 = gao_add(scores[1][i]);
+        // TODO: magic number!
         for (size_t j = 0; j < tmp_res_1.size(); ++j)
-			result[i].indicator[j] = tmp_res_1[j];
+            result[i].indicator[j+13] = tmp_res_1[j];
 
-		result[i].scheme = score[0][i].scheme;
+        result[i].scheme = scores[0][i].scheme;
 	}
 
 	// foreach scheme => rule_2 (指标层2)

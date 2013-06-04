@@ -87,18 +87,18 @@ int main (int argc, const char* argv[]) {
         auto gbk_dec = gbk->makeDecoder();
 		for (bf::directory_iterator file_iter(path); file_iter != end_iter; ++file_iter) {
             auto filename = gbk_dec->toUnicode(file_iter->path().filename().string().c_str());
-            qDebug() << "ori filename" << file_iter->path().filename().string().c_str();
+            // qDebug() << "ori filename" << file_iter->path().filename().string().c_str();
 			// remove ".txt"
-            filename.remove(".txt");
-            if (filename.contains("上海")) {
+            filename.remove(".txt").remove(".TXT");
+            if (filename.contains("全国")) {
                 if (filename.contains("合计人口概要")) {
-                    qDebug() << "filename" << filename << endl;
+                    qDebug() << "filename" << filename;
                     v_rkgy.push_back(std::make_shared<Scheme>(Scheme(meta_rkgy, buffer, filename)));
 					buffer->forceRead(v_rkgy.back().get());
                 } else if (filename.contains("合计夫妇子女")) {
+                    qDebug() << "filename" << filename;
                     v_ffzn.push_back(std::make_shared<Scheme>(Scheme(meta_fufuzinv, buffer, filename)));
 					buffer->forceRead(v_ffzn.back().get());
-                    qDebug() << filename << endl;
 				}
 			}
 		}
@@ -106,7 +106,7 @@ int main (int argc, const char* argv[]) {
 		// v_rkgy.push_back(SchemePtr( new Scheme(meta_rkgy, buffer, QString("上海合计人口概要_回归分释_多龄_农d11p15_非d11p15_z"))));
 		// v_ffzn.push_back(SchemePtr( new Scheme(meta_fufuzinv, buffer, QString("上海合计夫妇子女_回归分释_多龄_农d11p15_非d11p15_z"))));
 		// align(v_rkgy, v_ffzn);
-		std::cerr << "gaohaole";
+        std::cerr << "gaohaole\n";
 		std::vector<std::vector<SchemePtr>> c;
 		c.push_back(v_rkgy);
 		c.push_back(v_ffzn);
@@ -120,6 +120,12 @@ int main (int argc, const char* argv[]) {
 		 SchemePtr scheme;
 		 };
 		 */
+        sort(&r[0], &r[v_rkgy.size()],
+                [&](const METHOD_ADD::evaluate_result& lhs, const METHOD_ADD::evaluate_result& rhs)
+                {
+                    return lhs.synthesize > rhs.synthesize;
+                }
+        );
 		for (size_t j = 0; j < v_rkgy.size(); ++j) {
 			qDebug() << r[j].scheme->getName();
 			qDebug() << "indicator";
@@ -145,7 +151,9 @@ int main (int argc, const char* argv[]) {
 		qDebug() << e.what()->toInternalName() << e.index();
 	} catch (const ColNotExist& e) {
 		qDebug() << e.index() << e.value();
-	}
+    } catch (const RecordNotExist& e ) {
+        qDebug() << "record not exist" << e.name();
+    }
 
 	// } catch (const ColNotExist& e) {
 	//    cerr << e.value().toStdString() << e.index();
