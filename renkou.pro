@@ -2,7 +2,9 @@ TEMPLATE = subdirs
 CONFIG += ordered
 
 SUBDIRS = Scheme\
-    evaluate
+    evaluate\
+    MainWindow \
+    MainWindow
 
 evaluate.depends = Scheme
 

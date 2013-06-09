@@ -90,7 +90,7 @@ int main (int argc, const char* argv[]) {
             // qDebug() << "ori filename" << file_iter->path().filename().string().c_str();
 			// remove ".txt"
             filename.remove(".txt").remove(".TXT");
-            if (filename.contains("全国")) {
+            if (filename.contains("浙北")) {
                 if (filename.contains("合计人口概要")) {
                     qDebug() << "filename" << filename;
                     v_rkgy.push_back(std::make_shared<Scheme>(Scheme(meta_rkgy, buffer, filename)));
