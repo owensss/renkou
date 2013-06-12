@@ -2,7 +2,8 @@ TEMPLATE = subdirs
 CONFIG += ordered
 
 SUBDIRS = Scheme\
-    evaluate
+    evaluate \
+    test
 
 evaluate.depends = Scheme
 

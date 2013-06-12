@@ -55,10 +55,10 @@ public:
     }
 
 private:
-
     schememetadata(const schememetadata&);
     schememetadata& operator= (const schememetadata&);
-    void readMetadata(const QString& );
+    void readMetadata(const QString&);
+private:
     QString metadataName;
     QMap<QString , metadataItem> mtdMap;
     QMap<int , QString> indexMap;

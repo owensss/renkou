@@ -95,7 +95,7 @@ class Scheme : public std::enable_shared_from_this<Scheme> {
          *			return the intance on success
          */
         SchemeInstance getInstance(size_t year) ;
-        SchemeInstance operator [] (size_t year ) ;
+        SchemeInstance operator [] (size_t year) ;
         size_t startYear(void) const;
         size_t endYear(void) const;
     private:

@@ -32,7 +32,7 @@ class SchemeParameter : public ParaSetter {
 
 class SchemeParameterDefault : public SchemeParameter{
     public:
-        explicit SchemeParameterDefault(std::shared_ptr<ParaHolder> hd);
+        explicit SchemeParameterDefault();
 /* *************** @ 尹老师 聊天记录(From QQ @conversation with Yin.)
          地区、政策实现程度（分两种：政策生育、可能生育，可能生育即原来的“回归生育”）、堆积释放模式（分四种：分释、突释、缓释、正常）、婚配概率估计方法（只有多龄概率一种，可不标明。原来还有同龄概率）、户籍（农业、非农）、政策口径(多种)+政策调整时机、迁移强度
  * *****************************************************************/
