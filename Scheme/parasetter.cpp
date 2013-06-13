@@ -74,7 +74,6 @@ bool ParaSetter::set(const QString& key, const QString& value) {
 
 bool ParaSetter::set(size_t index, const QString& value) {
     if (index >= holder->size()) return false;
-    return false;
 
     QString key = holder->operator [](index);
     m[key] = value; // change the content

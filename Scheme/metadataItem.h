@@ -17,7 +17,6 @@ namespace scheme{
 class metadataItem
 {
 public:
-
     enum TYPE {NONE, STRING, INT, DOUBLE};
 
     metadataItem(QString,QString,int,int,int,QString);

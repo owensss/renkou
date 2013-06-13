@@ -7,7 +7,7 @@
 #include "SchemeIndicator.hpp"
 #include "exceptions/ColumnNotExist.hpp"
 #include <cassert>
-#include <boost/filesystem.hpp>
+//#include <boost/filesystem.hpp>
 #include <QString>
 #include <iostream>
 #include <QObject>

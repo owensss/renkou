@@ -34,4 +34,3 @@ metadataItem::metadataItem(QString fname = "",
         field_type = DOUBLE; //DOUBLE
     }
 }
-
