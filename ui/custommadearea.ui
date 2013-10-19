@@ -1,0 +1,2122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CustomMadeArea</class>
+ <widget class="QDialog" name="CustomMadeArea">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>485</width>
+    <height>338</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>定制地区</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>310</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>定制</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>390</x>
+     <y>310</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>310</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>命名定制地区：</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>310</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTreeWidget" name="treeWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>481</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>地区</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>选择系统提供</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>选择个人定制</string>
+    </property>
+   </column>
+   <item>
+    <property name="text">
+     <string>全国</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <item>
+     <property name="text">
+      <string>全国(整体)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <item>
+      <property name="text">
+       <string>北京</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>天津</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>河北</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>山西</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>内蒙古</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>辽宁</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>吉林</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>黑龙江</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>上海</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>江苏</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>浙江</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>安徽</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>福建</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>江西</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>山东</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>河南</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>湖北</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>湖南</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>广东</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>广西</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>海南</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>重庆</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>四川</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>贵州</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>云南</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>西藏</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>陕西</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>甘肃</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>青海</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>宁夏</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>新疆</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>全国(分省合计)</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>北京</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>天津</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>河北</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>山西</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>内蒙古</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>辽宁</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>吉林</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>黑龙江</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>上海</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>江苏</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>浙江</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>安徽</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>福建</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>江西</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>山东</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>河南</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>湖北</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>湖南</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>广东</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>广西</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>海南</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>重庆</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>四川</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>贵州</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>云南</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>西藏</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>陕西</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>甘肃</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>青海</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>宁夏</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>新疆</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+     </item>
+    </item>
+   </item>
+   <item>
+    <property name="text">
+     <string>按地带三分法</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>东部(三分法)</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>北京</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>天津</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>河北</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>辽宁</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>上海</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>江苏</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>浙江</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>福建</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>山东</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>广东</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>海南</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>中部(三分法)</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>内蒙古</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>广西</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>重庆</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>四川</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>贵州</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>云南</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>西藏</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>陕西</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>甘肃</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>青海</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>宁夏</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>新疆</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>西部(三分法)</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>山西</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>吉林</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>黑龙江</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>安徽</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>江西</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>河南</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>湖北</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>湖南</string>
+      </property>
+     </item>
+    </item>
+   </item>
+   <item>
+    <property name="text">
+     <string>按地带四分法</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>东部(四分法)</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>北京</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>天津</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>河北</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>上海</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>江苏</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>浙江</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>福建</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>山东</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>广东</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>海南</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>中部(四分法)</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>山西</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>安徽</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>江西</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>河南</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>湖北</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>湖南</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>西部(四分法)</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>内蒙古</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>广西</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>重庆</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>四川</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>贵州</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>云南</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>西藏</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>陕西</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>甘肃</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>青海</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>宁夏</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>新疆</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>东北(四分法)</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>辽宁</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>吉林</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>黑龙江</string>
+      </property>
+     </item>
+    </item>
+   </item>
+   <item>
+    <property name="text">
+     <string>按区域六分法</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <item>
+     <property name="text">
+      <string>华北</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>北京</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>天津</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>河北</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>山西</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>内蒙古</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>东北(六分法)</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>辽宁</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>吉林</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>黑龙江</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>华东</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>上海</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>江苏</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>浙江</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>福建</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>山东</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>安徽</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>江西</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>华中</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>广东</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>海南</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>河南</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>湖北</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>湖南</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>广西</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>西南</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>重庆</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>四川</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>贵州</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>云南</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>西藏</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>西北</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>陕西</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>甘肃</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>青海</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>宁夏</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>新疆</string>
+      </property>
+     </item>
+    </item>
+   </item>
+   <item>
+    <property name="text">
+     <string>按重点区域法</string>
+    </property>
+    <item>
+     <property name="text">
+      <string>京津冀</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>北京</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>天津</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>河北</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>泛长三角</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>上海</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>江苏</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>浙江</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>泛珠三角</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>广东</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>海南</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>湖北</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>湖南</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>广西</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>重庆</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>四川</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>泛环渤海</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>辽宁</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>山东</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Checked</enum>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="checkState">
+       <enum>Unchecked</enum>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>北京</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>天津</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>河北</string>
+      </property>
+     </item>
+    </item>
+   </item>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

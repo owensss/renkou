@@ -3,7 +3,8 @@ CONFIG += ordered
 
 SUBDIRS = Scheme\
     evaluate \
-    test
+    test \
+    ui
 
 evaluate.depends = Scheme
 
