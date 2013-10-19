@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 TEMPLATE = subdirs
 CONFIG += ordered
 
@@ -8,3 +9,14 @@ SUBDIRS = Scheme\
 
 evaluate.depends = Scheme
 
+=======
+TEMPLATE = subdirs
+CONFIG += ordered
+
+SUBDIRS = Scheme\
+    evaluate\
+    MainWindow
+    test
+evaluate.depends = Scheme
+test.depends = test
+>>>>>>> upstream/master

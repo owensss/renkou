@@ -55,7 +55,7 @@ int main (int argc, const char* argv[]) {
 	using namespace std;
 	try {
 		// force use utf-8
-		QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf-8"));
+        QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf-8"));
 
 		bool swt[3]; // add, mult, var
 		swt[0] = false; swt[1] = false; swt[2] = false; // init
@@ -82,19 +82,23 @@ int main (int argc, const char* argv[]) {
 
 		bf::path path(Config::config["DATA_PATH"].toStdString());
 		bf::directory_iterator end_iter;
+
+        auto gbk = QTextCodec::codecForName("gbk");
+        auto gbk_dec = gbk->makeDecoder();
 		for (bf::directory_iterator file_iter(path); file_iter != end_iter; ++file_iter) {
-			auto filename = file_iter->path().filename().string();
+            auto filename = gbk_dec->toUnicode(file_iter->path().filename().string().c_str());
+            // qDebug() << "ori filename" << file_iter->path().filename().string().c_str();
 			// remove ".txt"
-			filename.replace(filename.end()-4, filename.end(), "");
-			if (filename.find("上海") != string::npos) {
-				if (filename.find("合计人口概要") != string::npos) {
-					v_rkgy.push_back(std::make_shared<Scheme>(Scheme(meta_rkgy, buffer, QString(filename.c_str()))));
+            filename.remove(".txt").remove(".TXT");
+            if (filename.contains("浙北")) {
+                if (filename.contains("合计人口概要")) {
+                    qDebug() << "filename" << filename;
+                    v_rkgy.push_back(std::make_shared<Scheme>(Scheme(meta_rkgy, buffer, filename)));
 					buffer->forceRead(v_rkgy.back().get());
-					cerr << filename << endl;
-				} else if (filename.find("合计夫妇子女") != string::npos) {
-					v_ffzn.push_back(std::make_shared<Scheme>(Scheme(meta_fufuzinv, buffer, QString(filename.c_str()))));
+                } else if (filename.contains("合计夫妇子女")) {
+                    qDebug() << "filename" << filename;
+                    v_ffzn.push_back(std::make_shared<Scheme>(Scheme(meta_fufuzinv, buffer, filename)));
 					buffer->forceRead(v_ffzn.back().get());
-					cerr << filename << endl;
 				}
 			}
 		}
@@ -102,7 +106,7 @@ int main (int argc, const char* argv[]) {
 		// v_rkgy.push_back(SchemePtr( new Scheme(meta_rkgy, buffer, QString("上海合计人口概要_回归分释_多龄_农d11p15_非d11p15_z"))));
 		// v_ffzn.push_back(SchemePtr( new Scheme(meta_fufuzinv, buffer, QString("上海合计夫妇子女_回归分释_多龄_农d11p15_非d11p15_z"))));
 		// align(v_rkgy, v_ffzn);
-		std::cerr << "gaohaole";
+        std::cerr << "gaohaole\n";
 		std::vector<std::vector<SchemePtr>> c;
 		c.push_back(v_rkgy);
 		c.push_back(v_ffzn);
@@ -116,6 +120,12 @@ int main (int argc, const char* argv[]) {
 		 SchemePtr scheme;
 		 };
 		 */
+        sort(&r[0], &r[v_rkgy.size()],
+                [&](const METHOD_ADD::evaluate_result& lhs, const METHOD_ADD::evaluate_result& rhs)
+                {
+                    return lhs.synthesize > rhs.synthesize;
+                }
+        );
 		for (size_t j = 0; j < v_rkgy.size(); ++j) {
 			qDebug() << r[j].scheme->getName();
 			qDebug() << "indicator";
@@ -141,7 +151,9 @@ int main (int argc, const char* argv[]) {
 		qDebug() << e.what()->toInternalName() << e.index();
 	} catch (const ColNotExist& e) {
 		qDebug() << e.index() << e.value();
-	}
+    } catch (const RecordNotExist& e ) {
+        qDebug() << "record not exist" << e.name();
+    }
 
 	// } catch (const ColNotExist& e) {
 	//    cerr << e.value().toStdString() << e.index();

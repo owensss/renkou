@@ -11,4 +11,4 @@ namespace METHOD_ADD {
 	};
 }
 
-METHOD_ADD::evaluate_result* method_add(const std::vector<std::vector<SchemePtr>>& scheme);
+METHOD_ADD::evaluate_result* method_add(const std::vector<std::vector<SchemePtr>>& schemes);

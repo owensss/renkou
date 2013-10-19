@@ -16,7 +16,7 @@ typedef std::shared_ptr<SchemeBuffer> SchemeBufferPtr;
 typedef std::shared_ptr<SchemeInstance> SchemeInstancePtr;
 template <typename T> using SchemeIndicatorPtr = std::shared_ptr<SchemeIndicator<T> >;
 
-typedef int32_t schInt;
+typedef int64_t schInt;
 typedef double schDouble;
 typedef QString schString;
 

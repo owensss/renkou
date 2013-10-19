@@ -42,6 +42,11 @@ namespace METHOD_ADD {
 		SchemePtr scheme;
 	};
 
+    struct chayixishu_score {
+        score_type score;
+        SchemePtr scheme;
+    };
+
 	template <typename T>
 		score_type gao_avg(SchemePtr scheme, size_t index, bool posi, bool std, score_type pz) ;
 	template <typename T>
