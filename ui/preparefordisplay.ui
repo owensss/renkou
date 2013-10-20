@@ -1,0 +1,3903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PrepareForDisplay</class>
+ <widget class="QDialog" name="PrepareForDisplay">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>548</width>
+    <height>814</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>761</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>进入显示</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>761</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>取消</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>491</width>
+     <height>731</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0,0,0,0">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetFixedSize</enum>
+    </property>
+    <item>
+     <widget class="QLabel" name="label_2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>151</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>151</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>  选择组合</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget_2" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>450</width>
+        <height>480</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>450</width>
+        <height>500</height>
+       </size>
+      </property>
+      <widget class="QTabWidget" name="tabWidget_1">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>19</y>
+         <width>450</width>
+         <height>471</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>450</width>
+         <height>500</height>
+        </size>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <property name="usesScrollButtons">
+        <bool>false</bool>
+       </property>
+       <widget class="QWidget" name="tab_1">
+        <attribute name="title">
+         <string>地区选择</string>
+        </attribute>
+        <widget class="QToolBox" name="toolBox">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>0</y>
+           <width>391</width>
+           <height>401</height>
+          </rect>
+         </property>
+         <property name="currentIndex">
+          <number>1</number>
+         </property>
+         <widget class="QWidget" name="page_10">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>391</width>
+            <height>193</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>个人定制地区</string>
+          </attribute>
+          <widget class="QRadioButton" name="radioButton_101">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>120</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>391</width>
+            <height>193</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>省份</string>
+          </attribute>
+          <widget class="QRadioButton" name="radioButton_109">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>北京</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_135">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>0</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>天津</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_136">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>0</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>河北</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_140">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>0</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>山西</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_141">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>20</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>辽宁</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_142">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>20</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>吉林</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_143">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>20</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>黑龙江</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_144">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>20</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>上海</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_145">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>40</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>浙江</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_146">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>40</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>安徽</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_147">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>40</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>福建</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_148">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>40</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>江西</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_149">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>60</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>广西</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_150">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>60</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>陕西</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_151">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>60</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>海南</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_152">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>60</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>四川</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_153">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>80</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>贵州</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_154">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>80</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>湖南</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_155">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>80</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>河南</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_156">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>80</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>广东</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_157">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>100</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>湖北</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_158">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>100</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>西藏</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_159">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>100</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>重庆</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_160">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>100</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>云南</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_161">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>120</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>山东</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_162">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>120</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>江苏</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_163">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>120</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>内蒙古</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_164">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>120</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>甘肃</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_165">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>140</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>青海</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_166">
+           <property name="geometry">
+            <rect>
+             <x>100</x>
+             <y>140</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>宁夏</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_167">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>140</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>新疆</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_168">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>140</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>RadioButton_107</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_9">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>391</width>
+            <height>193</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>全国</string>
+          </attribute>
+          <widget class="QRadioButton" name="radioButton_169">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>10</y>
+             <width>101</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="statusTip">
+            <string/>
+           </property>
+           <property name="whatsThis">
+            <string extracomment="使用尽可能多的“个人定制地区”，缺省地区使用“系统默认地区”"/>
+           </property>
+           <property name="text">
+            <string>全国(整体)</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_170">
+           <property name="geometry">
+            <rect>
+             <x>270</x>
+             <y>130</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_171">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>30</y>
+             <width>131</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>全国(分省合计)</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_18">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>391</width>
+            <height>193</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>按地带三分法</string>
+          </attribute>
+          <widget class="QRadioButton" name="radioButton_172">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>20</y>
+             <width>121</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>东部(三分法)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_173">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>20</y>
+             <width>111</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>中部(三分法)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_174">
+           <property name="geometry">
+            <rect>
+             <x>280</x>
+             <y>20</y>
+             <width>111</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>西部(三分法)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_175">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>130</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_19">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>391</width>
+            <height>193</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>按地带四分法</string>
+          </attribute>
+          <widget class="QRadioButton" name="radioButton_176">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>121</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>东部(四分法)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_177">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>0</y>
+             <width>121</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>中部(四分法)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_178">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>40</y>
+             <width>121</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>西部(四分法)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_179">
+           <property name="geometry">
+            <rect>
+             <x>130</x>
+             <y>40</y>
+             <width>121</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>东北(四分法)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_180">
+           <property name="geometry">
+            <rect>
+             <x>290</x>
+             <y>130</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_20">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>391</width>
+            <height>193</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>按区域六分法</string>
+          </attribute>
+          <widget class="QRadioButton" name="radioButton_181">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>华北</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_182">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>0</y>
+             <width>121</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>东北(六分法)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_183">
+           <property name="geometry">
+            <rect>
+             <x>250</x>
+             <y>0</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>华东</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_184">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>30</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>华中</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_185">
+           <property name="geometry">
+            <rect>
+             <x>120</x>
+             <y>30</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>西南</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_186">
+           <property name="geometry">
+            <rect>
+             <x>250</x>
+             <y>30</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>西北</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_187">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>130</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_21">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>391</width>
+            <height>193</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>按重点区域法</string>
+          </attribute>
+          <widget class="QRadioButton" name="radioButton_188">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>10</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>京津冀</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_189">
+           <property name="geometry">
+            <rect>
+             <x>110</x>
+             <y>10</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>泛长三角</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_190">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>40</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>泛珠三角</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_191">
+           <property name="geometry">
+            <rect>
+             <x>110</x>
+             <y>40</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>泛环渤海</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_192">
+           <property name="geometry">
+            <rect>
+             <x>300</x>
+             <y>130</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_22">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>391</width>
+            <height>193</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>国际</string>
+          </attribute>
+          <widget class="QRadioButton" name="radioButton_193">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>世界</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_194">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>0</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>欧洲</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_195">
+           <property name="geometry">
+            <rect>
+             <x>140</x>
+             <y>0</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>北欧</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_196">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>0</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>南欧</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_197">
+           <property name="geometry">
+            <rect>
+             <x>270</x>
+             <y>0</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>西欧</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_198">
+           <property name="geometry">
+            <rect>
+             <x>330</x>
+             <y>0</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>东欧</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_199">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>20</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>北美</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_200">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>20</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>中美洲</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_201">
+           <property name="geometry">
+            <rect>
+             <x>150</x>
+             <y>20</y>
+             <width>91</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>拉丁美洲</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_202">
+           <property name="geometry">
+            <rect>
+             <x>240</x>
+             <y>20</y>
+             <width>81</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>大洋洲</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_203">
+           <property name="geometry">
+            <rect>
+             <x>320</x>
+             <y>20</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>亚洲</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_204">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>40</y>
+             <width>61</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>非洲</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_205">
+           <property name="geometry">
+            <rect>
+             <x>70</x>
+             <y>40</y>
+             <width>91</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>中东非洲</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_206">
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>40</y>
+             <width>121</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>撒哈拉南非洲</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_207">
+           <property name="geometry">
+            <rect>
+             <x>270</x>
+             <y>110</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_2">
+        <attribute name="title">
+         <string>方案选择</string>
+        </attribute>
+        <widget class="QScrollArea" name="scrollArea_2">
+         <property name="geometry">
+          <rect>
+           <x>0</x>
+           <y>0</y>
+           <width>427</width>
+           <height>391</height>
+          </rect>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>false</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>408</width>
+            <height>479</height>
+           </rect>
+          </property>
+          <widget class="Line" name="line_4">
+           <property name="geometry">
+            <rect>
+             <x>193</x>
+             <y>150</y>
+             <width>20</width>
+             <height>261</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+          </widget>
+          <widget class="Line" name="line_7">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>180</y>
+             <width>411</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="Line" name="line_8">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>201</y>
+             <width>411</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="Line" name="line_9">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>290</y>
+             <width>411</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_6">
+           <property name="geometry">
+            <rect>
+             <x>60</x>
+             <y>420</y>
+             <width>131</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>同步“农业”选项
+至“非农业”</string>
+           </property>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>150</y>
+             <width>201</width>
+             <height>251</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <strikeout>false</strikeout>
+             <kerning>true</kerning>
+            </font>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+           <property name="checkable">
+            <bool>false</bool>
+           </property>
+           <widget class="QRadioButton" name="radioButton_208">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>65</y>
+              <width>89</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>一步走</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_16">
+            <property name="geometry">
+             <rect>
+              <x>70</x>
+              <y>5</y>
+              <width>71</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>农业</string>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="radioButton_209">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>40</y>
+              <width>89</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>现行</string>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="radioButton_210">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>160</y>
+              <width>89</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>两步走</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_8">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>90</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>时机</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="NongYiBuXiaLa">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>112</y>
+              <width>101</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>单独</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>单独后</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>普二</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="NongDiYiBu">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>220</y>
+              <width>51</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>单独</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>单独后</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="label_17">
+            <property name="geometry">
+             <rect>
+              <x>13</x>
+              <y>200</y>
+              <width>91</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>时机  第一次</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="NongDiErBu">
+            <property name="geometry">
+             <rect>
+              <x>100</x>
+              <y>220</y>
+              <width>51</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>普二</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="label_18">
+            <property name="geometry">
+             <rect>
+              <x>113</x>
+              <y>200</y>
+              <width>91</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>时机 第二次</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="NongYiBuShiJi">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>113</y>
+              <width>81</width>
+              <height>20</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="NongDiYiBu_2">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>221</y>
+              <width>41</width>
+              <height>20</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="comboBox_14">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>221</y>
+              <width>41</width>
+              <height>20</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QGroupBox" name="groupBox_4">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>150</y>
+             <width>211</width>
+             <height>251</height>
+            </rect>
+           </property>
+           <property name="title">
+            <string/>
+           </property>
+           <property name="flat">
+            <bool>true</bool>
+           </property>
+           <widget class="QRadioButton" name="radioButton_211">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>40</y>
+              <width>89</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>现行</string>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="radioButton_212">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>160</y>
+              <width>89</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>两步走</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_19">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>5</y>
+              <width>101</width>
+              <height>31</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>20</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>非农业</string>
+            </property>
+           </widget>
+           <widget class="QRadioButton" name="radioButton_213">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>65</y>
+              <width>89</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>一步走</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="FeiNongYiBuXiaLa">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>112</y>
+              <width>101</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>单独</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>单独后</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>普二</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="label_20">
+            <property name="geometry">
+             <rect>
+              <x>53</x>
+              <y>90</y>
+              <width>31</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>时机</string>
+            </property>
+           </widget>
+           <widget class="QComboBox" name="comboBox_24">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>220</y>
+              <width>51</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>单独</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>单独后</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QComboBox" name="comboBox_16">
+            <property name="geometry">
+             <rect>
+              <x>100</x>
+              <y>220</y>
+              <width>51</width>
+              <height>22</height>
+             </rect>
+            </property>
+            <item>
+             <property name="text">
+              <string>普二</string>
+             </property>
+            </item>
+           </widget>
+           <widget class="QLabel" name="label_21">
+            <property name="geometry">
+             <rect>
+              <x>113</x>
+              <y>200</y>
+              <width>91</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>时机 第二次</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_22">
+            <property name="geometry">
+             <rect>
+              <x>13</x>
+              <y>200</y>
+              <width>91</width>
+              <height>16</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>时机  第一次</string>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="FeiNongYiBuShiJi">
+            <property name="geometry">
+             <rect>
+              <x>110</x>
+              <y>113</y>
+              <width>81</width>
+              <height>20</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="comboBox_18">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>221</y>
+              <width>41</width>
+              <height>20</height>
+             </rect>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="comboBox_19">
+            <property name="geometry">
+             <rect>
+              <x>150</x>
+              <y>221</y>
+              <width>41</width>
+              <height>20</height>
+             </rect>
+            </property>
+           </widget>
+          </widget>
+          <widget class="QLabel" name="label_23">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>10</y>
+             <width>121</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>当前已勾选方案：</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="pushButton_7">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>420</y>
+             <width>121</width>
+             <height>51</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>添加该方案</string>
+           </property>
+          </widget>
+          <widget class="QListWidget" name="strategylist">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>30</y>
+             <width>371</width>
+             <height>111</height>
+            </rect>
+           </property>
+           <property name="selectionRectVisible">
+            <bool>false</bool>
+           </property>
+          </widget>
+          <widget class="Line" name="line_10">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>400</y>
+             <width>411</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_3">
+        <attribute name="title">
+         <string>政策实现程度估计法选择</string>
+        </attribute>
+        <widget class="QRadioButton" name="radioButton_214">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>70</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>政策生育</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_215">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>120</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>回归估计</string>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_216">
+         <property name="geometry">
+          <rect>
+           <x>100</x>
+           <y>170</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>意愿生育</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_10">
+        <attribute name="title">
+         <string>起始年选择</string>
+        </attribute>
+        <widget class="QLabel" name="label_24">
+         <property name="geometry">
+          <rect>
+           <x>40</x>
+           <y>50</y>
+           <width>54</width>
+           <height>12</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>起始年：</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_217">
+         <property name="geometry">
+          <rect>
+           <x>110</x>
+           <y>50</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>2010</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_218">
+         <property name="geometry">
+          <rect>
+           <x>310</x>
+           <y>300</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>RadioButton</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_last1">
+        <attribute name="title">
+         <string>Page</string>
+        </attribute>
+       </widget>
+      </widget>
+      <widget class="QTabWidget" name="tabWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>400</x>
+         <y>420</y>
+         <width>21</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <property name="usesScrollButtons">
+        <bool>false</bool>
+       </property>
+       <widget class="QWidget" name="tab_4">
+        <attribute name="title">
+         <string>结婚率有偶率估计法选择</string>
+        </attribute>
+        <widget class="QRadioButton" name="radioButton_219">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>80</y>
+           <width>121</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>全员婚配有偶</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_220">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>130</y>
+           <width>151</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>结婚率_无婚率估计</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_5">
+        <attribute name="title">
+         <string>迁移强度选择</string>
+        </attribute>
+        <widget class="QRadioButton" name="radioButton_221">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>80</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>低迁移</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_222">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>160</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>高迁移</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_223">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>120</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>中迁移</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_224">
+         <property name="geometry">
+          <rect>
+           <x>160</x>
+           <y>40</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>无迁移</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_6">
+        <attribute name="title">
+         <string>调整对象户籍选择</string>
+        </attribute>
+        <widget class="QRadioButton" name="radioButton_225">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>130</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>非农业</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_226">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>80</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>农业</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_227">
+         <property name="geometry">
+          <rect>
+           <x>190</x>
+           <y>190</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>合计</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_228">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>80</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>城镇</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_229">
+         <property name="geometry">
+          <rect>
+           <x>250</x>
+           <y>130</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>农村</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_last2">
+        <attribute name="title">
+         <string>Page</string>
+        </attribute>
+       </widget>
+      </widget>
+      <widget class="QTabWidget" name="tabWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>271</y>
+         <width>371</width>
+         <height>201</height>
+        </rect>
+       </property>
+       <property name="currentIndex">
+        <number>3</number>
+       </property>
+       <property name="usesScrollButtons">
+        <bool>false</bool>
+       </property>
+       <widget class="QWidget" name="tab_7">
+        <attribute name="title">
+         <string>婚配概率估计法选择</string>
+        </attribute>
+        <widget class="QRadioButton" name="radioButton_230">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>110</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>多龄概率</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_231">
+         <property name="geometry">
+          <rect>
+           <x>140</x>
+           <y>50</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>同龄概率</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_8">
+        <attribute name="title">
+         <string>堆积释放模式选择</string>
+        </attribute>
+        <widget class="QRadioButton" name="radioButton_232">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>30</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>意愿模式</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_233">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>70</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>分释模式</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_234">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>150</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>突释模式</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_235">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>190</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>正常模式</string>
+         </property>
+        </widget>
+        <widget class="QRadioButton" name="radioButton_236">
+         <property name="geometry">
+          <rect>
+           <x>120</x>
+           <y>110</y>
+           <width>89</width>
+           <height>16</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>缓释模式</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_9">
+        <attribute name="title">
+         <string>基本参数选择</string>
+        </attribute>
+        <widget class="QToolBox" name="toolBox_4">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>10</y>
+           <width>401</width>
+           <height>371</height>
+          </rect>
+         </property>
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="page_23">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>401</width>
+            <height>215</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>预期寿命</string>
+          </attribute>
+          <widget class="QRadioButton" name="radioButton_237">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>161</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>对数模型法(系统提供数据)</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_238">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>110</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_239">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>40</y>
+             <width>141</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>对数模型法(自行计算)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_240">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>60</y>
+             <width>131</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>联合国法(自行计算)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_241">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>80</y>
+             <width>171</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>逻辑斯蒂模型法(自行计算)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_242">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>100</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>其他模型法</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox00_2">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>10</y>
+             <width>91</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>全国(整体)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>全国(分省合计)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>北京</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>天津</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>河北</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>山西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>辽宁</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>吉林</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>黑龙江</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>上海</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>浙江</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>安徽</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>福建</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>江西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>广西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>陕西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>海南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>四川</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>贵州</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>湖南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>河南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>广东</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>湖北</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>西藏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>重庆</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>云南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>山东</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>江苏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>内蒙古</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>甘肃</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>青海</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>宁夏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>新疆</string>
+            </property>
+           </item>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_24">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>100</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>死亡概率</string>
+          </attribute>
+          <widget class="QRadioButton" name="radioButton_243">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>0</y>
+             <width>186</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>迭代预测模型法(系统提供数据)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_244">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>120</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_245">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>70</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>西方模式</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_246">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>90</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>北方模式</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_247">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>110</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>南方模式</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_248">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>130</y>
+             <width>111</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>联合国一般模式</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_249">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>150</y>
+             <width>131</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>联合国拉丁美洲模式</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_250">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>30</y>
+             <width>111</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>联合国智利模式</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_251">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>50</y>
+             <width>111</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>联合国南亚模式</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_252">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>70</y>
+             <width>111</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>联合国东亚模式</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_253">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>50</y>
+             <width>111</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>东方模式</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_254">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>30</y>
+             <width>171</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>迭代预测模型法(自行计算)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_255">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>210</x>
+             <y>90</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>其它模型法</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox11_2">
+           <property name="geometry">
+            <rect>
+             <x>200</x>
+             <y>0</y>
+             <width>91</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>全国(整体)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>全国(分省合计)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>北京</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>天津</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>河北</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>山西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>辽宁</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>吉林</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>黑龙江</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>上海</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>浙江</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>安徽</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>福建</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>江西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>广西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>陕西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>海南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>四川</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>贵州</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>湖南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>河南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>广东</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>湖北</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>西藏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>重庆</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>云南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>山东</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>江苏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>内蒙古</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>甘肃</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>青海</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>宁夏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>新疆</string>
+            </property>
+           </item>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_25">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>100</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>迁移概率</string>
+          </attribute>
+          <widget class="QRadioButton" name="radioButton_256">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>0</y>
+             <width>198</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>总和迁移率模型法(系统提供数据)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_257">
+           <property name="geometry">
+            <rect>
+             <x>250</x>
+             <y>80</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_258">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>30</y>
+             <width>181</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>总和迁移率模型法(自行计算)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_259">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>50</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>其它模型法</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox22_2">
+           <property name="geometry">
+            <rect>
+             <x>230</x>
+             <y>0</y>
+             <width>91</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>全国(整体)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>全国(分省合计)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>北京</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>天津</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>河北</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>山西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>辽宁</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>吉林</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>黑龙江</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>上海</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>浙江</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>安徽</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>福建</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>江西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>广西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>陕西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>海南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>四川</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>贵州</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>湖南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>河南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>广东</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>湖北</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>西藏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>重庆</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>云南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>山东</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>江苏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>内蒙古</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>甘肃</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>青海</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>宁夏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>新疆</string>
+            </property>
+           </item>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_26">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>100</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>生育模式</string>
+          </attribute>
+          <widget class="QRadioButton" name="radioButton_260">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>161</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>回归模型法(系统提供数据)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_261">
+           <property name="geometry">
+            <rect>
+             <x>250</x>
+             <y>80</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_262">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>40</y>
+             <width>141</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>回归模型法(自行计算)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_263">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>60</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>其它模型法</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox33_2">
+           <property name="geometry">
+            <rect>
+             <x>190</x>
+             <y>10</y>
+             <width>91</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>全国(整体)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>全国(分省合计)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>北京</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>天津</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>河北</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>山西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>辽宁</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>吉林</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>黑龙江</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>上海</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>浙江</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>安徽</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>福建</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>江西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>广西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>陕西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>海南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>四川</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>贵州</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>湖南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>河南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>广东</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>湖北</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>西藏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>重庆</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>云南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>山东</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>江苏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>内蒙古</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>甘肃</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>青海</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>宁夏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>新疆</string>
+            </property>
+           </item>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_27">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>100</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>终身意愿生育率</string>
+          </attribute>
+          <widget class="QRadioButton" name="radioButton_264">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>245</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>基于调查数据的量化模型法(系统提供数据)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_265">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>80</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_266">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>40</y>
+             <width>231</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>基于调查数据的量化模型法(自行计算)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_267">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>60</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>其它模型法</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox44_2">
+           <property name="geometry">
+            <rect>
+             <x>260</x>
+             <y>10</y>
+             <width>91</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>全国(整体)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>全国(分省合计)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>北京</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>天津</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>河北</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>山西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>辽宁</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>吉林</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>黑龙江</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>上海</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>浙江</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>安徽</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>福建</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>江西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>广西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>陕西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>海南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>四川</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>贵州</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>湖南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>河南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>广东</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>湖北</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>西藏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>重庆</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>云南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>山东</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>江苏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>内蒙古</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>甘肃</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>青海</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>宁夏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>新疆</string>
+            </property>
+           </item>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_28">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>100</width>
+            <height>30</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>生育水平现状评估与政策偏离度量化估计率</string>
+          </attribute>
+          <widget class="QRadioButton" name="radioButton_268">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>10</y>
+             <width>187</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>迭代回归模型法(系统提供数据)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_269">
+           <property name="geometry">
+            <rect>
+             <x>250</x>
+             <y>80</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>RadioButton</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_270">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>40</y>
+             <width>171</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>迭代回归模型法(自行计算)</string>
+           </property>
+          </widget>
+          <widget class="QRadioButton" name="radioButton_271">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>60</y>
+             <width>89</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="text">
+            <string>其它模型法</string>
+           </property>
+          </widget>
+          <widget class="QComboBox" name="comboBox55_2">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>10</y>
+             <width>91</width>
+             <height>22</height>
+            </rect>
+           </property>
+           <item>
+            <property name="text">
+             <string>全国(整体)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>全国(分省合计)</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>北京</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>天津</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>河北</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>山西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>辽宁</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>吉林</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>黑龙江</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>上海</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>浙江</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>安徽</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>福建</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>江西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>广西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>陕西</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>海南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>四川</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>贵州</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>湖南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>河南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>广东</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>湖北</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>西藏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>重庆</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>云南</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>山东</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>江苏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>内蒙古</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>甘肃</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>青海</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>宁夏</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>新疆</string>
+            </property>
+           </item>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+       <widget class="QWidget" name="tab_last3">
+        <attribute name="title">
+         <string>Page</string>
+        </attribute>
+       </widget>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <spacer name="verticalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>20</width>
+        <height>2</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QLabel" name="label_25">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>151</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>151</width>
+        <height>25</height>
+       </size>
+      </property>
+      <property name="text">
+       <string>  当前进行比较的组合</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QListWidget" name="listWidget_2">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="lineWidth">
+       <number>1</number>
+      </property>
+      <property name="isWrapping" stdset="0">
+       <bool>false</bool>
+      </property>
+      <property name="sortingEnabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
