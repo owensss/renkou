@@ -16,7 +16,7 @@ TEMPLATE = app
 
 SOURCES += tst_testtest.cpp
 DEFINES += SRCDIR=\\\"$$PWD/\\\"
-INCLUDEPATH += E:\renkou\sourcecode\renkou\Scheme
-LIBS += -LE:\renkou\sourcecode\renkou\lib -lScheme
+INCLUDEPATH += K:\renkou\Scheme
+LIBS += -LK:\renkou\lib -lScheme
 DEPENDPATH += ..\Scheme
 PRE_TARGETDEPS += ..\lib\libscheme.a

@@ -25,6 +25,7 @@ class TestTest : public QObject
         void initTestCase();
         void cleanupTestCase();
         void testSchemeBuffer();
+        void testAbstractScheme();
 };
 
 TestTest::TestTest()
