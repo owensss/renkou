@@ -124,7 +124,7 @@
     <property name="title">
      <string>基本参数</string>
     </property>
-    <widget class="QMenu" name="caculate_2">
+    <widget class="QMenu" name="caculate_para">
      <property name="enabled">
       <bool>false</bool>
      </property>
@@ -205,13 +205,13 @@
      <addaction name="menu_7"/>
      <addaction name="menu_8"/>
     </widget>
-    <addaction name="input_2"/>
-    <addaction name="import_5"/>
+    <addaction name="input_para"/>
+    <addaction name="import_para"/>
     <addaction name="separator"/>
-    <addaction name="caculate_2"/>
+    <addaction name="caculate_para"/>
     <addaction name="separator"/>
-    <addaction name="view_2"/>
-    <addaction name="modify_2"/>
+    <addaction name="view_para"/>
+    <addaction name="modify_para"/>
    </widget>
    <widget class="QMenu" name="Analysis">
     <property name="enabled">
@@ -249,8 +249,8 @@
     <property name="title">
      <string>基础数据</string>
     </property>
-    <addaction name="input"/>
-    <addaction name="import_2"/>
+    <addaction name="input_data"/>
+    <addaction name="import_data"/>
     <addaction name="separator"/>
     <addaction name="view"/>
     <addaction name="modify"/>
@@ -328,7 +328,7 @@
     <string>关于</string>
    </property>
   </action>
-  <action name="input_2">
+  <action name="input_para">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -375,7 +375,7 @@
     <string>退出</string>
    </property>
   </action>
-  <action name="input">
+  <action name="input_data">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -383,7 +383,7 @@
     <string>录入</string>
    </property>
   </action>
-  <action name="import_2">
+  <action name="import_data">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -407,7 +407,7 @@
     <string>修改</string>
    </property>
   </action>
-  <action name="view_2">
+  <action name="view_para">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -415,7 +415,7 @@
     <string>查看</string>
    </property>
   </action>
-  <action name="modify_2">
+  <action name="modify_para">
    <property name="enabled">
     <bool>false</bool>
    </property>
@@ -686,7 +686,7 @@
     <string>生育水平现状评估与政策偏离度量化评估</string>
    </property>
   </action>
-  <action name="import_5">
+  <action name="import_para">
    <property name="enabled">
     <bool>false</bool>
    </property>
