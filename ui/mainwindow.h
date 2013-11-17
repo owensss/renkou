@@ -14,6 +14,8 @@
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
+#include "uimanager.h"
+
 namespace Ui {
     class MainWindow;
 }
@@ -23,10 +25,12 @@ public:
     MainWindow(QWidget* parent = NULL);
     ~MainWindow();
 private slots:
-    void on_display_triggered();
+    void addProjectActionTriggered();
 
 private:
     Ui::MainWindow* ui;
+    UiManager *uiManager;
+
 };
 
 QT_END_NAMESPACE
