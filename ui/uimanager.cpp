@@ -3,4 +3,3 @@
 UiManager::UiManager()
 {
 }
-
