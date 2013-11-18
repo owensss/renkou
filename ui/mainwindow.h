@@ -26,7 +26,8 @@ public:
     ~MainWindow();
 private slots:
     void addProjectActionTriggered();
-
+    void openProjectActionTriggered();
+    void aboutActionTriggered();
 private:
     Ui::MainWindow* ui;
     UiManager *uiManager;

@@ -14,11 +14,13 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    uimanager.cpp
+    uimanager.cpp \
+    newproject.cpp
 
 HEADERS  += \
     mainwindow.h \
-    uimanager.h
+    uimanager.h \
+    newproject.h
 
 FORMS += \
     progress_bar.ui \

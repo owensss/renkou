@@ -36,7 +36,7 @@
     <addaction name="CloseProject"/>
     <addaction name="Quit"/>
    </widget>
-   <widget class="QMenu" name="NewData">
+   <widget class="QMenu" name="DataManage">
     <property name="title">
      <string>新建数据</string>
     </property>
@@ -75,7 +75,7 @@
     <addaction name="About"/>
    </widget>
    <addaction name="File"/>
-   <addaction name="NewData"/>
+   <addaction name="DataManage"/>
    <addaction name="Parameter"/>
    <addaction name="Simulation"/>
    <addaction name="Help"/>
