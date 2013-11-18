@@ -17,8 +17,8 @@ public:
 		evaluate,
 		importBasicData,
 		importBasicPara,		
-		newProject,
-		projectName,
+        newProject,
+        openProject,
 		progress_bar,
 		searchObject
 	};
