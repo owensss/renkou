@@ -2,10 +2,13 @@
 #define NEWPROJECT_H
 
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QPushButton>
+#include <QPushButton>
 #include <QLineEdit>
+#include <QFileDialog>
+#include <QDir>
 #include <QLabel>
-
+#include <QMessageBox>
+#include <QTextCodec>
 #include "uimanager.h"
 
 namespace Ui {
@@ -23,6 +26,14 @@ public:
 private:
     Ui::NewProject *ui;
     UiManager *uiManager;
+
+private slots:
+    void projectNameEdited(QString _filename);
+    void savePathEdited(QString _filename);
+    void selectPathButtonClicked();
+    void okButtonClicked();
+    void cancelButtonClicked();
+
 };
 
 #endif // NEWPROJECT_H

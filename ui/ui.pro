@@ -38,4 +38,4 @@ FORMS += \
     doingCalcProgress.ui \
     importBasicData.ui \
     searchObject.ui \
-    projectName.ui
+    openProject.ui
