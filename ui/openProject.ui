@@ -1,43 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>NewProject</class>
- <widget class="QDialog" name="NewProject">
+ <class>OpenProject</class>
+ <widget class="QDialog" name="OpenProject">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>419</width>
-    <height>170</height>
+    <width>400</width>
+    <height>99</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>新建项目</string>
+   <string>打开项目</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
+  <layout class="QGridLayout" name="gridLayout_2">
    <item row="0" column="0">
-    <layout class="QGridLayout" name="gridLayout_2">
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="leProjectName"/>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="lbSavePath">
-       <property name="text">
-        <string>保存路径：</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
+    <layout class="QGridLayout" name="gridLayout">
      <item row="0" column="0">
-      <widget class="QLabel" name="lbProjectName">
-       <property name="text">
-        <string>新建项目：</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="leSavePath">
+      <widget class="QLineEdit" name="leProjectPath">
        <property name="enabled">
         <bool>true</bool>
        </property>
@@ -49,19 +29,13 @@
        </property>
       </widget>
      </item>
-     <item row="1" column="2">
+     <item row="0" column="1">
       <widget class="QPushButton" name="selectPath">
        <property name="enabled">
         <bool>true</bool>
        </property>
        <property name="text">
         <string>选择...</string>
-       </property>
-       <property name="autoDefault">
-        <bool>false</bool>
-       </property>
-       <property name="default">
-        <bool>false</bool>
        </property>
       </widget>
      </item>
@@ -83,18 +57,12 @@
       </spacer>
      </item>
      <item>
-      <widget class="QPushButton" name="ok">
+      <widget class="QPushButton" name="open">
        <property name="enabled">
         <bool>false</bool>
        </property>
        <property name="text">
-        <string>确定</string>
-       </property>
-       <property name="autoDefault">
-        <bool>false</bool>
-       </property>
-       <property name="default">
-        <bool>false</bool>
+        <string>打开</string>
        </property>
       </widget>
      </item>
@@ -102,15 +70,6 @@
       <widget class="QPushButton" name="cancel">
        <property name="text">
         <string>取消</string>
-       </property>
-       <property name="autoDefault">
-        <bool>false</bool>
-       </property>
-       <property name="default">
-        <bool>false</bool>
-       </property>
-       <property name="flat">
-        <bool>false</bool>
        </property>
       </widget>
      </item>
@@ -131,13 +90,6 @@
    </item>
   </layout>
  </widget>
- <tabstops>
-  <tabstop>leProjectName</tabstop>
-  <tabstop>leSavePath</tabstop>
-  <tabstop>selectPath</tabstop>
-  <tabstop>ok</tabstop>
-  <tabstop>cancel</tabstop>
- </tabstops>
  <resources/>
  <connections/>
 </ui>

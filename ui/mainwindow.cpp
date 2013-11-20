@@ -39,7 +39,7 @@ void MainWindow::addProjectActionTriggered()
 
 void MainWindow::openProjectActionTriggered()
 {
-    uiManager->active(UiManager::projectName);
+    uiManager->active(UiManager::openProject);
 }
 
 void MainWindow::importDataActionTriggered()
@@ -55,7 +55,7 @@ void MainWindow::importParaActionTriggered()
 void MainWindow::calculateSimActionTriggered()
 {
     //do some calculate in the background
-    uiManager->active(UiManager::doingCalcProgress);
+    uiManager->active(UiManager::enterCalculate);
 }
 
 void MainWindow::showSimActionTriggered()
