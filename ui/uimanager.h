@@ -29,7 +29,7 @@ public:
 	void active(page uiPage);
 	void disactive(page uiPage);
 	void makeFront(page uiPage);
-private:
+
 };
 
 #endif // UIMANAGER_H

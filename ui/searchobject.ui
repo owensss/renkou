@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>searchObject</class>
- <widget class="QDialog" name="searchObject">
+ <class>SearchObject</class>
+ <widget class="QDialog" name="SearchObject">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -13,399 +13,289 @@
   <property name="windowTitle">
    <string>查找研究对象</string>
   </property>
-  <widget class="QPushButton" name="searchButton">
-   <property name="geometry">
-    <rect>
-     <x>210</x>
-     <y>100</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>查询</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboYear">
-   <property name="geometry">
-    <rect>
-     <x>90</x>
-     <y>50</y>
-     <width>69</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="editable">
-    <bool>true</bool>
-   </property>
-   <item>
-    <property name="text">
-     <string>1980</string>
-    </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelYear">
+       <property name="text">
+        <string>基年：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboYear">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="labelArea">
+       <property name="text">
+        <string>地区：</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="comboArea">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>全国</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>北京</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>天津</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>河北</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>山西</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>内蒙古</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>辽宁</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>吉林</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>黑龙江</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>上海</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>江苏</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>浙江</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>安徽</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>福建</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>江西</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>山东</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>河南</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>湖北</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>湖南</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>广东</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>广西</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>海南</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>重庆</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>四川</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>贵州</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>云南</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>西藏</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>陕西</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>甘肃</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>青海</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>宁夏</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>新疆</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
    </item>
-   <item>
-    <property name="text">
-     <string>1981</string>
-    </property>
+   <item row="1" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="search">
+       <property name="text">
+        <string>查询</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="ok">
+       <property name="text">
+        <string>完成</string>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
    </item>
-   <item>
-    <property name="text">
-     <string>1982</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1983</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1984</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1985</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1986</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1987</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1988</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1989</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1990</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1991</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1992</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1993</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1994</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1995</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1996</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1997</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1998</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>1999</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>2000</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>2001</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>2002</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>2003</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>2004</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>2005</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>2006</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>2007</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>2008</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>2009</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>2010</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QLabel" name="label_3">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>50</y>
-     <width>54</width>
-     <height>12</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>地区：</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>50</x>
-     <y>50</y>
-     <width>54</width>
-     <height>12</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>基年：</string>
-   </property>
-  </widget>
-  <widget class="QComboBox" name="comboArea">
-   <property name="geometry">
-    <rect>
-     <x>230</x>
-     <y>50</y>
-     <width>69</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="editable">
-    <bool>true</bool>
-   </property>
-   <item>
-    <property name="text">
-     <string>全国</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>北京</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>天津</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>河北</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>山西</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>内蒙古</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>辽宁</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>吉林</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>黑龙江</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>上海</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>江苏</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>浙江</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>安徽</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>福建</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>江西</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>山东</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>河南</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>湖北</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>湖南</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>广东</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>广西</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>海南</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>重庆</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>四川</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>贵州</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>云南</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>西藏</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>陕西</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>甘肃</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>青海</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>宁夏</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>新疆</string>
-    </property>
-   </item>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>300</x>
-     <y>100</y>
-     <width>75</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>完成</string>
-   </property>
-  </widget>
+  </layout>
  </widget>
  <resources/>
  <connections/>
