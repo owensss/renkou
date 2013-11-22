@@ -14,11 +14,27 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    uimanager.cpp
+    uimanager.cpp \
+    newproject.cpp \
+    openproject.cpp \
+    searchobject.cpp \
+    importbasicdata.cpp \
+    importbasicpara.cpp \
+    entercalculate.cpp \
+    evaluate.cpp \
+    display.cpp
 
 HEADERS  += \
     mainwindow.h \
-    uimanager.h
+    uimanager.h \
+    newproject.h \
+    openproject.h \
+    searchobject.h \
+    importbasicdata.h \
+    importbasicpara.h \
+    entercalculate.h \
+    evaluate.h \
+    display.h
 
 FORMS += \
     progress_bar.ui \
@@ -29,6 +45,7 @@ FORMS += \
     display.ui \
     dia_accu_linetype2.ui \
     dia_accu_linetype1.ui \
+<<<<<<< HEAD
     importBasicPara.ui \
     doingCalcProgress.ui \
     importBasicData.ui \
@@ -37,3 +54,11 @@ FORMS += \
     customMadeArea.ui \
     enterCaculate.ui \
     newProject.ui
+=======
+    importbasicpara.ui \
+    doingcalcprogress.ui \
+    importbasicdata.ui \
+    openproject.ui \
+    searchobject.ui \
+    entercalculate.ui
+>>>>>>> 50c1e71e0d3aaab919de479af75f5c2d8a176851

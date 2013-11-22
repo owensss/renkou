@@ -1,9 +1,12 @@
 #include "uimanager.h"
 
+
+
 UiManager::UiManager()
 {
 }
 
+<<<<<<< HEAD
 UiManager::uiPtr UiManager::addUiPtr(page uiPage){
     uiPtr ptr = nullptr;
 
@@ -65,3 +68,24 @@ UiManager::uiPtr UiManager::addUiPtr(page uiPage){
 void UiManager::active(page uiPage){
     //TODO
 }
+=======
+UiManager::~UiManager()
+{
+
+}
+void UiManager::active(UiManager::page uiPage)
+{
+
+}
+
+void UiManager::disactive(UiManager::page uiPage)
+{
+
+}
+
+void UiManager::makeFront(UiManager::page uiPage)
+{
+
+}
+
+>>>>>>> 50c1e71e0d3aaab919de479af75f5c2d8a176851

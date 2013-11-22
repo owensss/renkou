@@ -17,8 +17,8 @@ public:
 		evaluate,
 		importBasicData,
 		importBasicPara,		
-		newProject,
-		projectName,
+        newProject,
+        openProject,
 		progress_bar,
 		searchObject
 	};
@@ -29,6 +29,7 @@ public:
 	void active(page uiPage);
 	void disactive(page uiPage);
 	void makeFront(page uiPage);
+<<<<<<< HEAD
 private:
     uiPtr getUiPtr(page uiPage){
         uiPtr ptr = nullptr;
@@ -53,6 +54,9 @@ private:
     /** used for managing all kinds of ui ptrs
      */
     ptrContainer ptrCollection;
+=======
+
+>>>>>>> 50c1e71e0d3aaab919de479af75f5c2d8a176851
 };
 
 #endif // UIMANAGER_H
