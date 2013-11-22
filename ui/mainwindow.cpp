@@ -1,12 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::MainWindow(QWidget *parent, UiManager *uiManager) :
 	QMainWindow(parent),
-    ui(new Ui::MainWindow),
-    uiManager(new UiManager())
+    ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
+    this->uiManager = uiManager;
 
     //project menu
     connect(ui->NewProject, SIGNAL(triggered()), this, SLOT(addProjectActionTriggered()));
@@ -29,7 +29,6 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
-    delete uiManager;
 }
 
 void MainWindow::addProjectActionTriggered()
