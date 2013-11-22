@@ -1,9 +1,10 @@
 #include "importbasicpara.h"
 #include "ui_importbasicpara.h"
 
-ImportBasicPara::ImportBasicPara(QWidget *parent) :
+ImportBasicPara::ImportBasicPara(QWidget *parent, UiManager *uiManager) :
     QDialog(parent),
-    ui(new Ui::ImportBasicPara)
+    ui(new Ui::ImportBasicPara),
+    uiManager(uiManager)
 {
     ui->setupUi(this);
 
@@ -14,7 +15,6 @@ ImportBasicPara::ImportBasicPara(QWidget *parent) :
 ImportBasicPara::~ImportBasicPara()
 {
     delete ui;
-    delete uiManager;
 }
 
 void ImportBasicPara::cancelButtonClicked()

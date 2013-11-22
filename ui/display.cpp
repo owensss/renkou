@@ -1,10 +1,10 @@
 #include "display.h"
 #include "ui_display.h"
 
-Display::Display(QWidget *parent) :
+Display::Display(QWidget *parent, UiManager *uiManager) :
     QDialog(parent),
     ui(new Ui::Display),
-    uiManager(new UiManager())
+    uiManager(uiManager)
 {
     ui->setupUi(this);
 }
@@ -12,5 +12,4 @@ Display::Display(QWidget *parent) :
 Display::~Display()
 {
     delete ui;
-    delete uiManager;
 }

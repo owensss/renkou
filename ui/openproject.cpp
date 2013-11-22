@@ -2,10 +2,10 @@
 #include "openproject.h"
 #include "ui_openproject.h"
 
-OpenProject::OpenProject(QWidget *parent) :
+OpenProject::OpenProject(QWidget *parent, UiManager *uiManager) :
     QDialog(parent),
     ui(new Ui::OpenProject),
-    uiManager(new UiManager())
+    uiManager(uiManager)
 {
     ui->setupUi(this);
 
@@ -20,7 +20,6 @@ OpenProject::OpenProject(QWidget *parent) :
 OpenProject::~OpenProject()
 {
     delete ui;
-    delete uiManager;
 }
 
 //void OpenProject::openPathEdited(QString _filename)

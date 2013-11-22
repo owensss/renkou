@@ -2,10 +2,10 @@
 #include "searchobject.h"
 #include "ui_searchobject.h"
 
-SearchObject::SearchObject(QWidget *parent) :
+SearchObject::SearchObject(QWidget *parent, UiManager *uiManager) :
     QDialog(parent),
     ui(new Ui::SearchObject),
-    uiManager(new UiManager()),
+    uiManager(uiManager),
     maxYear(2010), minYear(1980)
 {
     ui->setupUi(this);
@@ -25,7 +25,6 @@ SearchObject::SearchObject(QWidget *parent) :
 SearchObject::~SearchObject()
 {
     delete ui;
-    delete uiManager;
 }
 
 void SearchObject::areaComboChanged(QString s)

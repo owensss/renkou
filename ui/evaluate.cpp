@@ -1,10 +1,10 @@
 #include "evaluate.h"
 #include "ui_evaluate.h"
 
-Evaluate::Evaluate(QWidget *parent) :
+Evaluate::Evaluate(QWidget *parent, UiManager *uiManager) :
     QDialog(parent),
     ui(new Ui::Evaluate),
-    uiManager(new UiManager())
+    uiManager(uiManager)
 {
     ui->setupUi(this);
 
@@ -15,7 +15,6 @@ Evaluate::Evaluate(QWidget *parent) :
 Evaluate::~Evaluate()
 {
     delete ui;
-    delete uiManager;
 }
 
 void Evaluate::exitButtonClicked()

@@ -13,7 +13,7 @@ class Display : public QDialog
     Q_OBJECT
 
 public:
-    explicit Display(QWidget *parent = 0);
+    explicit Display(QWidget *parent = nullptr, UiManager *uiManager);
     ~Display();
 
 private:

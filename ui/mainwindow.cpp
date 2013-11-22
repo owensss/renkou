@@ -3,10 +3,10 @@
 
 MainWindow::MainWindow(QWidget *parent, UiManager *uiManager) :
 	QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    uiManager(uiManager)
 {
 	ui->setupUi(this);
-    this->uiManager = uiManager;
 
     //project menu
     connect(ui->NewProject, SIGNAL(triggered()), this, SLOT(addProjectActionTriggered()));

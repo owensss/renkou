@@ -1,10 +1,10 @@
 #include "entercalculate.h"
 #include "ui_entercalculate.h"
 
-EnterCalculate::EnterCalculate(QWidget *parent) :
+EnterCalculate::EnterCalculate(QWidget *parent, UiManager *uiManager) :
     QDialog(parent),
     ui(new Ui::EnterCalculate),
-    uiManager(new UiManager())
+    uiManager(uiManager)
 {
     ui->setupUi(this);
 
