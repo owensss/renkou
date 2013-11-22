@@ -2,10 +2,9 @@
 #include "openproject.h"
 #include "ui_openproject.h"
 
-OpenProject::OpenProject(QWidget *parent, UiManager *uiManager) :
+OpenProject::OpenProject(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::OpenProject),
-    uiManager(uiManager)
+    ui(new Ui::OpenProject)
 {
     ui->setupUi(this);
 

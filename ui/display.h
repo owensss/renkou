@@ -8,17 +8,16 @@ namespace Ui {
 class Display;
 }
 
-class Display : public QDialog
+class Display : public QDialog, public UiItem
 {
     Q_OBJECT
 
 public:
-    explicit Display(QWidget *parent = nullptr, UiManager *uiManager);
+    explicit Display(QWidget *parent = nullptr);
     ~Display();
 
 private:
     Ui::Display *ui;
-    UiManager *uiManager;
 };
 
 #endif // DISPLAY_H

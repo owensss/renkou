@@ -11,17 +11,17 @@ namespace Ui {
 class SearchObject;
 }
 
-class SearchObject : public QDialog
+class SearchObject : public QDialog, public UiItem
 {
     Q_OBJECT
 
 public:
-    explicit SearchObject(QWidget *parent = 0);
+    explicit SearchObject(QWidget *parent = nullptr);
     ~SearchObject();
 
 private:
     Ui::SearchObject *ui;
-    UiManager *uiManager;
+
     const int maxYear;
     const int minYear;
 

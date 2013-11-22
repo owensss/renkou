@@ -2,10 +2,9 @@
 #include "searchobject.h"
 #include "ui_searchobject.h"
 
-SearchObject::SearchObject(QWidget *parent, UiManager *uiManager) :
+SearchObject::SearchObject(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SearchObject),
-    uiManager(uiManager),
     maxYear(2010), minYear(1980)
 {
     ui->setupUi(this);
@@ -50,7 +49,7 @@ void SearchObject::yearComboChanged(QString s)
 
 void SearchObject::okButtonClicked()
 {
-    uiManager->disactive(UiManager::searchObject);
+    getUiManager()->disactive(UiManager::searchObject);
 }
 
 void SearchObject::searchButtonClicked()

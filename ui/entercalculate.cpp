@@ -1,10 +1,9 @@
 #include "entercalculate.h"
 #include "ui_entercalculate.h"
 
-EnterCalculate::EnterCalculate(QWidget *parent, UiManager *uiManager) :
+EnterCalculate::EnterCalculate(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::EnterCalculate),
-    uiManager(uiManager)
+    ui(new Ui::EnterCalculate)
 {
     ui->setupUi(this);
 
@@ -14,10 +13,9 @@ EnterCalculate::EnterCalculate(QWidget *parent, UiManager *uiManager) :
 EnterCalculate::~EnterCalculate()
 {
     delete ui;
-    delete uiManager;
 }
 
 void EnterCalculate::cancelButtonClicked()
 {
-    uiManager->disactive(UiManager::enterCalculate);
+    getUiManager()->disactive(UiManager::enterCalculate);
 }
