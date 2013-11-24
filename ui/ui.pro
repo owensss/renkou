@@ -4,6 +4,7 @@
 #
 #-------------------------------------------------
 
+QMAKE_CXXFLAGS += -std=c++0x
 QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
@@ -11,9 +12,8 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = ui
 TEMPLATE = app
 
-INCLUDEPATH += D:\boost_1_55_0
-SOURCES += main.cpp\
-        mainwindow.cpp \
+SOURCES += main.cpp \
+    mainwindow.cpp \
     uimanager.cpp \
     newproject.cpp \
     openproject.cpp \
@@ -39,29 +39,19 @@ HEADERS  += \
     uiitem.h
 
 FORMS += \
-    progress_bar.ui \
-    mainwindow.ui \
-    linetype2.ui \
-    linetype1.ui \
-    evaluate.ui \
-    display.ui \
-    dia_accu_linetype2.ui \
-    dia_accu_linetype1.ui \
-<<<<<<< HEAD \
-    searchobject.ui
-    importBasicPara.ui \
-    doingCalcProgress.ui \
-    importBasicData.ui \
-    searchObject.ui \
-    projectName.ui \
     customMadeArea.ui \
-    enterCaculate.ui \
-    newProject.ui
-=======
-    importbasicpara.ui \
-    doingcalcprogress.ui \
-    importbasicdata.ui \
-    openproject.ui \
-    searchobject.ui \
-    entercalculate.ui
->>>>>>> 50c1e71e0d3aaab919de479af75f5c2d8a176851
+    dia_accu_linetype1.ui \
+    dia_accu_linetype2.ui \
+    display.ui \
+    doingCalcProgress.ui \
+    entercalculate.ui \
+    evaluate.ui \
+    importBasicData.ui \
+    importBasicPara.ui \
+    linetype1.ui \
+    linetype2.ui \
+    mainwindow.ui \
+    newproject.ui \
+    openProject.ui \
+    progress_bar.ui \
+    searchobject.ui

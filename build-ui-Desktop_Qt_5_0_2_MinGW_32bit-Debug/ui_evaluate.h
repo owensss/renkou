@@ -16,12 +16,15 @@
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QGroupBox>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QTableWidget>
 #include <QtWidgets/QTextBrowser>
@@ -33,6 +36,7 @@ QT_BEGIN_NAMESPACE
 class Ui_Evaluate
 {
 public:
+    QGridLayout *gridLayout_4;
     QStackedWidget *stackedWidget;
     QWidget *page;
     QPushButton *pushButton_2;
@@ -52,40 +56,49 @@ public:
     QLabel *label_2;
     QPushButton *pushButton_3;
     QWidget *page_3;
-    QLabel *label_3;
-    QRadioButton *value1;
-    QRadioButton *area1;
-    QComboBox *area2;
-    QTreeWidget *value2;
-    QTableWidget *tableWidget;
-    QLabel *label_8;
-    QGroupBox *groupBox_3;
-    QComboBox *comboArea_2;
-    QLabel *label_9;
-    QPushButton *pushButton_5;
-    QPushButton *pushButton_6;
-    QPushButton *pushButton_7;
-    QLabel *label_12;
-    QComboBox *comboBox_2;
+    QGridLayout *gridLayout_2;
     QGroupBox *groupBox_4;
     QListWidget *listWidget;
     QPushButton *pushButton_4;
     QLabel *label_10;
     QLabel *label_7;
     QListWidget *listWidget_2;
+    QGroupBox *groupBox_3;
+    QGridLayout *gridLayout_3;
+    QGridLayout *gridLayout;
+    QLabel *label_9;
+    QComboBox *comboArea_2;
+    QLabel *label_12;
+    QComboBox *comboBox_2;
+    QPushButton *pushButton_5;
+    QSpacerItem *horizontalSpacer_2;
+    QPushButton *pushButton_6;
+    QPushButton *pushButton_7;
+    QSpacerItem *horizontalSpacer;
+    QRadioButton *value1;
+    QTableWidget *tableWidget;
+    QRadioButton *area1;
+    QTreeWidget *value2;
+    QLabel *label_3;
+    QLabel *label_8;
     QComboBox *comboBox_method;
-    QLabel *label_11;
-    QPushButton *exit;
     QPushButton *pushButton_9;
+    QComboBox *area2;
+    QLabel *label_11;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer_3;
+    QPushButton *exit;
+    QSpacerItem *horizontalSpacer_4;
 
     void setupUi(QDialog *Evaluate)
     {
         if (Evaluate->objectName().isEmpty())
             Evaluate->setObjectName(QStringLiteral("Evaluate"));
-        Evaluate->resize(1300, 548);
+        Evaluate->resize(1197, 675);
+        gridLayout_4 = new QGridLayout(Evaluate);
+        gridLayout_4->setObjectName(QStringLiteral("gridLayout_4"));
         stackedWidget = new QStackedWidget(Evaluate);
         stackedWidget->setObjectName(QStringLiteral("stackedWidget"));
-        stackedWidget->setGeometry(QRect(10, 10, 1285, 531));
         page = new QWidget();
         page->setObjectName(QStringLiteral("page"));
         pushButton_2 = new QPushButton(page);
@@ -145,57 +158,120 @@ public:
         stackedWidget->addWidget(page_2);
         page_3 = new QWidget();
         page_3->setObjectName(QStringLiteral("page_3"));
-        label_3 = new QLabel(page_3);
-        label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(190, 20, 61, 16));
+        gridLayout_2 = new QGridLayout(page_3);
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
+        groupBox_4 = new QGroupBox(page_3);
+        groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
+        listWidget = new QListWidget(groupBox_4);
+        listWidget->setObjectName(QStringLiteral("listWidget"));
+        listWidget->setGeometry(QRect(15, 58, 256, 192));
+        pushButton_4 = new QPushButton(groupBox_4);
+        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+        pushButton_4->setEnabled(false);
+        pushButton_4->setGeometry(QRect(279, 260, 146, 32));
+        label_10 = new QLabel(groupBox_4);
+        label_10->setObjectName(QStringLiteral("label_10"));
+        label_10->setGeometry(QRect(285, 34, 52, 16));
+        label_7 = new QLabel(groupBox_4);
+        label_7->setObjectName(QStringLiteral("label_7"));
+        label_7->setGeometry(QRect(15, 34, 91, 16));
+        listWidget_2 = new QListWidget(groupBox_4);
+        QListWidgetItem *__qlistwidgetitem = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem->setCheckState(Qt::Unchecked);
+        QListWidgetItem *__qlistwidgetitem1 = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem1->setCheckState(Qt::Unchecked);
+        QListWidgetItem *__qlistwidgetitem2 = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem2->setCheckState(Qt::Unchecked);
+        QListWidgetItem *__qlistwidgetitem3 = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem3->setCheckState(Qt::Unchecked);
+        QListWidgetItem *__qlistwidgetitem4 = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem4->setCheckState(Qt::Unchecked);
+        QListWidgetItem *__qlistwidgetitem5 = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem5->setCheckState(Qt::Unchecked);
+        QListWidgetItem *__qlistwidgetitem6 = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem6->setCheckState(Qt::Unchecked);
+        QListWidgetItem *__qlistwidgetitem7 = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem7->setCheckState(Qt::Unchecked);
+        QListWidgetItem *__qlistwidgetitem8 = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem8->setCheckState(Qt::Unchecked);
+        QListWidgetItem *__qlistwidgetitem9 = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem9->setCheckState(Qt::Unchecked);
+        QListWidgetItem *__qlistwidgetitem10 = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem10->setCheckState(Qt::Unchecked);
+        QListWidgetItem *__qlistwidgetitem11 = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem11->setCheckState(Qt::Unchecked);
+        QListWidgetItem *__qlistwidgetitem12 = new QListWidgetItem(listWidget_2);
+        __qlistwidgetitem12->setCheckState(Qt::Unchecked);
+        listWidget_2->setObjectName(QStringLiteral("listWidget_2"));
+        listWidget_2->setGeometry(QRect(285, 58, 256, 191));
+
+        gridLayout_2->addWidget(groupBox_4, 0, 4, 5, 1);
+
+        groupBox_3 = new QGroupBox(page_3);
+        groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
+        gridLayout_3 = new QGridLayout(groupBox_3);
+        gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
+        gridLayout = new QGridLayout();
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        label_9 = new QLabel(groupBox_3);
+        label_9->setObjectName(QStringLiteral("label_9"));
+
+        gridLayout->addWidget(label_9, 0, 0, 1, 1);
+
+        comboArea_2 = new QComboBox(groupBox_3);
+        comboArea_2->setObjectName(QStringLiteral("comboArea_2"));
+        comboArea_2->setEditable(false);
+
+        gridLayout->addWidget(comboArea_2, 0, 1, 1, 1);
+
+        label_12 = new QLabel(groupBox_3);
+        label_12->setObjectName(QStringLiteral("label_12"));
+
+        gridLayout->addWidget(label_12, 1, 0, 1, 1);
+
+        comboBox_2 = new QComboBox(groupBox_3);
+        comboBox_2->setObjectName(QStringLiteral("comboBox_2"));
+
+        gridLayout->addWidget(comboBox_2, 1, 1, 1, 1);
+
+        pushButton_5 = new QPushButton(groupBox_3);
+        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
+        pushButton_5->setEnabled(false);
+
+        gridLayout->addWidget(pushButton_5, 2, 1, 1, 1);
+
+        horizontalSpacer_2 = new QSpacerItem(103, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer_2, 3, 0, 2, 1);
+
+        pushButton_6 = new QPushButton(groupBox_3);
+        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
+        pushButton_6->setEnabled(false);
+
+        gridLayout->addWidget(pushButton_6, 3, 1, 1, 1);
+
+        pushButton_7 = new QPushButton(groupBox_3);
+        pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
+        pushButton_7->setEnabled(false);
+
+        gridLayout->addWidget(pushButton_7, 4, 1, 1, 1);
+
+        horizontalSpacer = new QSpacerItem(148, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        gridLayout->addItem(horizontalSpacer, 4, 2, 1, 1);
+
+
+        gridLayout_3->addLayout(gridLayout, 0, 0, 1, 1);
+
+
+        gridLayout_2->addWidget(groupBox_3, 5, 4, 2, 1);
+
         value1 = new QRadioButton(page_3);
         value1->setObjectName(QStringLiteral("value1"));
         value1->setEnabled(true);
-        value1->setGeometry(QRect(10, 130, 91, 16));
-        area1 = new QRadioButton(page_3);
-        area1->setObjectName(QStringLiteral("area1"));
-        area1->setGeometry(QRect(10, 100, 89, 16));
-        area1->setChecked(true);
-        area2 = new QComboBox(page_3);
-        area2->setObjectName(QStringLiteral("area2"));
-        area2->setGeometry(QRect(100, 100, 71, 20));
-        area2->setEditable(false);
-        value2 = new QTreeWidget(page_3);
-        QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem(value2);
-        __qtreewidgetitem->setCheckState(0, Qt::Unchecked);
-        QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem(__qtreewidgetitem);
-        __qtreewidgetitem1->setCheckState(0, Qt::Unchecked);
-        QTreeWidgetItem *__qtreewidgetitem2 = new QTreeWidgetItem(__qtreewidgetitem1);
-        __qtreewidgetitem2->setCheckState(0, Qt::Unchecked);
-        QTreeWidgetItem *__qtreewidgetitem3 = new QTreeWidgetItem(__qtreewidgetitem1);
-        __qtreewidgetitem3->setCheckState(0, Qt::Unchecked);
-        QTreeWidgetItem *__qtreewidgetitem4 = new QTreeWidgetItem(__qtreewidgetitem);
-        __qtreewidgetitem4->setCheckState(0, Qt::Unchecked);
-        QTreeWidgetItem *__qtreewidgetitem5 = new QTreeWidgetItem(__qtreewidgetitem4);
-        __qtreewidgetitem5->setCheckState(0, Qt::Unchecked);
-        QTreeWidgetItem *__qtreewidgetitem6 = new QTreeWidgetItem(__qtreewidgetitem);
-        __qtreewidgetitem6->setCheckState(0, Qt::Unchecked);
-        QTreeWidgetItem *__qtreewidgetitem7 = new QTreeWidgetItem(__qtreewidgetitem6);
-        __qtreewidgetitem7->setCheckState(0, Qt::Unchecked);
-        QTreeWidgetItem *__qtreewidgetitem8 = new QTreeWidgetItem(__qtreewidgetitem6);
-        __qtreewidgetitem8->setCheckState(0, Qt::Unchecked);
-        QTreeWidgetItem *__qtreewidgetitem9 = new QTreeWidgetItem(__qtreewidgetitem6);
-        __qtreewidgetitem9->setCheckState(0, Qt::Unchecked);
-        QTreeWidgetItem *__qtreewidgetitem10 = new QTreeWidgetItem(__qtreewidgetitem6);
-        __qtreewidgetitem10->setCheckState(0, Qt::Unchecked);
-        QTreeWidgetItem *__qtreewidgetitem11 = new QTreeWidgetItem(__qtreewidgetitem6);
-        __qtreewidgetitem11->setCheckState(0, Qt::Unchecked);
-        QTreeWidgetItem *__qtreewidgetitem12 = new QTreeWidgetItem(__qtreewidgetitem);
-        __qtreewidgetitem12->setCheckState(0, Qt::Unchecked);
-        QTreeWidgetItem *__qtreewidgetitem13 = new QTreeWidgetItem(__qtreewidgetitem12);
-        __qtreewidgetitem13->setCheckState(0, Qt::Unchecked);
-        value2->setObjectName(QStringLiteral("value2"));
-        value2->setEnabled(false);
-        value2->setGeometry(QRect(0, 150, 171, 241));
-        value2->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-        value2->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
-        value2->header()->setDefaultSectionSize(200);
-        value2->header()->setMinimumSectionSize(200);
+
+        gridLayout_2->addWidget(value1, 3, 0, 1, 1);
+
         tableWidget = new QTableWidget(page_3);
         if (tableWidget->columnCount() < 4)
             tableWidget->setColumnCount(4);
@@ -658,102 +734,112 @@ public:
         __qtablewidgetitem163->setCheckState(Qt::PartiallyChecked);
         tableWidget->setItem(31, 3, __qtablewidgetitem163);
         tableWidget->setObjectName(QStringLiteral("tableWidget"));
-        tableWidget->setGeometry(QRect(200, 40, 791, 451));
+
+        gridLayout_2->addWidget(tableWidget, 1, 2, 6, 2);
+
+        area1 = new QRadioButton(page_3);
+        area1->setObjectName(QStringLiteral("area1"));
+        area1->setChecked(true);
+
+        gridLayout_2->addWidget(area1, 2, 0, 1, 1);
+
+        value2 = new QTreeWidget(page_3);
+        QTreeWidgetItem *__qtreewidgetitem = new QTreeWidgetItem(value2);
+        __qtreewidgetitem->setCheckState(0, Qt::Unchecked);
+        QTreeWidgetItem *__qtreewidgetitem1 = new QTreeWidgetItem(__qtreewidgetitem);
+        __qtreewidgetitem1->setCheckState(0, Qt::Unchecked);
+        QTreeWidgetItem *__qtreewidgetitem2 = new QTreeWidgetItem(__qtreewidgetitem1);
+        __qtreewidgetitem2->setCheckState(0, Qt::Unchecked);
+        QTreeWidgetItem *__qtreewidgetitem3 = new QTreeWidgetItem(__qtreewidgetitem1);
+        __qtreewidgetitem3->setCheckState(0, Qt::Unchecked);
+        QTreeWidgetItem *__qtreewidgetitem4 = new QTreeWidgetItem(__qtreewidgetitem);
+        __qtreewidgetitem4->setCheckState(0, Qt::Unchecked);
+        QTreeWidgetItem *__qtreewidgetitem5 = new QTreeWidgetItem(__qtreewidgetitem4);
+        __qtreewidgetitem5->setCheckState(0, Qt::Unchecked);
+        QTreeWidgetItem *__qtreewidgetitem6 = new QTreeWidgetItem(__qtreewidgetitem);
+        __qtreewidgetitem6->setCheckState(0, Qt::Unchecked);
+        QTreeWidgetItem *__qtreewidgetitem7 = new QTreeWidgetItem(__qtreewidgetitem6);
+        __qtreewidgetitem7->setCheckState(0, Qt::Unchecked);
+        QTreeWidgetItem *__qtreewidgetitem8 = new QTreeWidgetItem(__qtreewidgetitem6);
+        __qtreewidgetitem8->setCheckState(0, Qt::Unchecked);
+        QTreeWidgetItem *__qtreewidgetitem9 = new QTreeWidgetItem(__qtreewidgetitem6);
+        __qtreewidgetitem9->setCheckState(0, Qt::Unchecked);
+        QTreeWidgetItem *__qtreewidgetitem10 = new QTreeWidgetItem(__qtreewidgetitem6);
+        __qtreewidgetitem10->setCheckState(0, Qt::Unchecked);
+        QTreeWidgetItem *__qtreewidgetitem11 = new QTreeWidgetItem(__qtreewidgetitem6);
+        __qtreewidgetitem11->setCheckState(0, Qt::Unchecked);
+        QTreeWidgetItem *__qtreewidgetitem12 = new QTreeWidgetItem(__qtreewidgetitem);
+        __qtreewidgetitem12->setCheckState(0, Qt::Unchecked);
+        QTreeWidgetItem *__qtreewidgetitem13 = new QTreeWidgetItem(__qtreewidgetitem12);
+        __qtreewidgetitem13->setCheckState(0, Qt::Unchecked);
+        value2->setObjectName(QStringLiteral("value2"));
+        value2->setEnabled(false);
+        value2->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+        value2->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
+        value2->header()->setDefaultSectionSize(200);
+        value2->header()->setMinimumSectionSize(200);
+
+        gridLayout_2->addWidget(value2, 4, 0, 2, 2);
+
+        label_3 = new QLabel(page_3);
+        label_3->setObjectName(QStringLiteral("label_3"));
+
+        gridLayout_2->addWidget(label_3, 0, 2, 1, 1);
+
         label_8 = new QLabel(page_3);
         label_8->setObjectName(QStringLiteral("label_8"));
-        label_8->setGeometry(QRect(420, 20, 301, 20));
-        groupBox_3 = new QGroupBox(page_3);
-        groupBox_3->setObjectName(QStringLiteral("groupBox_3"));
-        groupBox_3->setGeometry(QRect(1010, 310, 261, 181));
-        comboArea_2 = new QComboBox(groupBox_3);
-        comboArea_2->setObjectName(QStringLiteral("comboArea_2"));
-        comboArea_2->setGeometry(QRect(100, 30, 71, 20));
-        comboArea_2->setEditable(false);
-        label_9 = new QLabel(groupBox_3);
-        label_9->setObjectName(QStringLiteral("label_9"));
-        label_9->setGeometry(QRect(20, 30, 81, 20));
-        pushButton_5 = new QPushButton(groupBox_3);
-        pushButton_5->setObjectName(QStringLiteral("pushButton_5"));
-        pushButton_5->setEnabled(false);
-        pushButton_5->setGeometry(QRect(30, 90, 141, 23));
-        pushButton_6 = new QPushButton(groupBox_3);
-        pushButton_6->setObjectName(QStringLiteral("pushButton_6"));
-        pushButton_6->setEnabled(false);
-        pushButton_6->setGeometry(QRect(30, 120, 141, 23));
-        pushButton_7 = new QPushButton(groupBox_3);
-        pushButton_7->setObjectName(QStringLiteral("pushButton_7"));
-        pushButton_7->setEnabled(false);
-        pushButton_7->setGeometry(QRect(30, 150, 141, 23));
-        label_12 = new QLabel(groupBox_3);
-        label_12->setObjectName(QStringLiteral("label_12"));
-        label_12->setGeometry(QRect(23, 60, 61, 20));
-        comboBox_2 = new QComboBox(groupBox_3);
-        comboBox_2->setObjectName(QStringLiteral("comboBox_2"));
-        comboBox_2->setGeometry(QRect(100, 60, 69, 22));
-        groupBox_4 = new QGroupBox(page_3);
-        groupBox_4->setObjectName(QStringLiteral("groupBox_4"));
-        groupBox_4->setGeometry(QRect(1010, 29, 261, 271));
-        listWidget = new QListWidget(groupBox_4);
-        listWidget->setObjectName(QStringLiteral("listWidget"));
-        listWidget->setGeometry(QRect(10, 40, 111, 221));
-        pushButton_4 = new QPushButton(groupBox_4);
-        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
-        pushButton_4->setEnabled(false);
-        pushButton_4->setGeometry(QRect(130, 240, 111, 23));
-        label_10 = new QLabel(groupBox_4);
-        label_10->setObjectName(QStringLiteral("label_10"));
-        label_10->setGeometry(QRect(130, 20, 71, 16));
-        label_7 = new QLabel(groupBox_4);
-        label_7->setObjectName(QStringLiteral("label_7"));
-        label_7->setGeometry(QRect(10, 20, 121, 16));
-        listWidget_2 = new QListWidget(groupBox_4);
-        QListWidgetItem *__qlistwidgetitem = new QListWidgetItem(listWidget_2);
-        __qlistwidgetitem->setCheckState(Qt::Unchecked);
-        QListWidgetItem *__qlistwidgetitem1 = new QListWidgetItem(listWidget_2);
-        __qlistwidgetitem1->setCheckState(Qt::Unchecked);
-        QListWidgetItem *__qlistwidgetitem2 = new QListWidgetItem(listWidget_2);
-        __qlistwidgetitem2->setCheckState(Qt::Unchecked);
-        QListWidgetItem *__qlistwidgetitem3 = new QListWidgetItem(listWidget_2);
-        __qlistwidgetitem3->setCheckState(Qt::Unchecked);
-        QListWidgetItem *__qlistwidgetitem4 = new QListWidgetItem(listWidget_2);
-        __qlistwidgetitem4->setCheckState(Qt::Unchecked);
-        QListWidgetItem *__qlistwidgetitem5 = new QListWidgetItem(listWidget_2);
-        __qlistwidgetitem5->setCheckState(Qt::Unchecked);
-        QListWidgetItem *__qlistwidgetitem6 = new QListWidgetItem(listWidget_2);
-        __qlistwidgetitem6->setCheckState(Qt::Unchecked);
-        QListWidgetItem *__qlistwidgetitem7 = new QListWidgetItem(listWidget_2);
-        __qlistwidgetitem7->setCheckState(Qt::Unchecked);
-        QListWidgetItem *__qlistwidgetitem8 = new QListWidgetItem(listWidget_2);
-        __qlistwidgetitem8->setCheckState(Qt::Unchecked);
-        QListWidgetItem *__qlistwidgetitem9 = new QListWidgetItem(listWidget_2);
-        __qlistwidgetitem9->setCheckState(Qt::Unchecked);
-        QListWidgetItem *__qlistwidgetitem10 = new QListWidgetItem(listWidget_2);
-        __qlistwidgetitem10->setCheckState(Qt::Unchecked);
-        QListWidgetItem *__qlistwidgetitem11 = new QListWidgetItem(listWidget_2);
-        __qlistwidgetitem11->setCheckState(Qt::Unchecked);
-        QListWidgetItem *__qlistwidgetitem12 = new QListWidgetItem(listWidget_2);
-        __qlistwidgetitem12->setCheckState(Qt::Unchecked);
-        listWidget_2->setObjectName(QStringLiteral("listWidget_2"));
-        listWidget_2->setGeometry(QRect(130, 40, 121, 191));
+
+        gridLayout_2->addWidget(label_8, 0, 3, 1, 1);
+
         comboBox_method = new QComboBox(page_3);
         comboBox_method->setObjectName(QStringLiteral("comboBox_method"));
-        comboBox_method->setGeometry(QRect(10, 40, 161, 22));
-        label_11 = new QLabel(page_3);
-        label_11->setObjectName(QStringLiteral("label_11"));
-        label_11->setGeometry(QRect(20, 20, 61, 16));
-        exit = new QPushButton(page_3);
-        exit->setObjectName(QStringLiteral("exit"));
-        exit->setGeometry(QRect(1190, 492, 75, 31));
+
+        gridLayout_2->addWidget(comboBox_method, 1, 0, 1, 2);
+
         pushButton_9 = new QPushButton(page_3);
         pushButton_9->setObjectName(QStringLiteral("pushButton_9"));
-        pushButton_9->setGeometry(QRect(64, 400, 101, 23));
+
+        gridLayout_2->addWidget(pushButton_9, 6, 0, 1, 2);
+
+        area2 = new QComboBox(page_3);
+        area2->setObjectName(QStringLiteral("area2"));
+        area2->setEditable(false);
+
+        gridLayout_2->addWidget(area2, 2, 1, 1, 1);
+
+        label_11 = new QLabel(page_3);
+        label_11->setObjectName(QStringLiteral("label_11"));
+
+        gridLayout_2->addWidget(label_11, 0, 0, 1, 1);
+
         stackedWidget->addWidget(page_3);
+
+        gridLayout_4->addWidget(stackedWidget, 0, 0, 1, 1);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_3);
+
+        exit = new QPushButton(Evaluate);
+        exit->setObjectName(QStringLiteral("exit"));
+
+        horizontalLayout->addWidget(exit);
+
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_4);
+
+
+        gridLayout_4->addLayout(horizontalLayout, 1, 0, 1, 1);
+
 
         retranslateUi(Evaluate);
 
         stackedWidget->setCurrentIndex(2);
-        area2->setCurrentIndex(0);
         comboArea_2->setCurrentIndex(0);
+        area2->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(Evaluate);
@@ -779,20 +865,54 @@ public:
         checkBox_3->setText(QApplication::translate("Evaluate", "\345\244\232\346\214\207\346\240\207\350\201\224\345\220\210\351\200\220\346\255\245\346\267\230\346\261\260\344\270\216\344\274\230\351\200\211", 0));
         label_2->setText(QApplication::translate("Evaluate", "\345\274\200\345\247\213\350\257\204\344\273\267\350\256\241\347\256\227", 0));
         pushButton_3->setText(QApplication::translate("Evaluate", "\346\237\245\347\234\213\350\257\204\344\273\267\347\273\223\346\236\234", 0));
-        label_3->setText(QApplication::translate("Evaluate", "\350\257\204\344\273\267\347\273\223\346\236\234", 0));
-        value1->setText(QApplication::translate("Evaluate", "\351\200\211\346\213\251\346\214\207\346\240\207", 0));
-        area1->setText(QApplication::translate("Evaluate", "\351\200\211\346\213\251\345\234\260\345\214\272", 0));
-        area2->clear();
-        area2->insertItems(0, QStringList()
+        groupBox_4->setTitle(QApplication::translate("Evaluate", "\346\257\224\350\276\203\346\226\271\346\241\210", 0));
+        pushButton_4->setText(QApplication::translate("Evaluate", "\345\233\276\345\203\217\346\274\224\347\244\272\346\211\200\351\200\211\346\226\271\346\241\210", 0));
+        label_10->setText(QApplication::translate("Evaluate", "\351\200\211\346\213\251\346\214\207\346\240\207", 0));
+        label_7->setText(QApplication::translate("Evaluate", "\345\275\223\345\211\215\351\200\211\344\270\255\347\232\204\346\226\271\346\241\210", 0));
+
+        const bool __sortingEnabled = listWidget_2->isSortingEnabled();
+        listWidget_2->setSortingEnabled(false);
+        QListWidgetItem *___qlistwidgetitem = listWidget_2->item(0);
+        ___qlistwidgetitem->setText(QApplication::translate("Evaluate", "\346\200\273\350\247\204\346\250\241", 0));
+        QListWidgetItem *___qlistwidgetitem1 = listWidget_2->item(1);
+        ___qlistwidgetitem1->setText(QApplication::translate("Evaluate", "\345\207\272\347\224\237\350\247\204\346\250\241", 0));
+        QListWidgetItem *___qlistwidgetitem2 = listWidget_2->item(2);
+        ___qlistwidgetitem2->setText(QApplication::translate("Evaluate", "\345\207\272\347\224\237\347\216\207", 0));
+        QListWidgetItem *___qlistwidgetitem3 = listWidget_2->item(3);
+        ___qlistwidgetitem3->setText(QApplication::translate("Evaluate", "\350\207\252\347\204\266\345\242\236\351\225\277\347\216\207", 0));
+        QListWidgetItem *___qlistwidgetitem4 = listWidget_2->item(4);
+        ___qlistwidgetitem4->setText(QApplication::translate("Evaluate", "\347\224\237\350\202\262\347\216\207", 0));
+        QListWidgetItem *___qlistwidgetitem5 = listWidget_2->item(5);
+        ___qlistwidgetitem5->setText(QApplication::translate("Evaluate", "\345\212\263\345\212\250\345\271\264\351\276\204\344\272\272\345\217\243\345\215\240\346\200\273\344\272\272\345\217\243\346\257\224\351\207\215", 0));
+        QListWidgetItem *___qlistwidgetitem6 = listWidget_2->item(6);
+        ___qlistwidgetitem6->setText(QApplication::translate("Evaluate", "\351\235\222\345\271\264\345\212\263\345\212\250\345\212\233\345\215\240\345\212\263\345\212\250\345\271\264\351\276\204\344\272\272\345\217\243\346\257\224\351\207\215", 0));
+        QListWidgetItem *___qlistwidgetitem7 = listWidget_2->item(7);
+        ___qlistwidgetitem7->setText(QApplication::translate("Evaluate", "\345\271\264\351\276\204\344\270\255\344\275\215\346\225\260", 0));
+        QListWidgetItem *___qlistwidgetitem8 = listWidget_2->item(8);
+        ___qlistwidgetitem8->setText(QApplication::translate("Evaluate", "\350\200\201\345\271\264\344\272\272\345\217\243\346\257\224\351\207\215", 0));
+        QListWidgetItem *___qlistwidgetitem9 = listWidget_2->item(9);
+        ___qlistwidgetitem9->setText(QApplication::translate("Evaluate", "\350\264\237\346\213\205\350\200\201\345\271\264\347\263\273\346\225\260", 0));
+        QListWidgetItem *___qlistwidgetitem10 = listWidget_2->item(10);
+        ___qlistwidgetitem10->setText(QApplication::translate("Evaluate", "\350\264\237\346\213\205\345\260\221\345\204\277\347\263\273\346\225\260", 0));
+        QListWidgetItem *___qlistwidgetitem11 = listWidget_2->item(11);
+        ___qlistwidgetitem11->setText(QApplication::translate("Evaluate", "\346\200\273\350\264\237\346\213\205\347\263\273\346\225\260", 0));
+        QListWidgetItem *___qlistwidgetitem12 = listWidget_2->item(12);
+        ___qlistwidgetitem12->setText(QApplication::translate("Evaluate", "\345\271\264\351\276\204\351\207\221\345\255\227\345\241\224\345\235\207\350\241\241\346\200\247", 0));
+        listWidget_2->setSortingEnabled(__sortingEnabled);
+
+        groupBox_3->setTitle(QApplication::translate("Evaluate", "\346\237\245\350\257\242\346\226\271\346\241\210", 0));
+        label_9->setText(QApplication::translate("Evaluate", "\351\200\211\346\213\251\345\234\260\345\214\272\357\274\232", 0));
+        comboArea_2->clear();
+        comboArea_2->insertItems(0, QStringList()
          << QApplication::translate("Evaluate", "\345\214\227\344\272\254", 0)
          << QApplication::translate("Evaluate", "\345\244\251\346\264\245", 0)
-         << QApplication::translate("Evaluate", "\344\270\212\346\265\267", 0)
-         << QApplication::translate("Evaluate", "\351\207\215\345\272\206", 0)
          << QApplication::translate("Evaluate", "\346\262\263\345\214\227", 0)
          << QApplication::translate("Evaluate", "\345\261\261\350\245\277", 0)
+         << QApplication::translate("Evaluate", "\345\206\205\350\222\231\345\217\244", 0)
          << QApplication::translate("Evaluate", "\350\276\275\345\256\201", 0)
          << QApplication::translate("Evaluate", "\345\220\211\346\236\227", 0)
          << QApplication::translate("Evaluate", "\351\273\221\351\276\231\346\261\237", 0)
+         << QApplication::translate("Evaluate", "\344\270\212\346\265\267", 0)
          << QApplication::translate("Evaluate", "\346\261\237\350\213\217", 0)
          << QApplication::translate("Evaluate", "\346\265\231\346\261\237", 0)
          << QApplication::translate("Evaluate", "\345\256\211\345\276\275", 0)
@@ -803,54 +923,24 @@ public:
          << QApplication::translate("Evaluate", "\346\271\226\345\214\227", 0)
          << QApplication::translate("Evaluate", "\346\271\226\345\215\227", 0)
          << QApplication::translate("Evaluate", "\345\271\277\344\270\234", 0)
+         << QApplication::translate("Evaluate", "\345\271\277\350\245\277", 0)
          << QApplication::translate("Evaluate", "\346\265\267\345\215\227", 0)
+         << QApplication::translate("Evaluate", "\351\207\215\345\272\206", 0)
          << QApplication::translate("Evaluate", "\345\233\233\345\267\235", 0)
          << QApplication::translate("Evaluate", "\350\264\265\345\267\236", 0)
          << QApplication::translate("Evaluate", "\344\272\221\345\215\227", 0)
+         << QApplication::translate("Evaluate", "\350\245\277\350\227\217", 0)
          << QApplication::translate("Evaluate", "\351\231\225\350\245\277", 0)
          << QApplication::translate("Evaluate", "\347\224\230\350\202\203", 0)
          << QApplication::translate("Evaluate", "\351\235\222\346\265\267", 0)
-         << QApplication::translate("Evaluate", "\345\206\205\350\222\231\345\217\244", 0)
-         << QApplication::translate("Evaluate", "\345\271\277\350\245\277", 0)
-         << QApplication::translate("Evaluate", "\350\245\277\350\227\217", 0)
          << QApplication::translate("Evaluate", "\345\256\201\345\244\217", 0)
          << QApplication::translate("Evaluate", "\346\226\260\347\226\206", 0)
         );
-        QTreeWidgetItem *___qtreewidgetitem = value2->headerItem();
-        ___qtreewidgetitem->setText(0, QApplication::translate("Evaluate", "\346\214\207\346\240\207", 0));
-
-        const bool __sortingEnabled = value2->isSortingEnabled();
-        value2->setSortingEnabled(false);
-        QTreeWidgetItem *___qtreewidgetitem1 = value2->topLevelItem(0);
-        ___qtreewidgetitem1->setText(0, QApplication::translate("Evaluate", "\347\273\274\345\220\210\350\257\204\344\273\267", 0));
-        QTreeWidgetItem *___qtreewidgetitem2 = ___qtreewidgetitem1->child(0);
-        ___qtreewidgetitem2->setText(0, QApplication::translate("Evaluate", "\350\265\204\346\272\220\347\216\257\345\242\203\350\257\204\344\273\267", 0));
-        QTreeWidgetItem *___qtreewidgetitem3 = ___qtreewidgetitem2->child(0);
-        ___qtreewidgetitem3->setText(0, QApplication::translate("Evaluate", "\350\247\204\346\250\241\350\257\204\344\273\267", 0));
-        QTreeWidgetItem *___qtreewidgetitem4 = ___qtreewidgetitem2->child(1);
-        ___qtreewidgetitem4->setText(0, QApplication::translate("Evaluate", "\344\272\272\345\235\207\350\265\204\346\272\220\350\257\204\344\273\267", 0));
-        QTreeWidgetItem *___qtreewidgetitem5 = ___qtreewidgetitem1->child(1);
-        ___qtreewidgetitem5->setText(0, QApplication::translate("Evaluate", "\345\242\236\351\225\277\351\200\237\345\272\246\350\257\204\344\273\267", 0));
-        QTreeWidgetItem *___qtreewidgetitem6 = ___qtreewidgetitem5->child(0);
-        ___qtreewidgetitem6->setText(0, QApplication::translate("Evaluate", "\345\242\236\351\225\277\350\257\204\344\273\267", 0));
-        QTreeWidgetItem *___qtreewidgetitem7 = ___qtreewidgetitem1->child(2);
-        ___qtreewidgetitem7->setText(0, QApplication::translate("Evaluate", "\345\256\217\350\247\202\347\273\223\346\236\204\350\257\204\344\273\267", 0));
-        QTreeWidgetItem *___qtreewidgetitem8 = ___qtreewidgetitem7->child(0);
-        ___qtreewidgetitem8->setText(0, QApplication::translate("Evaluate", "\345\233\275\351\231\205\350\200\201\351\276\204\350\257\204\344\273\267", 0));
-        QTreeWidgetItem *___qtreewidgetitem9 = ___qtreewidgetitem7->child(1);
-        ___qtreewidgetitem9->setText(0, QApplication::translate("Evaluate", "\345\233\275\351\231\205\350\264\237\346\213\205\350\257\204\344\273\267", 0));
-        QTreeWidgetItem *___qtreewidgetitem10 = ___qtreewidgetitem7->child(2);
-        ___qtreewidgetitem10->setText(0, QApplication::translate("Evaluate", "\345\233\275\351\231\205\345\212\263\345\212\233\350\257\204\344\273\267", 0));
-        QTreeWidgetItem *___qtreewidgetitem11 = ___qtreewidgetitem7->child(3);
-        ___qtreewidgetitem11->setText(0, QApplication::translate("Evaluate", "\345\233\275\351\231\205\350\247\206\347\252\227\350\257\204\344\273\267", 0));
-        QTreeWidgetItem *___qtreewidgetitem12 = ___qtreewidgetitem7->child(4);
-        ___qtreewidgetitem12->setText(0, QApplication::translate("Evaluate", "\345\271\264\351\276\204\345\235\207\350\241\241\350\257\204\344\273\267", 0));
-        QTreeWidgetItem *___qtreewidgetitem13 = ___qtreewidgetitem1->child(3);
-        ___qtreewidgetitem13->setText(0, QApplication::translate("Evaluate", "\345\276\256\350\247\202\347\273\223\346\236\204\350\257\204\344\273\267", 0));
-        QTreeWidgetItem *___qtreewidgetitem14 = ___qtreewidgetitem13->child(0);
-        ___qtreewidgetitem14->setText(0, QApplication::translate("Evaluate", "\345\256\266\345\272\255\351\243\216\351\231\251\350\257\204\344\273\267", 0));
-        value2->setSortingEnabled(__sortingEnabled);
-
+        label_12->setText(QApplication::translate("Evaluate", "\351\200\211\346\213\251\346\226\271\346\241\210\357\274\232", 0));
+        pushButton_5->setText(QApplication::translate("Evaluate", "\345\210\227\350\241\250\346\230\276\347\244\272\350\257\246\347\273\206\344\277\241\346\201\257", 0));
+        pushButton_6->setText(QApplication::translate("Evaluate", "\345\212\240\345\205\245\345\210\260\346\226\271\346\241\210\346\257\224\350\276\203\344\270\255", 0));
+        pushButton_7->setText(QApplication::translate("Evaluate", "\345\233\276\345\203\217\346\274\224\347\244\272", 0));
+        value1->setText(QApplication::translate("Evaluate", "\351\200\211\346\213\251\346\214\207\346\240\207", 0));
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("Evaluate", "\346\234\200\344\274\230\346\226\271\346\241\210", 0));
         QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
@@ -990,19 +1080,62 @@ public:
         ___qtablewidgetitem66->setText(QApplication::translate("Evaluate", "\345\205\250\351\200\211", 0));
         tableWidget->setSortingEnabled(__sortingEnabled1);
 
+        area1->setText(QApplication::translate("Evaluate", "\351\200\211\346\213\251\345\234\260\345\214\272", 0));
+        QTreeWidgetItem *___qtreewidgetitem = value2->headerItem();
+        ___qtreewidgetitem->setText(0, QApplication::translate("Evaluate", "\346\214\207\346\240\207", 0));
+
+        const bool __sortingEnabled2 = value2->isSortingEnabled();
+        value2->setSortingEnabled(false);
+        QTreeWidgetItem *___qtreewidgetitem1 = value2->topLevelItem(0);
+        ___qtreewidgetitem1->setText(0, QApplication::translate("Evaluate", "\347\273\274\345\220\210\350\257\204\344\273\267", 0));
+        QTreeWidgetItem *___qtreewidgetitem2 = ___qtreewidgetitem1->child(0);
+        ___qtreewidgetitem2->setText(0, QApplication::translate("Evaluate", "\350\265\204\346\272\220\347\216\257\345\242\203\350\257\204\344\273\267", 0));
+        QTreeWidgetItem *___qtreewidgetitem3 = ___qtreewidgetitem2->child(0);
+        ___qtreewidgetitem3->setText(0, QApplication::translate("Evaluate", "\350\247\204\346\250\241\350\257\204\344\273\267", 0));
+        QTreeWidgetItem *___qtreewidgetitem4 = ___qtreewidgetitem2->child(1);
+        ___qtreewidgetitem4->setText(0, QApplication::translate("Evaluate", "\344\272\272\345\235\207\350\265\204\346\272\220\350\257\204\344\273\267", 0));
+        QTreeWidgetItem *___qtreewidgetitem5 = ___qtreewidgetitem1->child(1);
+        ___qtreewidgetitem5->setText(0, QApplication::translate("Evaluate", "\345\242\236\351\225\277\351\200\237\345\272\246\350\257\204\344\273\267", 0));
+        QTreeWidgetItem *___qtreewidgetitem6 = ___qtreewidgetitem5->child(0);
+        ___qtreewidgetitem6->setText(0, QApplication::translate("Evaluate", "\345\242\236\351\225\277\350\257\204\344\273\267", 0));
+        QTreeWidgetItem *___qtreewidgetitem7 = ___qtreewidgetitem1->child(2);
+        ___qtreewidgetitem7->setText(0, QApplication::translate("Evaluate", "\345\256\217\350\247\202\347\273\223\346\236\204\350\257\204\344\273\267", 0));
+        QTreeWidgetItem *___qtreewidgetitem8 = ___qtreewidgetitem7->child(0);
+        ___qtreewidgetitem8->setText(0, QApplication::translate("Evaluate", "\345\233\275\351\231\205\350\200\201\351\276\204\350\257\204\344\273\267", 0));
+        QTreeWidgetItem *___qtreewidgetitem9 = ___qtreewidgetitem7->child(1);
+        ___qtreewidgetitem9->setText(0, QApplication::translate("Evaluate", "\345\233\275\351\231\205\350\264\237\346\213\205\350\257\204\344\273\267", 0));
+        QTreeWidgetItem *___qtreewidgetitem10 = ___qtreewidgetitem7->child(2);
+        ___qtreewidgetitem10->setText(0, QApplication::translate("Evaluate", "\345\233\275\351\231\205\345\212\263\345\212\233\350\257\204\344\273\267", 0));
+        QTreeWidgetItem *___qtreewidgetitem11 = ___qtreewidgetitem7->child(3);
+        ___qtreewidgetitem11->setText(0, QApplication::translate("Evaluate", "\345\233\275\351\231\205\350\247\206\347\252\227\350\257\204\344\273\267", 0));
+        QTreeWidgetItem *___qtreewidgetitem12 = ___qtreewidgetitem7->child(4);
+        ___qtreewidgetitem12->setText(0, QApplication::translate("Evaluate", "\345\271\264\351\276\204\345\235\207\350\241\241\350\257\204\344\273\267", 0));
+        QTreeWidgetItem *___qtreewidgetitem13 = ___qtreewidgetitem1->child(3);
+        ___qtreewidgetitem13->setText(0, QApplication::translate("Evaluate", "\345\276\256\350\247\202\347\273\223\346\236\204\350\257\204\344\273\267", 0));
+        QTreeWidgetItem *___qtreewidgetitem14 = ___qtreewidgetitem13->child(0);
+        ___qtreewidgetitem14->setText(0, QApplication::translate("Evaluate", "\345\256\266\345\272\255\351\243\216\351\231\251\350\257\204\344\273\267", 0));
+        value2->setSortingEnabled(__sortingEnabled2);
+
+        label_3->setText(QApplication::translate("Evaluate", "\350\257\204\344\273\267\347\273\223\346\236\234", 0));
         label_8->setText(QApplication::translate("Evaluate", "\346\263\250\357\274\232\345\217\214\345\207\273\350\241\250\346\240\274\351\241\271\345\217\257\344\273\245\345\210\227\350\241\250\346\230\276\347\244\272\350\257\204\344\273\267\350\257\246\347\273\206\344\277\241\346\201\257", 0));
-        groupBox_3->setTitle(QApplication::translate("Evaluate", "\346\237\245\350\257\242\346\226\271\346\241\210", 0));
-        comboArea_2->clear();
-        comboArea_2->insertItems(0, QStringList()
+        comboBox_method->clear();
+        comboBox_method->insertItems(0, QStringList()
+         << QApplication::translate("Evaluate", "\345\244\232\346\214\207\346\240\207\350\201\224\345\220\210\351\200\220\346\255\245\346\267\230\346\261\260\344\270\216\344\274\230\351\200\211", 0)
+         << QApplication::translate("Evaluate", "\344\271\230\346\263\225\345\220\210\346\210\220\345\222\214\344\274\230\351\200\211", 0)
+         << QApplication::translate("Evaluate", "\345\212\240\346\263\225\345\220\210\346\210\220\345\222\214\344\274\230\351\200\211", 0)
+        );
+        pushButton_9->setText(QApplication::translate("Evaluate", "\346\230\276\347\244\272\350\257\204\344\273\267\347\273\223\346\236\234", 0));
+        area2->clear();
+        area2->insertItems(0, QStringList()
          << QApplication::translate("Evaluate", "\345\214\227\344\272\254", 0)
          << QApplication::translate("Evaluate", "\345\244\251\346\264\245", 0)
+         << QApplication::translate("Evaluate", "\344\270\212\346\265\267", 0)
+         << QApplication::translate("Evaluate", "\351\207\215\345\272\206", 0)
          << QApplication::translate("Evaluate", "\346\262\263\345\214\227", 0)
          << QApplication::translate("Evaluate", "\345\261\261\350\245\277", 0)
-         << QApplication::translate("Evaluate", "\345\206\205\350\222\231\345\217\244", 0)
          << QApplication::translate("Evaluate", "\350\276\275\345\256\201", 0)
          << QApplication::translate("Evaluate", "\345\220\211\346\236\227", 0)
          << QApplication::translate("Evaluate", "\351\273\221\351\276\231\346\261\237", 0)
-         << QApplication::translate("Evaluate", "\344\270\212\346\265\267", 0)
          << QApplication::translate("Evaluate", "\346\261\237\350\213\217", 0)
          << QApplication::translate("Evaluate", "\346\265\231\346\261\237", 0)
          << QApplication::translate("Evaluate", "\345\256\211\345\276\275", 0)
@@ -1013,68 +1146,21 @@ public:
          << QApplication::translate("Evaluate", "\346\271\226\345\214\227", 0)
          << QApplication::translate("Evaluate", "\346\271\226\345\215\227", 0)
          << QApplication::translate("Evaluate", "\345\271\277\344\270\234", 0)
-         << QApplication::translate("Evaluate", "\345\271\277\350\245\277", 0)
          << QApplication::translate("Evaluate", "\346\265\267\345\215\227", 0)
-         << QApplication::translate("Evaluate", "\351\207\215\345\272\206", 0)
          << QApplication::translate("Evaluate", "\345\233\233\345\267\235", 0)
          << QApplication::translate("Evaluate", "\350\264\265\345\267\236", 0)
          << QApplication::translate("Evaluate", "\344\272\221\345\215\227", 0)
-         << QApplication::translate("Evaluate", "\350\245\277\350\227\217", 0)
          << QApplication::translate("Evaluate", "\351\231\225\350\245\277", 0)
          << QApplication::translate("Evaluate", "\347\224\230\350\202\203", 0)
          << QApplication::translate("Evaluate", "\351\235\222\346\265\267", 0)
+         << QApplication::translate("Evaluate", "\345\206\205\350\222\231\345\217\244", 0)
+         << QApplication::translate("Evaluate", "\345\271\277\350\245\277", 0)
+         << QApplication::translate("Evaluate", "\350\245\277\350\227\217", 0)
          << QApplication::translate("Evaluate", "\345\256\201\345\244\217", 0)
          << QApplication::translate("Evaluate", "\346\226\260\347\226\206", 0)
         );
-        label_9->setText(QApplication::translate("Evaluate", "\351\200\211\346\213\251\345\234\260\345\214\272\357\274\232", 0));
-        pushButton_5->setText(QApplication::translate("Evaluate", "\345\210\227\350\241\250\346\230\276\347\244\272\350\257\246\347\273\206\344\277\241\346\201\257", 0));
-        pushButton_6->setText(QApplication::translate("Evaluate", "\345\212\240\345\205\245\345\210\260\346\226\271\346\241\210\346\257\224\350\276\203\344\270\255", 0));
-        pushButton_7->setText(QApplication::translate("Evaluate", "\345\233\276\345\203\217\346\274\224\347\244\272", 0));
-        label_12->setText(QApplication::translate("Evaluate", "\351\200\211\346\213\251\346\226\271\346\241\210\357\274\232", 0));
-        groupBox_4->setTitle(QApplication::translate("Evaluate", "\346\257\224\350\276\203\346\226\271\346\241\210", 0));
-        pushButton_4->setText(QApplication::translate("Evaluate", "\345\233\276\345\203\217\346\274\224\347\244\272\346\211\200\351\200\211\346\226\271\346\241\210", 0));
-        label_10->setText(QApplication::translate("Evaluate", "\351\200\211\346\213\251\346\214\207\346\240\207", 0));
-        label_7->setText(QApplication::translate("Evaluate", "\345\275\223\345\211\215\351\200\211\344\270\255\347\232\204\346\226\271\346\241\210", 0));
-
-        const bool __sortingEnabled2 = listWidget_2->isSortingEnabled();
-        listWidget_2->setSortingEnabled(false);
-        QListWidgetItem *___qlistwidgetitem = listWidget_2->item(0);
-        ___qlistwidgetitem->setText(QApplication::translate("Evaluate", "\346\200\273\350\247\204\346\250\241", 0));
-        QListWidgetItem *___qlistwidgetitem1 = listWidget_2->item(1);
-        ___qlistwidgetitem1->setText(QApplication::translate("Evaluate", "\345\207\272\347\224\237\350\247\204\346\250\241", 0));
-        QListWidgetItem *___qlistwidgetitem2 = listWidget_2->item(2);
-        ___qlistwidgetitem2->setText(QApplication::translate("Evaluate", "\345\207\272\347\224\237\347\216\207", 0));
-        QListWidgetItem *___qlistwidgetitem3 = listWidget_2->item(3);
-        ___qlistwidgetitem3->setText(QApplication::translate("Evaluate", "\350\207\252\347\204\266\345\242\236\351\225\277\347\216\207", 0));
-        QListWidgetItem *___qlistwidgetitem4 = listWidget_2->item(4);
-        ___qlistwidgetitem4->setText(QApplication::translate("Evaluate", "\347\224\237\350\202\262\347\216\207", 0));
-        QListWidgetItem *___qlistwidgetitem5 = listWidget_2->item(5);
-        ___qlistwidgetitem5->setText(QApplication::translate("Evaluate", "\345\212\263\345\212\250\345\271\264\351\276\204\344\272\272\345\217\243\345\215\240\346\200\273\344\272\272\345\217\243\346\257\224\351\207\215", 0));
-        QListWidgetItem *___qlistwidgetitem6 = listWidget_2->item(6);
-        ___qlistwidgetitem6->setText(QApplication::translate("Evaluate", "\351\235\222\345\271\264\345\212\263\345\212\250\345\212\233\345\215\240\345\212\263\345\212\250\345\271\264\351\276\204\344\272\272\345\217\243\346\257\224\351\207\215", 0));
-        QListWidgetItem *___qlistwidgetitem7 = listWidget_2->item(7);
-        ___qlistwidgetitem7->setText(QApplication::translate("Evaluate", "\345\271\264\351\276\204\344\270\255\344\275\215\346\225\260", 0));
-        QListWidgetItem *___qlistwidgetitem8 = listWidget_2->item(8);
-        ___qlistwidgetitem8->setText(QApplication::translate("Evaluate", "\350\200\201\345\271\264\344\272\272\345\217\243\346\257\224\351\207\215", 0));
-        QListWidgetItem *___qlistwidgetitem9 = listWidget_2->item(9);
-        ___qlistwidgetitem9->setText(QApplication::translate("Evaluate", "\350\264\237\346\213\205\350\200\201\345\271\264\347\263\273\346\225\260", 0));
-        QListWidgetItem *___qlistwidgetitem10 = listWidget_2->item(10);
-        ___qlistwidgetitem10->setText(QApplication::translate("Evaluate", "\350\264\237\346\213\205\345\260\221\345\204\277\347\263\273\346\225\260", 0));
-        QListWidgetItem *___qlistwidgetitem11 = listWidget_2->item(11);
-        ___qlistwidgetitem11->setText(QApplication::translate("Evaluate", "\346\200\273\350\264\237\346\213\205\347\263\273\346\225\260", 0));
-        QListWidgetItem *___qlistwidgetitem12 = listWidget_2->item(12);
-        ___qlistwidgetitem12->setText(QApplication::translate("Evaluate", "\345\271\264\351\276\204\351\207\221\345\255\227\345\241\224\345\235\207\350\241\241\346\200\247", 0));
-        listWidget_2->setSortingEnabled(__sortingEnabled2);
-
-        comboBox_method->clear();
-        comboBox_method->insertItems(0, QStringList()
-         << QApplication::translate("Evaluate", "\345\244\232\346\214\207\346\240\207\350\201\224\345\220\210\351\200\220\346\255\245\346\267\230\346\261\260\344\270\216\344\274\230\351\200\211", 0)
-         << QApplication::translate("Evaluate", "\344\271\230\346\263\225\345\220\210\346\210\220\345\222\214\344\274\230\351\200\211", 0)
-         << QApplication::translate("Evaluate", "\345\212\240\346\263\225\345\220\210\346\210\220\345\222\214\344\274\230\351\200\211", 0)
-        );
         label_11->setText(QApplication::translate("Evaluate", "\350\257\204\344\273\267\346\226\271\346\263\225\357\274\232", 0));
         exit->setText(QApplication::translate("Evaluate", "\351\200\200\345\207\272\350\257\204\344\273\267", 0));
-        pushButton_9->setText(QApplication::translate("Evaluate", "\346\230\276\347\244\272\350\257\204\344\273\267\347\273\223\346\236\234", 0));
     } // retranslateUi
 
 };

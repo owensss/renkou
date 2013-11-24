@@ -1,18 +1,14 @@
-//#include <QApplication>
+#include <QApplication>
 #include <QTextCodec>
 #include "mainwindow.h"
-#include "newproject.h"
-#include "openproject.h"
-#include "searchobject.h"
+#include "uimanager.h"
 
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
+int main(int argc, char *argv[]){
+    QApplication app(argc, argv);
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf-8"));
-    //MainWindow w;
-    //NewProject w;
-    //OpenProject w;
-    SearchObject w;
-    w.show();
-    return a.exec();
+    MainWindow mainWindow;
+    UiManager uiManager;
+    mainWindow.setUiManager(&uiManager);
+    mainWindow.show();
+    return app.exec();
 }

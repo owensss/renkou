@@ -3,3 +3,6 @@
 UiItem::UiItem()
 {
 }
+
+UiItem::~UiItem(){
+}

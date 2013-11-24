@@ -1,5 +1,5 @@
 /********************************************************************************
-** Form generated from reading UI file 'custommadearea.ui'
+** Form generated from reading UI file 'customMadeArea.ui'
 **
 ** Created by: Qt User Interface Compiler version 5.0.2
 **

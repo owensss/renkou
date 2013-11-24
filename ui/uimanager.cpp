@@ -1,5 +1,6 @@
+#include <QApplication>
+#include <algorithm>
 #include "uimanager.h"
-#include "mainwindow.h"
 #include "display.h"
 #include "entercalculate.h"
 #include "evaluate.h"
@@ -11,8 +12,7 @@
 
 UiManager::UiManager()
 {
-  ptrContainer.fill(nullptr);
-  create_ui(mainWindow);
+  ptrCollection.fill(nullptr);
 }
 
 /** suppose the uiPage not existed before
@@ -24,14 +24,13 @@ UiManager::uiPtr UiManager::create_ui(page uiPage){
     //create the ui object according to page value
     //TODO: the ctors of all ui need refining
     switch (uiPage) {
-        case mainWindow :
-            ptr = make_shared<MainWindow>(MainWindow());
-            break;
 //        case customMadeArea :
 //            ptr = make_shared<CustomMadeArea>(CustomMadeArea());
 //            break;
-        case display :
-            ptr = make_shared<Display>(Display());
+        case display :{
+            auto derived_ptr = new Display();
+            derived_ptr->setUiManager(this);
+            ptr = uiPtr(derived_ptr);}
             break;
 //        case dia_accu_linetype1:
 //            ptr = make_shared<Dia_accu_linetype1>(Dia_accu_linetype1());
@@ -48,20 +47,30 @@ UiManager::uiPtr UiManager::create_ui(page uiPage){
 //        case doingCalcProgress:
 //            ptr = make_shared<DoingCalcProgress>(DoingCalcProgress());
 //            break;
-        case enterCalculate:
-            ptr = make_shared<EnterCalculate>(EnterCalculate());
+        case enterCalculate:{
+            auto derived_ptr = new EnterCalculate();
+            derived_ptr->setUiManager(this);
+            ptr = uiPtr(derived_ptr);}
             break;
-        case evaluate:
-            ptr = make_shared<Evaluate>(Evaluate());
+        case evaluate:{
+            auto derived_ptr = new Evaluate();
+            derived_ptr->setUiManager(this);
+            ptr = uiPtr(derived_ptr);}
             break;
-        case importBasicData:
-            ptr = make_shared<ImportBasicData>(ImportBasicData());
+        case importBasicData:{
+            auto derived_ptr = new ImportBasicData();
+            derived_ptr->setUiManager(this);
+            ptr = uiPtr(derived_ptr);}
             break;
-        case importBasicPara:
-            ptr = make_shared<importBasicPara>(importBasicPara());
+        case importBasicPara:{
+            auto derived_ptr = new ImportBasicPara();
+            derived_ptr->setUiManager(this);
+            ptr = uiPtr(derived_ptr);}
             break;
-        case newProject:
-            ptr = make_shared<newProject>(newProject());
+        case newProject:{
+            auto derived_ptr = new NewProject();
+            derived_ptr->setUiManager(this);
+            ptr = uiPtr(derived_ptr);}
             break;
 //        case projectName:
 //            ptr = make_shared<projectName>(projectName());
@@ -69,11 +78,14 @@ UiManager::uiPtr UiManager::create_ui(page uiPage){
 //        case progress_bar:
 //            ptr = make_shared<Progress_bar>(Progress_bar());
 //            break;
-        case searchObject:
-            ptr = make_shared<SearchObject>(SearchObject());
+        case searchObject:{
+            auto derived_ptr = new SearchObject();
+            derived_ptr->setUiManager(this);
+            ptr = uiPtr(derived_ptr);}
+            break;
+        default:
             break;
     }//end of switch
-    ptr->setUiManager(this);
     ptrCollection[uiPage] = ptr;
 
     return ptr;
@@ -95,6 +107,6 @@ void UiManager::disactive(UiManager::page uiPage)
 
 void UiManager::makeFront(UiManager::page uiPage)
 {
-    get_ui(uiPage)->execute();
+    get_ui(uiPage)->exec();
 }
 

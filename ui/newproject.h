@@ -9,13 +9,12 @@
 #include <QDir>
 #include <QLabel>
 #include <QMessageBox>
-#include "uimanager.h"
-
+#include "uiitem.h"
 namespace Ui {
 class NewProject;
 }
 
-class NewProject : public QDialog
+class NewProject : public QDialog, public UiItem
 {
     Q_OBJECT
 

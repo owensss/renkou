@@ -2,7 +2,7 @@
 #define ENTERCACULATE_H
 
 #include <QDialog>
-#include "uimanager.h"
+#include "uiitem.h"
 namespace Ui {
 class EnterCalculate;
 }

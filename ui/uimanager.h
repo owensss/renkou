@@ -1,7 +1,9 @@
 #ifndef UIMANAGER_H
 #define UIMANAGER_H
 
+#include <QDialog>
 #include <array>
+#include <memory>
 
 class UiManager
 {
@@ -11,34 +13,26 @@ public:
    * So That PAGE_SIZE == number of enum items could work
    */
     enum page {
-        mainWindow,
-        customMadeArea,
+//        customMadeArea,
         display,
-        dia_accu_linetype1,
-        dia_accu_linetype2,
-        linetype1,
-        linetype2,
-        doingCalcProgress,
+//        dia_accu_linetype1,
+//        dia_accu_linetype2,
+//        linetype1,
+//        linetype2,
+//        doingCalcProgress,
         enterCalculate,
         evaluate,
         importBasicData,
         importBasicPara,
         newProject,
         openProject,
-        progress_bar,
+//        progress_bar,
         searchObject,
         PAGE_SIZE
     };
 public:
     UiManager();
     ~UiManager();
-
-    /**
-     * @brief show mainWindow to user
-     */
-    void showMainwindow() {
-      get_ui(mainWindow)->show();
-    }
 
     /**
      * @brief show the window
@@ -57,6 +51,13 @@ public:
      * @param the window to be made front
      */
     void makeFront(page uiPage);
+private:
+    typedef std::shared_ptr<QDialog> uiPtr;
+
+    /*
+     * suppose one ui enum only has one instance
+     */
+    typedef std::array<uiPtr, PAGE_SIZE> PtrContainer;
 private:
     /**
      * @brief get ui pointer from page
@@ -86,17 +87,10 @@ private:
       return ptrCollection[uiPage] != nullptr;
     }
 private:
-    typedef shared_ptr<QWidget *> uiPtr;
-
-    /*
-     * suppose one ui enum only has one instance
-     */
-    typedef std::array<uiPtr, PAGE_SIZE> ptrContainer;
-private:
     /*
      * used for managing all kinds of ui ptrs
      */
-    ptrContainer ptrCollection;
+    PtrContainer ptrCollection;
 };
 
 #endif // UIMANAGER_H

@@ -14,68 +14,129 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_newProject
+class Ui_NewProject
 {
 public:
-    QLabel *label;
-    QLineEdit *projectroute;
-    QLabel *label_2;
+    QGridLayout *gridLayout;
+    QGridLayout *gridLayout_2;
+    QLineEdit *leProjectName;
+    QLabel *lbSavePath;
+    QLabel *lbProjectName;
+    QLineEdit *leSavePath;
+    QPushButton *selectPath;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer;
     QPushButton *ok;
-    QLineEdit *projectname;
     QPushButton *cancel;
+    QSpacerItem *horizontalSpacer_2;
 
-    void setupUi(QDialog *newProject)
+    void setupUi(QDialog *NewProject)
     {
-        if (newProject->objectName().isEmpty())
-            newProject->setObjectName(QStringLiteral("newProject"));
-        newProject->resize(419, 170);
-        label = new QLabel(newProject);
-        label->setObjectName(QStringLiteral("label"));
-        label->setGeometry(QRect(40, 40, 61, 16));
-        projectroute = new QLineEdit(newProject);
-        projectroute->setObjectName(QStringLiteral("projectroute"));
-        projectroute->setEnabled(false);
-        projectroute->setGeometry(QRect(100, 80, 201, 20));
-        label_2 = new QLabel(newProject);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(40, 80, 71, 16));
-        ok = new QPushButton(newProject);
+        if (NewProject->objectName().isEmpty())
+            NewProject->setObjectName(QStringLiteral("NewProject"));
+        NewProject->resize(419, 170);
+        gridLayout = new QGridLayout(NewProject);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        gridLayout_2 = new QGridLayout();
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
+        leProjectName = new QLineEdit(NewProject);
+        leProjectName->setObjectName(QStringLiteral("leProjectName"));
+
+        gridLayout_2->addWidget(leProjectName, 0, 1, 1, 1);
+
+        lbSavePath = new QLabel(NewProject);
+        lbSavePath->setObjectName(QStringLiteral("lbSavePath"));
+        lbSavePath->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+
+        gridLayout_2->addWidget(lbSavePath, 1, 0, 1, 1);
+
+        lbProjectName = new QLabel(NewProject);
+        lbProjectName->setObjectName(QStringLiteral("lbProjectName"));
+
+        gridLayout_2->addWidget(lbProjectName, 0, 0, 1, 1);
+
+        leSavePath = new QLineEdit(NewProject);
+        leSavePath->setObjectName(QStringLiteral("leSavePath"));
+        leSavePath->setEnabled(true);
+        leSavePath->setReadOnly(true);
+
+        gridLayout_2->addWidget(leSavePath, 1, 1, 1, 1);
+
+        selectPath = new QPushButton(NewProject);
+        selectPath->setObjectName(QStringLiteral("selectPath"));
+        selectPath->setEnabled(true);
+        selectPath->setAutoDefault(false);
+        selectPath->setDefault(false);
+
+        gridLayout_2->addWidget(selectPath, 1, 2, 1, 1);
+
+
+        gridLayout->addLayout(gridLayout_2, 0, 0, 1, 1);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer);
+
+        ok = new QPushButton(NewProject);
         ok->setObjectName(QStringLiteral("ok"));
         ok->setEnabled(false);
-        ok->setGeometry(QRect(240, 130, 75, 23));
-        projectname = new QLineEdit(newProject);
-        projectname->setObjectName(QStringLiteral("projectname"));
-        projectname->setGeometry(QRect(100, 40, 201, 20));
-        cancel = new QPushButton(newProject);
+        ok->setAutoDefault(false);
+        ok->setDefault(false);
+
+        horizontalLayout->addWidget(ok);
+
+        cancel = new QPushButton(NewProject);
         cancel->setObjectName(QStringLiteral("cancel"));
-        cancel->setGeometry(QRect(330, 130, 75, 23));
+        cancel->setAutoDefault(false);
+        cancel->setDefault(false);
+        cancel->setFlat(false);
 
-        retranslateUi(newProject);
+        horizontalLayout->addWidget(cancel);
 
-        QMetaObject::connectSlotsByName(newProject);
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_2);
+
+
+        gridLayout->addLayout(horizontalLayout, 1, 0, 1, 1);
+
+        QWidget::setTabOrder(leProjectName, leSavePath);
+        QWidget::setTabOrder(leSavePath, selectPath);
+        QWidget::setTabOrder(selectPath, ok);
+        QWidget::setTabOrder(ok, cancel);
+
+        retranslateUi(NewProject);
+
+        QMetaObject::connectSlotsByName(NewProject);
     } // setupUi
 
-    void retranslateUi(QDialog *newProject)
+    void retranslateUi(QDialog *NewProject)
     {
-        newProject->setWindowTitle(QApplication::translate("newProject", "\346\226\260\345\273\272\351\241\271\347\233\256", 0));
-        label->setText(QApplication::translate("newProject", "\351\241\271\347\233\256\345\220\215\357\274\232", 0));
-        projectroute->setText(QApplication::translate("newProject", "D:/Demographic/\351\241\271\347\233\256/", 0));
-        label_2->setText(QApplication::translate("newProject", "\344\277\235\345\255\230\350\267\257\345\276\204\357\274\232", 0));
-        ok->setText(QApplication::translate("newProject", "\347\241\256\345\256\232", 0));
-        cancel->setText(QApplication::translate("newProject", "\345\217\226\346\266\210", 0));
+        NewProject->setWindowTitle(QApplication::translate("NewProject", "\346\226\260\345\273\272\351\241\271\347\233\256", 0));
+        lbSavePath->setText(QApplication::translate("NewProject", "\344\277\235\345\255\230\350\267\257\345\276\204\357\274\232", 0));
+        lbProjectName->setText(QApplication::translate("NewProject", "\346\226\260\345\273\272\351\241\271\347\233\256\357\274\232", 0));
+        leSavePath->setText(QApplication::translate("NewProject", "D:/Demographic/\351\241\271\347\233\256/", 0));
+        selectPath->setText(QApplication::translate("NewProject", "\351\200\211\346\213\251...", 0));
+        ok->setText(QApplication::translate("NewProject", "\347\241\256\345\256\232", 0));
+        cancel->setText(QApplication::translate("NewProject", "\345\217\226\346\266\210", 0));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class newProject: public Ui_newProject {};
+    class NewProject: public Ui_NewProject {};
 } // namespace Ui
 
 QT_END_NAMESPACE

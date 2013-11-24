@@ -15,135 +15,158 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_searchObject
+class Ui_SearchObject
 {
 public:
-    QPushButton *searchButton;
+    QGridLayout *gridLayout;
+    QHBoxLayout *horizontalLayout;
+    QSpacerItem *horizontalSpacer_4;
+    QLabel *labelYear;
     QComboBox *comboYear;
-    QLabel *label_3;
-    QLabel *label_2;
+    QSpacerItem *horizontalSpacer_3;
+    QLabel *labelArea;
     QComboBox *comboArea;
-    QPushButton *pushButton;
+    QSpacerItem *horizontalSpacer_5;
+    QHBoxLayout *horizontalLayout_2;
+    QSpacerItem *horizontalSpacer;
+    QPushButton *search;
+    QPushButton *ok;
+    QSpacerItem *horizontalSpacer_2;
 
-    void setupUi(QDialog *searchObject)
+    void setupUi(QDialog *SearchObject)
     {
-        if (searchObject->objectName().isEmpty())
-            searchObject->setObjectName(QStringLiteral("searchObject"));
-        searchObject->resize(400, 145);
-        searchButton = new QPushButton(searchObject);
-        searchButton->setObjectName(QStringLiteral("searchButton"));
-        searchButton->setGeometry(QRect(210, 100, 75, 23));
-        comboYear = new QComboBox(searchObject);
+        if (SearchObject->objectName().isEmpty())
+            SearchObject->setObjectName(QStringLiteral("SearchObject"));
+        SearchObject->resize(400, 145);
+        gridLayout = new QGridLayout(SearchObject);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalSpacer_4 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_4);
+
+        labelYear = new QLabel(SearchObject);
+        labelYear->setObjectName(QStringLiteral("labelYear"));
+
+        horizontalLayout->addWidget(labelYear);
+
+        comboYear = new QComboBox(SearchObject);
         comboYear->setObjectName(QStringLiteral("comboYear"));
-        comboYear->setGeometry(QRect(90, 50, 69, 22));
         comboYear->setEditable(true);
-        label_3 = new QLabel(searchObject);
-        label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(190, 50, 54, 12));
-        label_2 = new QLabel(searchObject);
-        label_2->setObjectName(QStringLiteral("label_2"));
-        label_2->setGeometry(QRect(50, 50, 54, 12));
-        comboArea = new QComboBox(searchObject);
+
+        horizontalLayout->addWidget(comboYear);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_3);
+
+        labelArea = new QLabel(SearchObject);
+        labelArea->setObjectName(QStringLiteral("labelArea"));
+
+        horizontalLayout->addWidget(labelArea);
+
+        comboArea = new QComboBox(SearchObject);
         comboArea->setObjectName(QStringLiteral("comboArea"));
-        comboArea->setGeometry(QRect(230, 50, 69, 22));
         comboArea->setEditable(true);
-        pushButton = new QPushButton(searchObject);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(300, 100, 75, 23));
 
-        retranslateUi(searchObject);
+        horizontalLayout->addWidget(comboArea);
 
-        QMetaObject::connectSlotsByName(searchObject);
+        horizontalSpacer_5 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_5);
+
+
+        gridLayout->addLayout(horizontalLayout, 0, 0, 1, 1);
+
+        horizontalLayout_2 = new QHBoxLayout();
+        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer);
+
+        search = new QPushButton(SearchObject);
+        search->setObjectName(QStringLiteral("search"));
+        search->setAutoDefault(false);
+
+        horizontalLayout_2->addWidget(search);
+
+        ok = new QPushButton(SearchObject);
+        ok->setObjectName(QStringLiteral("ok"));
+        ok->setAutoDefault(false);
+
+        horizontalLayout_2->addWidget(ok);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_2->addItem(horizontalSpacer_2);
+
+
+        gridLayout->addLayout(horizontalLayout_2, 1, 0, 1, 1);
+
+
+        retranslateUi(SearchObject);
+
+        QMetaObject::connectSlotsByName(SearchObject);
     } // setupUi
 
-    void retranslateUi(QDialog *searchObject)
+    void retranslateUi(QDialog *SearchObject)
     {
-        searchObject->setWindowTitle(QApplication::translate("searchObject", "\346\237\245\346\211\276\347\240\224\347\251\266\345\257\271\350\261\241", 0));
-        searchButton->setText(QApplication::translate("searchObject", "\346\237\245\350\257\242", 0));
-        comboYear->clear();
-        comboYear->insertItems(0, QStringList()
-         << QApplication::translate("searchObject", "1980", 0)
-         << QApplication::translate("searchObject", "1981", 0)
-         << QApplication::translate("searchObject", "1982", 0)
-         << QApplication::translate("searchObject", "1983", 0)
-         << QApplication::translate("searchObject", "1984", 0)
-         << QApplication::translate("searchObject", "1985", 0)
-         << QApplication::translate("searchObject", "1986", 0)
-         << QApplication::translate("searchObject", "1987", 0)
-         << QApplication::translate("searchObject", "1988", 0)
-         << QApplication::translate("searchObject", "1989", 0)
-         << QApplication::translate("searchObject", "1990", 0)
-         << QApplication::translate("searchObject", "1991", 0)
-         << QApplication::translate("searchObject", "1992", 0)
-         << QApplication::translate("searchObject", "1993", 0)
-         << QApplication::translate("searchObject", "1994", 0)
-         << QApplication::translate("searchObject", "1995", 0)
-         << QApplication::translate("searchObject", "1996", 0)
-         << QApplication::translate("searchObject", "1997", 0)
-         << QApplication::translate("searchObject", "1998", 0)
-         << QApplication::translate("searchObject", "1999", 0)
-         << QApplication::translate("searchObject", "2000", 0)
-         << QApplication::translate("searchObject", "2001", 0)
-         << QApplication::translate("searchObject", "2002", 0)
-         << QApplication::translate("searchObject", "2003", 0)
-         << QApplication::translate("searchObject", "2004", 0)
-         << QApplication::translate("searchObject", "2005", 0)
-         << QApplication::translate("searchObject", "2006", 0)
-         << QApplication::translate("searchObject", "2007", 0)
-         << QApplication::translate("searchObject", "2008", 0)
-         << QApplication::translate("searchObject", "2009", 0)
-         << QApplication::translate("searchObject", "2010", 0)
-        );
-        label_3->setText(QApplication::translate("searchObject", "\345\234\260\345\214\272\357\274\232", 0));
-        label_2->setText(QApplication::translate("searchObject", "\345\237\272\345\271\264\357\274\232", 0));
+        SearchObject->setWindowTitle(QApplication::translate("SearchObject", "\346\237\245\346\211\276\347\240\224\347\251\266\345\257\271\350\261\241", 0));
+        labelYear->setText(QApplication::translate("SearchObject", "\345\237\272\345\271\264\357\274\232", 0));
+        labelArea->setText(QApplication::translate("SearchObject", "\345\234\260\345\214\272\357\274\232", 0));
         comboArea->clear();
         comboArea->insertItems(0, QStringList()
-         << QApplication::translate("searchObject", "\345\205\250\345\233\275", 0)
-         << QApplication::translate("searchObject", "\345\214\227\344\272\254", 0)
-         << QApplication::translate("searchObject", "\345\244\251\346\264\245", 0)
-         << QApplication::translate("searchObject", "\346\262\263\345\214\227", 0)
-         << QApplication::translate("searchObject", "\345\261\261\350\245\277", 0)
-         << QApplication::translate("searchObject", "\345\206\205\350\222\231\345\217\244", 0)
-         << QApplication::translate("searchObject", "\350\276\275\345\256\201", 0)
-         << QApplication::translate("searchObject", "\345\220\211\346\236\227", 0)
-         << QApplication::translate("searchObject", "\351\273\221\351\276\231\346\261\237", 0)
-         << QApplication::translate("searchObject", "\344\270\212\346\265\267", 0)
-         << QApplication::translate("searchObject", "\346\261\237\350\213\217", 0)
-         << QApplication::translate("searchObject", "\346\265\231\346\261\237", 0)
-         << QApplication::translate("searchObject", "\345\256\211\345\276\275", 0)
-         << QApplication::translate("searchObject", "\347\246\217\345\273\272", 0)
-         << QApplication::translate("searchObject", "\346\261\237\350\245\277", 0)
-         << QApplication::translate("searchObject", "\345\261\261\344\270\234", 0)
-         << QApplication::translate("searchObject", "\346\262\263\345\215\227", 0)
-         << QApplication::translate("searchObject", "\346\271\226\345\214\227", 0)
-         << QApplication::translate("searchObject", "\346\271\226\345\215\227", 0)
-         << QApplication::translate("searchObject", "\345\271\277\344\270\234", 0)
-         << QApplication::translate("searchObject", "\345\271\277\350\245\277", 0)
-         << QApplication::translate("searchObject", "\346\265\267\345\215\227", 0)
-         << QApplication::translate("searchObject", "\351\207\215\345\272\206", 0)
-         << QApplication::translate("searchObject", "\345\233\233\345\267\235", 0)
-         << QApplication::translate("searchObject", "\350\264\265\345\267\236", 0)
-         << QApplication::translate("searchObject", "\344\272\221\345\215\227", 0)
-         << QApplication::translate("searchObject", "\350\245\277\350\227\217", 0)
-         << QApplication::translate("searchObject", "\351\231\225\350\245\277", 0)
-         << QApplication::translate("searchObject", "\347\224\230\350\202\203", 0)
-         << QApplication::translate("searchObject", "\351\235\222\346\265\267", 0)
-         << QApplication::translate("searchObject", "\345\256\201\345\244\217", 0)
-         << QApplication::translate("searchObject", "\346\226\260\347\226\206", 0)
+         << QApplication::translate("SearchObject", "\345\205\250\345\233\275", 0)
+         << QApplication::translate("SearchObject", "\345\214\227\344\272\254", 0)
+         << QApplication::translate("SearchObject", "\345\244\251\346\264\245", 0)
+         << QApplication::translate("SearchObject", "\346\262\263\345\214\227", 0)
+         << QApplication::translate("SearchObject", "\345\261\261\350\245\277", 0)
+         << QApplication::translate("SearchObject", "\345\206\205\350\222\231\345\217\244", 0)
+         << QApplication::translate("SearchObject", "\350\276\275\345\256\201", 0)
+         << QApplication::translate("SearchObject", "\345\220\211\346\236\227", 0)
+         << QApplication::translate("SearchObject", "\351\273\221\351\276\231\346\261\237", 0)
+         << QApplication::translate("SearchObject", "\344\270\212\346\265\267", 0)
+         << QApplication::translate("SearchObject", "\346\261\237\350\213\217", 0)
+         << QApplication::translate("SearchObject", "\346\265\231\346\261\237", 0)
+         << QApplication::translate("SearchObject", "\345\256\211\345\276\275", 0)
+         << QApplication::translate("SearchObject", "\347\246\217\345\273\272", 0)
+         << QApplication::translate("SearchObject", "\346\261\237\350\245\277", 0)
+         << QApplication::translate("SearchObject", "\345\261\261\344\270\234", 0)
+         << QApplication::translate("SearchObject", "\346\262\263\345\215\227", 0)
+         << QApplication::translate("SearchObject", "\346\271\226\345\214\227", 0)
+         << QApplication::translate("SearchObject", "\346\271\226\345\215\227", 0)
+         << QApplication::translate("SearchObject", "\345\271\277\344\270\234", 0)
+         << QApplication::translate("SearchObject", "\345\271\277\350\245\277", 0)
+         << QApplication::translate("SearchObject", "\346\265\267\345\215\227", 0)
+         << QApplication::translate("SearchObject", "\351\207\215\345\272\206", 0)
+         << QApplication::translate("SearchObject", "\345\233\233\345\267\235", 0)
+         << QApplication::translate("SearchObject", "\350\264\265\345\267\236", 0)
+         << QApplication::translate("SearchObject", "\344\272\221\345\215\227", 0)
+         << QApplication::translate("SearchObject", "\350\245\277\350\227\217", 0)
+         << QApplication::translate("SearchObject", "\351\231\225\350\245\277", 0)
+         << QApplication::translate("SearchObject", "\347\224\230\350\202\203", 0)
+         << QApplication::translate("SearchObject", "\351\235\222\346\265\267", 0)
+         << QApplication::translate("SearchObject", "\345\256\201\345\244\217", 0)
+         << QApplication::translate("SearchObject", "\346\226\260\347\226\206", 0)
         );
-        pushButton->setText(QApplication::translate("searchObject", "\345\256\214\346\210\220", 0));
+        search->setText(QApplication::translate("SearchObject", "\346\237\245\350\257\242", 0));
+        ok->setText(QApplication::translate("SearchObject", "\345\256\214\346\210\220", 0));
     } // retranslateUi
 
 };
 
 namespace Ui {
-    class searchObject: public Ui_searchObject {};
+    class SearchObject: public Ui_SearchObject {};
 } // namespace Ui
 
 QT_END_NAMESPACE
