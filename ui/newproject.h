@@ -9,8 +9,7 @@
 #include <QDir>
 #include <QLabel>
 #include <QMessageBox>
-#include "uimanager.h"
-
+#include "uiitem.h"
 namespace Ui {
 class NewProject;
 }

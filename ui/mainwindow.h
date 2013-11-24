@@ -1,5 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
+#include <QMainWindow>
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
@@ -14,22 +15,25 @@
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
-#include "uimanager.h"
-
+#include "uiitem.h"
 namespace Ui {
     class MainWindow;
 }
 
-class MainWindow : public QMainWindow, public UiItem
-{
+//class MainWindow : public QMainWindow, public UiItem
+//{
+
+class MainWindow : public QMainWindow, public UiItem {
+    Q_OBJECT
+
 public:
-    MainWindow(QWidget* parent = nullptr);
+    explicit MainWindow(QWidget* parent = nullptr);
     ~MainWindow();
 private slots:
     //project menu
     void addProjectActionTriggered();
     void openProjectActionTriggered();
-
+    void searchObjectActionTriggered();
     //data manage menu
     void importDataActionTriggered();
 
@@ -46,8 +50,6 @@ private slots:
 
 private:
     Ui::MainWindow* ui;
-
 };
 
-QT_END_NAMESPACE
 #endif // MAINWINDOW_H

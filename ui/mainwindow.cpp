@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
-	QMainWindow(parent),
+    QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
     //project menu
     connect(ui->NewProject, SIGNAL(triggered()), this, SLOT(addProjectActionTriggered()));
     connect(ui->OpenProject, SIGNAL(triggered()), this, SLOT(openProjectActionTriggered()));
-
+    connect(ui->SearchObject, SIGNAL(triggered()), this, SLOT(searchObjectActionTriggered()));
     //data manage menu
     connect(ui->ImportData, SIGNAL(triggered()), this, SLOT(importDataActionTriggered()));
     //parameter menu
@@ -18,7 +18,7 @@ MainWindow::MainWindow(QWidget *parent) :
     //simulation menu
     connect(ui->CalculateSim, SIGNAL(triggered()), this, SLOT(calculateSimActionTriggered()));
     connect(ui->ShowSim, SIGNAL(triggered()), this, SLOT(showSimActionTriggered()));
-    connect(ui->EvaluateSim, SIGNAL(toggled(bool)), this, SLOT(evaluateSimActionTriggered()));
+    connect(ui->EvaluateSim, SIGNAL(triggered()), this, SLOT(evaluateSimActionTriggered()));
     //connect(ui->ReportSim, SIGNAL(triggered()), this, SLOT());
 
     //help menu
@@ -40,6 +40,10 @@ void MainWindow::openProjectActionTriggered()
     getUiManager()->active(UiManager::openProject);
 }
 
+void MainWindow::searchObjectActionTriggered()
+{
+    getUiManager()->active(UiManager::searchObject);
+}
 void MainWindow::importDataActionTriggered()
 {
     getUiManager()->active(UiManager::importBasicData);

@@ -5,8 +5,7 @@
 #include <QString>
 #include <QComboBox>
 #include <QStringList>
-
-#include "uimanager.h"
+#include "uiitem.h"
 namespace Ui {
 class SearchObject;
 }

@@ -6,6 +6,8 @@ ImportBasicData::ImportBasicData(QWidget *parent) :
     ui(new Ui::ImportBasicData)
 {
     ui->setupUi(this);
+
+    connect(ui->cancel, SIGNAL(clicked()), this, SLOT(cancelButtonClicked()));
 }
 
 ImportBasicData::~ImportBasicData()

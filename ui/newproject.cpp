@@ -12,10 +12,8 @@ NewProject::NewProject(QWidget *parent) :
     //connect(ui->leSavePath, SIGNAL(textChanged(QString)), this, SLOT(savePathEdited(QString)));
     //connect(ui->leSavePath, SIGNAL(textEdited(QString)), this, SLOT(savePahtEdited(QString)));
     connect(ui->selectPath, SIGNAL(clicked()), this, SLOT(selectPathButtonClicked()));
-
     connect(ui->ok, SIGNAL(clicked()), this, SLOT(okButtonClicked()));
     connect(ui->cancel, SIGNAL(clicked()), this, SLOT(cancelButtonClicked()));
-
 }
 
 NewProject::~NewProject()

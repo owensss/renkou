@@ -2,8 +2,7 @@
 #define DISPLAY_H
 
 #include <QDialog>
-
-#include "uimanager.h"
+#include "uiitem.h"
 namespace Ui {
 class Display;
 }
@@ -18,6 +17,9 @@ public:
 
 private:
     Ui::Display *ui;
+
+//private slots:
+//    void cancelButtonClicked();
 };
 
 #endif // DISPLAY_H
