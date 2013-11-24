@@ -2,10 +2,10 @@
 #include "newproject.h"
 #include "ui_newproject.h"
 
-NewProject::NewProject(QWidget *parent) :
+NewProject::NewProject(QWidget *parent, UiManager *uiManager) :
     QDialog(parent),
     ui(new Ui::NewProject),
-    uiManager(new UiManager())
+    uiManager(uiManager)
 {
     ui->setupUi(this);
 
@@ -22,7 +22,6 @@ NewProject::NewProject(QWidget *parent) :
 NewProject::~NewProject()
 {
     delete ui;
-    delete uiManager;
 }
 
 void NewProject::projectNameEdited(QString _filename)

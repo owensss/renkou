@@ -3,8 +3,7 @@
 
 Evaluate::Evaluate(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Evaluate),
-    uiManager(new UiManager())
+    ui(new Ui::Evaluate)
 {
     ui->setupUi(this);
 
@@ -15,10 +14,9 @@ Evaluate::Evaluate(QWidget *parent) :
 Evaluate::~Evaluate()
 {
     delete ui;
-    delete uiManager;
 }
 
 void Evaluate::exitButtonClicked()
 {
-    uiManager->disactive(UiManager::evaluate);
+    getUiManager()->disactive(UiManager::evaluate);
 }

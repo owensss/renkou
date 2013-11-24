@@ -14,10 +14,9 @@ ImportBasicPara::ImportBasicPara(QWidget *parent) :
 ImportBasicPara::~ImportBasicPara()
 {
     delete ui;
-    delete uiManager;
 }
 
 void ImportBasicPara::cancelButtonClicked()
 {
-    uiManager->disactive(UiManager::importBasicPara);
+    getUiManager()->disactive(UiManager::importBasicPara);
 }

@@ -5,7 +5,6 @@
 SearchObject::SearchObject(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SearchObject),
-    uiManager(new UiManager()),
     maxYear(2010), minYear(1980)
 {
     ui->setupUi(this);
@@ -25,7 +24,6 @@ SearchObject::SearchObject(QWidget *parent) :
 SearchObject::~SearchObject()
 {
     delete ui;
-    delete uiManager;
 }
 
 void SearchObject::areaComboChanged(QString s)
@@ -51,7 +49,7 @@ void SearchObject::yearComboChanged(QString s)
 
 void SearchObject::okButtonClicked()
 {
-    uiManager->disactive(UiManager::searchObject);
+    getUiManager()->disactive(UiManager::searchObject);
 }
 
 void SearchObject::searchButtonClicked()

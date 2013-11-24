@@ -16,17 +16,16 @@ namespace Ui {
 class OpenProject;
 }
 
-class OpenProject : public QDialog
+class OpenProject : public QDialog, public UiItem
 {
     Q_OBJECT
 
 public:
-    explicit OpenProject(QWidget *parent = 0);
+    explicit OpenProject(QWidget *parent = nullptr);
     ~OpenProject();
 
 private:
     Ui::OpenProject *ui;
-    UiManager *uiManager;
 
 private slots:
     //void openPathEdited(QString _filename);

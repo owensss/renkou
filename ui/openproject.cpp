@@ -4,8 +4,7 @@
 
 OpenProject::OpenProject(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::OpenProject),
-    uiManager(new UiManager())
+    ui(new Ui::OpenProject)
 {
     ui->setupUi(this);
 
@@ -20,7 +19,6 @@ OpenProject::OpenProject(QWidget *parent) :
 OpenProject::~OpenProject()
 {
     delete ui;
-    delete uiManager;
 }
 
 //void OpenProject::openPathEdited(QString _filename)
