@@ -2,13 +2,13 @@
 #define IMPORTBASICPARA_H
 
 #include <QDialog>
-#include "uimanager.h"
+#include "uiitem.h"
 
 namespace Ui {
 class ImportBasicPara;
 }
 
-class ImportBasicPara : public QDialog
+class ImportBasicPara : public QDialog, public UiItem
 {
     Q_OBJECT
 

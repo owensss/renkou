@@ -2,10 +2,9 @@
 #include "newproject.h"
 #include "ui_newproject.h"
 
-NewProject::NewProject(QWidget *parent, UiManager *uiManager) :
+NewProject::NewProject(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::NewProject),
-    uiManager(uiManager)
+    ui(new Ui::NewProject)
 {
     ui->setupUi(this);
 

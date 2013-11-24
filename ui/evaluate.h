@@ -2,7 +2,7 @@
 #define EVALUATE_H
 
 #include <QDialog>
-#include "uimanager.h"
+#include "uiitem.h"
 namespace Ui {
 class Evaluate;
 }
@@ -12,7 +12,7 @@ class Evaluate : public QDialog, public UiItem
     Q_OBJECT
 
 public:
-    explicit Evaluate(QWidget *parent = nullptr, UiManager *uiManager);
+    explicit Evaluate(QWidget *parent = nullptr);
     ~Evaluate();
 
 private:

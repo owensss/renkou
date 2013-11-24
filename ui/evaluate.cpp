@@ -8,7 +8,6 @@ Evaluate::Evaluate(QWidget *parent) :
     ui->setupUi(this);
 
     connect(ui->exit, SIGNAL(clicked()), this, SLOT(exitButtonClicked()));
-
 }
 
 Evaluate::~Evaluate()

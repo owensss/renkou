@@ -10,8 +10,7 @@
 #include <QMessageBox>
 #include <QStringList>
 #include <QChar>
-#include "uimanager.h"
-
+#include "uiitem.h"
 namespace Ui {
 class OpenProject;
 }
