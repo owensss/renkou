@@ -2003,7 +2003,15 @@
     <string> 双击指标亦可显示</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>452</width>
+     <height>874</height>
+    </rect>
+   </property>
    <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0,0,0,0,0">
     <property name="sizeConstraint">
      <enum>QLayout::SetFixedSize</enum>
@@ -2228,7 +2236,7 @@
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>2</number>
       </property>
       <property name="usesScrollButtons">
        <bool>false</bool>
@@ -4048,7 +4056,7 @@
         <enum>QTabWidget::Rounded</enum>
        </property>
        <property name="currentIndex">
-        <number>2</number>
+        <number>0</number>
        </property>
        <property name="usesScrollButtons">
         <bool>false</bool>
@@ -4071,8 +4079,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>420</width>
+              <height>175</height>
              </rect>
             </property>
             <attribute name="label">
@@ -4526,8 +4534,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>420</width>
+              <height>175</height>
              </rect>
             </property>
             <attribute name="label">
@@ -4587,8 +4595,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>420</width>
+              <height>175</height>
              </rect>
             </property>
             <attribute name="label">
@@ -4652,8 +4660,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>420</width>
+              <height>175</height>
              </rect>
             </property>
             <attribute name="label">
@@ -4730,8 +4738,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>420</width>
+              <height>175</height>
              </rect>
             </property>
             <attribute name="label">
@@ -4834,8 +4842,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>420</width>
+              <height>175</height>
              </rect>
             </property>
             <attribute name="label">
@@ -4912,8 +4920,8 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>100</width>
-              <height>30</height>
+              <width>420</width>
+              <height>175</height>
              </rect>
             </property>
             <attribute name="label">

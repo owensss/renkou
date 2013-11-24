@@ -8,17 +8,16 @@ namespace Ui {
 class ImportBasicPara;
 }
 
-class ImportBasicPara : public QDialog
+class ImportBasicPara : public QDialog, public UiItem
 {
     Q_OBJECT
 
 public:
-    explicit ImportBasicPara(QWidget *parent = 0);
+    explicit ImportBasicPara(QWidget *parent = nullptr);
     ~ImportBasicPara();
 
 private:
     Ui::ImportBasicPara *ui;
-    UiManager* uiManager;
 
 private slots:
     void cancelButtonClicked();

@@ -68,10 +68,10 @@ void OpenProject::openButtonClicked()
 {
     ///load the project
     qDebug()<<"open "<<ui->leProjectPath->text()<<endl;
-    uiManager->disactive(UiManager::openProject);
+    getUiManager()->disactive(UiManager::openProject);
 }
 
 void OpenProject::cancelButtonClicked()
 {
-    uiManager->disactive(UiManager::openProject);
+    getUiManager()->disactive(UiManager::openProject);
 }

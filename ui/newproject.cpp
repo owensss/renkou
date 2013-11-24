@@ -2,10 +2,9 @@
 #include "newproject.h"
 #include "ui_newproject.h"
 
-NewProject::NewProject(QWidget *parent, UiManager *uiManager) :
+NewProject::NewProject(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::NewProject),
-    uiManager(uiManager)
+    ui(new Ui::NewProject)
 {
     ui->setupUi(this);
 
@@ -85,7 +84,7 @@ void NewProject::okButtonClicked()
         else{
             ///create the new project
             qDebug()<<"create " <<newFile->fileName() << endl;
-            uiManager->disactive(UiManager::newProject);
+            getUiManager()->disactive(UiManager::newProject);
         }
         delete newFile;
         newFile = NULL;
@@ -104,5 +103,5 @@ void NewProject::okButtonClicked()
 
 void NewProject::cancelButtonClicked()
 {
-    uiManager->disactive(UiManager::newProject);
+    getUiManager()->disactive(UiManager::newProject);
 }

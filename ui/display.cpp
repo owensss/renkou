@@ -3,8 +3,7 @@
 
 Display::Display(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::Display),
-    uiManager(uiManager)
+    ui(new Ui::Display)
 {
     ui->setupUi(this);
 }
