@@ -49,5 +49,4 @@ private:
 
 };
 
-QT_END_NAMESPACE
 #endif // MAINWINDOW_H

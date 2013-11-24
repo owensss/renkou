@@ -11,7 +11,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = ui
 TEMPLATE = app
 
-
+INCLUDEPATH += D:\boost_1_55_0
 SOURCES += main.cpp\
         mainwindow.cpp \
     uimanager.cpp \
@@ -22,7 +22,8 @@ SOURCES += main.cpp\
     importbasicpara.cpp \
     entercalculate.cpp \
     evaluate.cpp \
-    display.cpp
+    display.cpp \
+    uiitem.cpp
 
 HEADERS  += \
     mainwindow.h \
@@ -34,7 +35,8 @@ HEADERS  += \
     importbasicpara.h \
     entercalculate.h \
     evaluate.h \
-    display.h
+    display.h \
+    uiitem.h
 
 FORMS += \
     progress_bar.ui \
@@ -45,7 +47,8 @@ FORMS += \
     display.ui \
     dia_accu_linetype2.ui \
     dia_accu_linetype1.ui \
-<<<<<<< HEAD
+<<<<<<< HEAD \
+    searchobject.ui
     importBasicPara.ui \
     doingCalcProgress.ui \
     importBasicData.ui \
