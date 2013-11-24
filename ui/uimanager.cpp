@@ -72,9 +72,11 @@ UiManager::uiPtr UiManager::create_ui(page uiPage){
             derived_ptr->setUiManager(this);
             ptr = uiPtr(derived_ptr);}
             break;
-//        case projectName:
-//            ptr = make_shared<projectName>(projectName());
-//            break;
+        case openProject:{
+                auto derived_ptr = new OpenProject();
+                derived_ptr->setUiManager(this);
+                ptr = uiPtr(derived_ptr);}
+            break;
 //        case progress_bar:
 //            ptr = make_shared<Progress_bar>(Progress_bar());
 //            break;
