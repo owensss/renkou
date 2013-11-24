@@ -3,8 +3,7 @@
 
 MainWindow::MainWindow(QWidget *parent) :
 	QMainWindow(parent),
-    ui(new Ui::MainWindow),
-    uiManager(new UiManager())
+    ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
 
@@ -29,43 +28,42 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
-    delete uiManager;
 }
 
 void MainWindow::addProjectActionTriggered()
 {
-    uiManager->active(UiManager::newProject);
+    getUiManager()->active(UiManager::newProject);
 }
 
 void MainWindow::openProjectActionTriggered()
 {
-    uiManager->active(UiManager::openProject);
+    getUiManager()->active(UiManager::openProject);
 }
 
 void MainWindow::importDataActionTriggered()
 {
-    uiManager->active(UiManager::importBasicData);
+    getUiManager()->active(UiManager::importBasicData);
 }
 
 void MainWindow::importParaActionTriggered()
 {
-    uiManager->active(UiManager::importBasicPara);
+    getUiManager()->active(UiManager::importBasicPara);
 }
 
 void MainWindow::calculateSimActionTriggered()
 {
     //do some calculate in the background
-    uiManager->active(UiManager::enterCalculate);
+    getUiManager()->active(UiManager::enterCalculate);
 }
 
 void MainWindow::showSimActionTriggered()
 {
-    uiManager->active(UiManager::display);
+    getUiManager()->active(UiManager::display);
 }
 
 void MainWindow::evaluateSimActionTriggered()
 {
-    uiManager->active(UiManager::evaluate);
+    getUiManager()->active(UiManager::evaluate);
 }
 
 void MainWindow::aboutActionTriggered()

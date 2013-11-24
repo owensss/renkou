@@ -4,7 +4,7 @@
 Display::Display(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Display),
-    uiManager(new UiManager())
+    uiManager(uiManager)
 {
     ui->setupUi(this);
 }
@@ -12,5 +12,4 @@ Display::Display(QWidget *parent) :
 Display::~Display()
 {
     delete ui;
-    delete uiManager;
 }

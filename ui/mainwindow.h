@@ -22,7 +22,7 @@ namespace Ui {
 
 class MainWindow : public QMainWindow {
 public:
-    MainWindow(QWidget* parent = NULL);
+    MainWindow(QWidget* parent = nullptr, UiManager *uiManager);
     ~MainWindow();
 private slots:
     //project menu

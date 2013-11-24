@@ -3,8 +3,7 @@
 
 ImportBasicData::ImportBasicData(QWidget *parent) :
     QDialog(parent),
-    ui(new Ui::ImportBasicData),
-    uiManager(new UiManager())
+    ui(new Ui::ImportBasicData)
 {
     ui->setupUi(this);
 }
@@ -12,10 +11,9 @@ ImportBasicData::ImportBasicData(QWidget *parent) :
 ImportBasicData::~ImportBasicData()
 {
     delete ui;
-    delete uiManager;
 }
 
 void ImportBasicData::cancelButtonClicked()
 {
-    uiManager->disactive(UiManager::importBasicData);
+    getUiManager()->disactive(UiManager::importBasicData);
 }

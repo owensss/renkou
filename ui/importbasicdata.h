@@ -7,17 +7,16 @@ namespace Ui {
 class ImportBasicData;
 }
 
-class ImportBasicData : public QDialog
+class ImportBasicData : public QDialog, public UiItem
 {
     Q_OBJECT
 
 public:
-    explicit ImportBasicData(QWidget *parent = 0);
+    explicit ImportBasicData(QWidget *parent = nullptr);
     ~ImportBasicData();
 
 private:
     Ui::ImportBasicData *ui;
-    UiManager* uiManager;
 
 private slots:
     void cancelButtonClicked();

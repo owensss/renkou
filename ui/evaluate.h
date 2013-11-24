@@ -7,17 +7,16 @@ namespace Ui {
 class Evaluate;
 }
 
-class Evaluate : public QDialog
+class Evaluate : public QDialog, public UiItem
 {
     Q_OBJECT
 
 public:
-    explicit Evaluate(QWidget *parent = 0);
+    explicit Evaluate(QWidget *parent = nullptr, UiManager *uiManager);
     ~Evaluate();
 
 private:
     Ui::Evaluate *ui;
-    UiManager *uiManager;
 
 private slots:
     void exitButtonClicked();
