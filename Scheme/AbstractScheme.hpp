@@ -5,8 +5,8 @@
 #include "Scheme.hpp"
 #include "SchemeBuffer.hpp"
 
-/*
- * @desc: this class provide an interface between outer name & internal name
+/**
+ * @brief this class provide an interface between outer name & internal name
  *        this class accepts parameters as input and generate the desired Scheme class by providing the correct metadata
  *        and it's responsble for the mapping between the uniformed outer parameter & the internal name
  */

@@ -3,7 +3,7 @@
 #include <QMap>
 #include <QString>
 
-/*
+/**
  * aim: I shall make the program run normally evenif config is not loaded
  * usage:
  * 1, Decalare:
@@ -25,7 +25,7 @@ namespace Config {
             ConfigMan() {valid = false;}
             ~ConfigMan(void) {}
             // read config file, reture false upon failure
-            bool read(const QString& _filename="config.txt") ;
+            bool read(const QString& _filename="K:\\build-renkou-Desktop_Qt_5_1_1_MinGW_32bit-Debug\\config.txt") ;
             // return true if config file is read
             bool success(void) const { return valid; }
             // throw ValueNotExist

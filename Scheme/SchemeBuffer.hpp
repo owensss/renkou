@@ -6,7 +6,7 @@
 #include <list>
 #include "exceptions/RecordNotExist.hpp"
 
-/*
+/**
  * note: Input: this class reads data from either file or database
  * 		stores it in binary form.
  * note: Store: LRU, least recently used method, stores the last access time
@@ -27,7 +27,7 @@ class SchemeBuffer {
     public:
         explicit SchemeBuffer(void);
         virtual ~SchemeBuffer() ;
-        /*
+        /**
          * @params: pointer to scheme, row and colonm of the data(row->year, col->indicator)
          * 			note: row starts with 0, say, year-start_year;
          * @return: the value of the desired type, do not check type information!
@@ -40,7 +40,7 @@ class SchemeBuffer {
         // force read a scheme into buffer
         void forceRead(const Scheme* scheme);
     private:
-        /*
+        /**
          * @params: schemePtr, row and col of the record (note: row->year, col->indicator)
          * 			note: row-> starts with 0, say, year-start_year.
          *          note: col-> starts with 1, the first element shall be value `year`.
@@ -66,7 +66,7 @@ class SchemeBuffer {
             buffer.push_front(buf_store);
         }
         // the buffer class that cares about IO, the SchemeBuffer class shall be responsible to the assignment of the buffer array
-        /*
+        /**
          * @description: this class reads data from either file or database and load it into memory
          * 		provides interface to access(read only) the mirrored data
          * 		it does not care about the type of the data
@@ -77,8 +77,8 @@ class SchemeBuffer {
                 Buffer();
                 ~Buffer();
             public:
-                /*
-                 * @desc: load scheme from Input device
+                /**
+                 * @brief load scheme from Input device
                  * @return: true if success, false if failed
                  * @impl: set last_access, size, name, meta and reallocate the buffer on success
                  * XXX: communicate with the outer implement of the data storage method:
@@ -94,13 +94,14 @@ class SchemeBuffer {
                 schememetadataPtr getMetadata(void) const {return meta;}
                 char * rawBuffer(void) {return buffer;}
             private:
-                /* @desc: :allocate new space for the buffer according to its size
+                /**
+                 * @brief :allocate new space for the buffer according to its size
                  * 			if new size <= buffer_size, then the size is not changed
                  * 			and the allocation shall not take place
-                 * @return : false if allocation failed. however, it may throws bad_alloc
+                 * @return  false if allocation failed. however, it may throws bad_alloc
                  */
                 bool allocateBuffer(size_t size) ;
-                /*
+                /**
                  * @desc:IO with filesystem or database, set data to buffer
                  * @params: the scheme name(shall be recegnizable by the implement), buffer, a pointer to the metadata
                  * @return : false if scheme not found

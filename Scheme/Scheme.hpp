@@ -3,7 +3,8 @@
 #include "SchemeDef.hpp"
 #include <QTextCodec>
 /* note: scheme: 方案 */
-/* note: All data are stored in SchemeBuffer and schememetadata, Scheme do not store any data
+/**
+ * note: All data are stored in SchemeBuffer and schememetadata, Scheme do not store any data
  *     Scheme
  *                      SchemeIndicator----------------------------->
  * SchemeInstance      Indicator1 Indicator2 Indicator3 ...
@@ -14,7 +15,7 @@
  *     |    .            .        .
  *     v
  */
-/*
+/**
  * TODO:
  * 		把 schemeItem 写成 class,
  * 		create a new class SchemeItem
@@ -41,10 +42,11 @@ class Scheme : public std::enable_shared_from_this<Scheme> {
     public:
         enum ItemType {sch_none, sch_double, sch_int, sch_string};
     public:
-        /*
-         * @params: this scheme's metadata
-         * 			the buffer associated with this scheme
-         * 			the scheme name: currently, the name shall be the filename-".txt"
+        /**
+         * @brief   create a scheme using meta, buffer and name
+         * @params  metadata this scheme's metadata
+         * 			buffer the buffer associated with this scheme
+         * 			scheme_name the scheme name: currently, the name shall be the filename-".txt"
          * 			note: the sheme name is the name used in the program(used by Prof. Yin.), NOT the name of the txt file or the pri-key value in the relation
          * @note: please use SchemePtr to create instance of this class (just recommended)
          */
@@ -56,23 +58,24 @@ class Scheme : public std::enable_shared_from_this<Scheme> {
         }
         SchemeBufferPtr getBuffer(void) const {return buf;}
         schememetadataPtr getMetadata(void) const {return meta;}
+        /**
+         * @brief getName get the name of the scheme.
+         * @return
+         */
         const QString& getName(void) const {return name;}
         virtual ~Scheme(void) {}
     public:
-        /*
-         * @return: the name needed by SchemeBuffer to get information
-         * @descr: if the internal storage is placed in the files(currently)
-         * 				then this function returns the filename
+        /**
+         * @brief convert the name of the scheme into readable format. Which means(currently)
+         *        convert relative/absulote path with / w\o .txt into a uniformed format
+         * @return if the internal storage is placed in the files(currently)
+         * 				then this function returns the filename.
          * 		   if the internal storage is placed in the database
          * 		   		then this function returns the scheme name
          */
-        QString toInternalName(void) const {
-            // static QTextCodec* gbk = QTextCodec::codecForName("gbk");
-            // static QTextEncoder* gbk_enc = gbk->makeEncoder();
-            return /*gbk_enc->fromUnicode(*/name+".txt"/*)*/;
-        }
+        QString toInternalName(void) const;
     public:
-        /*
+        /**
          * @params: the index of the indicator
          * @return: the indicator of the scheme at the index
          * 		if the index is out of range, throws IndicatorOutOfRange
@@ -84,9 +87,9 @@ class Scheme : public std::enable_shared_from_this<Scheme> {
         SchemeIndicator<schDouble> getIndicatorDouble(size_t index) ;
         template <typename T> SchemeIndicator<T> getIndicator(size_t index);
 
-        /*
-         * @params: the name of the indicator, this is not the name used
-         * @return: the indicator of the scheme of such name
+        /**
+         * @param the name of the indicator, this is not the name used
+         * @return the indicator of the scheme of such name
          * 		if scheme has no indicator with such name, throws IndicatorNameNotFound
          * 		if type mismatch, go die, too!
          */
@@ -94,7 +97,7 @@ class Scheme : public std::enable_shared_from_this<Scheme> {
         SchemeIndicator<schString> getIndicatorString(const QString& name) ;
         SchemeIndicator<schDouble> getIndicatorDouble(const QString& name) ;
 
-        /*
+        /**
          * @params: the absulote year(say, >=start_year, <= end_year)
          * @return: throws InstanceIndexOutOfRange if year outof range
          *			return the intance on success

@@ -2,6 +2,11 @@
 #include "SchemeInstance.hpp"
 #include "SchemeIndicator.hpp"
 #include "exceptions/IndicatorIndexOutOfRange.hpp"
+#include "ConfigMan.hpp"
+
+#include <QDebug>
+
+#include <Qdir>
 
 SchemeIndicator<schInt> Scheme::getIndicatorInt(size_t index) {
     if (meta->hasCol(index)) return SchemeIndicator<schInt>(this, index);
@@ -52,3 +57,34 @@ SchemeInstance Scheme::getInstance(size_t year) {
 }
 
 SchemeInstance Scheme::operator [] (size_t year ) {return getInstance(year);}
+
+namespace toInternalNameHelper {
+inline bool hasTxTSuffix(const QString& str) {
+    return str.endsWith(".txt", Qt::CaseInsensitive);
+}
+
+inline bool isRelativePath(const QString& str) {
+    return QDir(str).isRelative();
+}
+}
+
+/**
+ * @brief convert the name of the scheme into readable format. Which means(currently)
+ *        convert relative/absulote path with / w\o .txt into a uniformed format
+ * @return if the internal storage is placed in the files(currently)
+ * 				then this function returns the filename.
+ * 		   if the internal storage is placed in the database
+ * 		   		then this function returns the scheme name
+ */
+QString Scheme::toInternalName() const {
+    using namespace toInternalNameHelper;
+    QString tmp = name;
+
+    if (isRelativePath(tmp))
+        tmp = Config::config.value("DATA_PATH")+"\\"+tmp;
+
+    if (! hasTxTSuffix(tmp))
+        tmp += ".txt";
+
+    return tmp;
+}

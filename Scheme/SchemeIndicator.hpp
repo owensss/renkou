@@ -45,7 +45,8 @@ class wrapper<schString> {
 };
 }
 
-/* note: 方案指标，方案某个指标在所有年份的值
+/**
+ * note: 方案指标，方案某个指标在所有年份的值
  * 		 并可以计算一些统计数据(最大最小值，均值、方差 等)
  * 		 Scheme Indicator, Scheme one Indicator at all years of data
  * 		 this class stands for an indicator in a scheme, which shall access the records of the specific indicator
@@ -60,10 +61,10 @@ class SchemeIndicator {
         }
         const Scheme* getScheme(void) const {return scheme;}
         size_t getIndex(void) const {return index;}
-        /*
+        /**
          * scheme Item: represents a record in a scheme. not a class
          */
-        /*
+        /**
          * @params: the absolute year
          * @return: return the record in the specific type
          * 			if no record on that year
@@ -75,12 +76,12 @@ class SchemeIndicator {
         size_t endYear(void) const {return scheme->endYear();}
         size_t size(void) const {return scheme->endYear() - startYear();} // UNSCIENTIIC = =b
     // some methematical statistics functions
-    /*
+    /**
      * 1, function type1: the value has an index (max, min)
-     * @params: the value to be set, start_year(default to startYear()), end_year(default to endYear())
+     * @param: the value to be set, start_year(default to startYear()), end_year(default to endYear())
      * @return: the year that value occurs
      * 2, function type2: the value has no index (average, variant)
-     * @params: start_year, end_end (both have default value)
+     * @param: start_year, end_end (both have default value)
      * @return: the value
      */
     public:

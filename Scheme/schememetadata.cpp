@@ -49,7 +49,7 @@ void schememetadata::readMetadata(const QString& filename)
     QFile file(Config::config.value("DATA_STRUCT_PATH")+Config::config.value(filename));
     file.open(QIODevice::ReadOnly | QIODevice::Text);
     QTextStream mtdfile(&file);
-    qDebug() << Config::config.value("DATA_STRUCT_PATH")+Config::config.value(filename);
+    qDebug() << "reading " << Config::config.value("DATA_STRUCT_PATH")+Config::config.value(filename);
     QString tmpline;
     QStringList tmplines;
     QString field_name,

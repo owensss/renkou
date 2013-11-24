@@ -259,7 +259,7 @@ bool SchemeBuffer::Buffer::allocateBuffer(size_t size) {
  * IO function
  */
 bool SchemeBuffer::Buffer::setData(const QString& name, schememetadataPtr meta) {
-    QFile fs(Config::config.value("DATA_PATH")+name);
+    QFile fs(name);
     if (! fs.open(QIODevice::ReadOnly)) {
         throw RecordNotExist(name);
     }

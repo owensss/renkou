@@ -26,6 +26,7 @@ class TestTest : public QObject
         void cleanupTestCase();
         void testSchemeBuffer();
         void testAbstractScheme();
+        void testScheme();
 };
 
 TestTest::TestTest()
@@ -41,7 +42,8 @@ void TestTest::cleanupTestCase()
 }
 
 void TestTest::testAbstractScheme()
-{   try {
+{
+try {
     AbstractScheme as(std::make_shared<SchemeParameterDefault>(), std::make_shared<SchemeBuffer>());
     schememetadataPtr meta_renkougaiyao(new schememetadata("META_RENKOUGAIYAO"));
     as.set("diqu", QObject::tr("上海"));
@@ -103,7 +105,6 @@ void TestTest::testSchemeBuffer()
      SchemePtr test6_(new Scheme(meta1, buffer, "上海农业夫妇子女_回归分释_多龄_农d11p45_非d11p45_z"));
      SchemePtr test7_(new Scheme(meta1, buffer, "安徽城镇夫妇子女_回归分释_多龄_农d11p15_非d11p15_z"));
      SchemePtr test8_(new Scheme(meta1, buffer, "安徽城镇夫妇子女_回归分释_多龄_农d11p20_非d11p20_z"));
-
 
      qDebug() << test->getMetadata()->rowCount() << meta->rowSize() << meta->size();
      qDebug() << meta->startYear() << meta->endYear();
@@ -171,6 +172,43 @@ void TestTest::testSchemeBuffer()
          qDebug() << "record not exist" << e.name();
      }
     QVERIFY2(true, "Failure");
+}
+
+void TestTest::testScheme() {
+    using Config::config;
+    QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf-8"));
+    if (! config.read()) {
+        std::cerr << "config not found!\n";
+        exit(0);
+    }
+
+    // QTextCodec::setCodecForTr(utf8);
+    // QTextCodec::setCodecForCStrings(utf8);
+
+    std::shared_ptr<schememetadata> meta( new schememetadata(QString("META_RENKOUGAIYAO")) );
+    std::shared_ptr<schememetadata> meta1( new schememetadata(QString("META_FUFUZINV")));
+    std::shared_ptr<SchemeBuffer> buffer(new SchemeBuffer);
+
+    SchemePtr test(new Scheme(meta, buffer, "上海农业人口概要_回归分释_多龄_农d11p15_非d11p15_z"));
+    SchemePtr test2(new Scheme(meta, buffer, "K:\\demography\\data\\sim\\0926\\上海农业人口概要_回归分释_多龄_农d11p15_非d11p15_z"));
+    SchemePtr test3(new Scheme(meta, buffer, "上海农业人口概要_回归分释_多龄_农d11p15_非d11p15_z.txt"));
+    SchemePtr test4(new Scheme(meta, buffer, "K:\\demography\\data\\sim\\0926\\上海农业人口概要_回归分释_多龄_农d11p15_非d11p15_z.txt"));
+
+    try {
+        qDebug() << "internal " << test->toInternalName();
+        dbtest(test,  2014, 12);
+        qDebug() << "internal " << test2->toInternalName();
+        dbtest(test2,  2014, 12);
+
+        dbtest(test3,  2014, 115);
+        dbtest(test4,  2014, 115);
+    } catch (const ValueNotExist&e) {
+        qDebug() << e.value();
+    } catch (const ColNotExist& e) {
+        qDebug() << e.value() << e.index();
+    } catch (const RecordNotExist& e) {
+        qDebug() << "record not exist" << e.name();
+    }
 }
 
 QTEST_MAIN(TestTest)
