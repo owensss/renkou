@@ -6,20 +6,131 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>763</width>
-    <height>377</height>
+    <width>911</width>
+    <height>519</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout" stretch="3,0,2">
+    <item>
+     <widget class="QTableView" name="objectTable"/>
+    </item>
+    <item>
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="showWidget" native="true">
+      <widget class="QGroupBox" name="addObjectGroup">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>102</y>
+         <width>311</width>
+         <height>171</height>
+        </rect>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QLabel" name="lb_year">
+            <property name="text">
+             <string>基年:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="yearComboBox"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="lb_area">
+            <property name="text">
+             <string>地区:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_2"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>分省代码:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="leProvinceCode"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QPushButton" name="btnAddNewObejct">
+            <property name="text">
+             <string>添加新对象</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnAddExsitObject">
+            <property name="text">
+             <string>添加已有对象</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnFinish">
+            <property name="text">
+             <string>完成</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>763</width>
+     <width>911</width>
      <height>22</height>
     </rect>
    </property>
@@ -38,7 +149,7 @@
    </widget>
    <widget class="QMenu" name="DataManage">
     <property name="title">
-     <string>新建数据</string>
+     <string>基础数据</string>
     </property>
     <addaction name="InputData"/>
     <addaction name="ImportData"/>
@@ -105,11 +216,17 @@
    </property>
   </action>
   <action name="AddObject">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>添加研究对象</string>
    </property>
   </action>
   <action name="CloseProject">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>关闭项目</string>
    </property>
@@ -120,71 +237,113 @@
    </property>
   </action>
   <action name="InputData">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>录入</string>
    </property>
   </action>
   <action name="ImportData">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>导入</string>
    </property>
   </action>
   <action name="WatchData">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>查看</string>
    </property>
   </action>
   <action name="ModifyData">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>修改</string>
    </property>
   </action>
   <action name="InputPara">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>录入</string>
    </property>
   </action>
   <action name="ImportPara">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>导入</string>
    </property>
   </action>
   <action name="CalculatePara">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>计算</string>
    </property>
   </action>
   <action name="WatchPara">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>查看</string>
    </property>
   </action>
   <action name="ModifyPara">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>修改</string>
    </property>
   </action>
   <action name="CalculateSim">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>仿真计算</string>
    </property>
   </action>
   <action name="ShowSim">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>仿真演示</string>
    </property>
   </action>
   <action name="EvaluateSim">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>仿真评价</string>
    </property>
   </action>
   <action name="ReportSim">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>仿真报告</string>
    </property>
   </action>
   <action name="About">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
    <property name="text">
     <string>关于</string>
    </property>
