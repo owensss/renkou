@@ -34,16 +34,16 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>102</y>
-         <width>311</width>
-         <height>171</height>
+         <y>120</y>
+         <width>329</width>
+         <height>191</height>
         </rect>
        </property>
        <property name="flat">
         <bool>true</bool>
        </property>
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
            <widget class="QLabel" name="lb_year">
@@ -63,11 +63,175 @@
            </widget>
           </item>
           <item>
-           <widget class="QComboBox" name="comboBox_2"/>
+           <widget class="QComboBox" name="comboArea">
+            <property name="editable">
+             <bool>false</bool>
+            </property>
+            <item>
+             <property name="text">
+              <string>全国</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>北京</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>天津</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>河北</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>山西</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>内蒙古</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>辽宁</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>吉林</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>黑龙江</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>上海</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>江苏</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>浙江</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>安徽</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>福建</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>江西</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>山东</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>河南</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>湖北</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>湖南</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>广东</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>广西</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>海南</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>重庆</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>四川</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>贵州</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>云南</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>西藏</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>陕西</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>甘肃</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>青海</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>宁夏</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>新疆</string>
+             </property>
+            </item>
+           </widget>
           </item>
          </layout>
         </item>
-        <item>
+        <item row="1" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_3">
           <item>
            <spacer name="horizontalSpacer">
@@ -94,7 +258,7 @@
           </item>
          </layout>
         </item>
-        <item>
+        <item row="2" column="0">
          <layout class="QHBoxLayout" name="horizontalLayout_4">
           <item>
            <widget class="QPushButton" name="btnAddNewObejct">

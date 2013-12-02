@@ -14,6 +14,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->showWidget->setPalette(*palette);
     ui->addObjectGroup->setVisible(false);
 
+    QStringList yearList;
+    for (int i = 1980; i<=2010; i++){
+        yearList.push_back(QString::number(i));
+    }
+    ui->yearComboBox->addItems(yearList);
     //project menu
     connect(ui->NewProject, SIGNAL(triggered()), this, SLOT(addProjectActionTriggered()));
     connect(ui->OpenProject, SIGNAL(triggered()), this, SLOT(openProjectActionTriggered()));
