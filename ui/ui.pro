@@ -4,49 +4,56 @@
 #
 #-------------------------------------------------
 
+QMAKE_CXXFLAGS += -std=c++0x
+
 QT       += core gui
+CONFIG += c++11
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = ui
 TEMPLATE = app
 
-
-SOURCES += main.cpp\
-        mainwindow.cpp
+SOURCES += main.cpp \
+    mainwindow.cpp \
+    uimanager.cpp \
+    newproject.cpp \
+    openproject.cpp \
+    searchobject.cpp \
+    importbasicdata.cpp \
+    importbasicpara.cpp \
+    entercalculate.cpp \
+    evaluate.cpp \
+    display.cpp \
+    uiitem.cpp
 
 HEADERS  += \
     mainwindow.h \
-    linetype1.h
+    uimanager.h \
+    newproject.h \
+    openproject.h \
+    searchobject.h \
+    importbasicdata.h \
+    importbasicpara.h \
+    entercalculate.h \
+    evaluate.h \
+    display.h \
+    uiitem.h
 
 FORMS += \
-    searchobject.ui \
-    projectname.ui \
-    progress_bar.ui \
-    preparefordisplay.ui \
-    openproject.ui \
-    openjichushujv.ui \
-    openjibencanshu.ui \
-    notexit.ui \
-    newproject.ui \
-    mainwindow.ui \
-    linetype2.ui \
-    linetype1.ui \
-    imagewin.ui \
-    evaluate.ui \
-    entercaculate.ui \
-    docalculate.ui \
-    display.ui \
-    dia_accu_linetype2.ui \
+    customMadeArea.ui \
     dia_accu_linetype1.ui \
-    deleteresearchobj.ui \
-    daorujichuornot.ui \
-    daorujichu.ui \
-    custommadearea.ui \
-    continuedaorushujv.ui \
-    close_or_not.ui \
-    chooseToDisplay.ui \
-    caculator.ui \
-    caculatefinish.ui \
-    already_exit.ui \
-    addnew.ui
+    dia_accu_linetype2.ui \
+    display.ui \
+    doingCalcProgress.ui \
+    entercalculate.ui \
+    evaluate.ui \
+    importBasicData.ui \
+    importBasicPara.ui \
+    linetype1.ui \
+    linetype2.ui \
+    mainwindow.ui \
+    newproject.ui \
+    openProject.ui \
+    progress_bar.ui \
+    searchobject.ui

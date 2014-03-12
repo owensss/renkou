@@ -1,12 +1,14 @@
 #include <QApplication>
 #include <QTextCodec>
 #include "mainwindow.h"
+#include "uimanager.h"
 
-int main(int argc, char *argv[])
-{
-    QApplication a(argc, argv);
+int main(int argc, char *argv[]){
+    QApplication app(argc, argv);
     QTextCodec::setCodecForLocale(QTextCodec::codecForName("utf-8"));
-    MainWindow w;
-    w.show();
-    return a.exec();
+    MainWindow mainWindow;
+    UiManager uiManager;
+    mainWindow.setUiManager(&uiManager);
+    mainWindow.show();
+    return app.exec();
 }
